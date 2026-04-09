@@ -3,21 +3,18 @@ using UnityEngine.Rendering;
 
 public class GameController : MonoBehaviour
 {
-    Camera main;
-
-
-
-
+    Camera mainCamera;
+    public PlayerPrefs playerMovement;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Start()
     {
-        Debug.Log("");
+        
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         
     }
