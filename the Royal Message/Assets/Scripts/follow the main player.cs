@@ -5,8 +5,11 @@ using UnityEngine.AI;
 
 public class Follow : MonoBehaviour
 {
+    public float speed = 5.0f;
+    private Rigidbody2D rb;
+    private Vector2 movement;
     public Transform target;
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     // Use this for initialization
     void Start()
@@ -19,5 +22,12 @@ public class Follow : MonoBehaviour
     {
         agent.SetDestination(target.position);
         transform.LookAt(target);
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+    }
+    void FixedUpdate()
+    {
+        // Apply movement to the Rigidbody in FixedUpdate (physics-safe)
+        rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
     }
 }
