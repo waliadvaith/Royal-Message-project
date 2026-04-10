@@ -7,7 +7,7 @@ public class roll : MonoBehaviour
     public bool isInvincible = false;
     public float rollCooldown = 2f;
     private float nextRollTime = 0f;
-    private IEnumerable BecomeInvincible()
+    public IEnumerable BecomeInvincible()
     {
         isInvincible = true;
         // Optional: Add flashing/transparency code here to show invincibility
@@ -21,15 +21,10 @@ public class roll : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= nextRollTime)
         {
             Roll();
-            IEnumerable(BecomeInvincible());
+            StartCoroutine (BecomeInvincible);
             // Reset next available time
             nextRollTime = Time.time + rollCooldown;
         }
-    }
-
-    private void IEnumerable(IEnumerable enumerable)
-    {
-        throw new NotImplementedException();
     }
 
     void Roll()
