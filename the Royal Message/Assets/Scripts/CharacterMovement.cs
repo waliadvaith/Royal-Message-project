@@ -5,7 +5,7 @@ public class CharacterMovement : MonoBehaviour
     public float speed = 5.0f;
     private Rigidbody2D rb;
     private Vector2 movement;
-    public float rotationSpeed = 720f;
+    
 
     void Start()
     {
