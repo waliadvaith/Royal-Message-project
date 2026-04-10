@@ -2,17 +2,21 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class roll : MonoBehaviour
+public class Roll : MonoBehaviour
 {
     public bool isInvincible = false;
     public float rollCooldown = 2f;
     private float nextRollTime = 0f;
-    public IEnumerable BecomeInvincible()
+
+    // 1. Changed IEnumerable to IEnumerator
+    public IEnumerator BecomeInvincible()
     {
         isInvincible = true;
-        // Optional: Add flashing/transparency code here to show invincibility
+        Debug.Log("Invincible: True");
+        // Optional: Add flashing/transparency code here
         yield return new WaitForSeconds(1.0f); // Wait for 1 second
         isInvincible = false;
+        Debug.Log("Invincible: False");
     }
 
     void Update()
@@ -20,24 +24,20 @@ public class roll : MonoBehaviour
         // Check for input and if cooldown has elapsed
         if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= nextRollTime)
         {
-            Roll();
-            StartCoroutine (BecomeInvincible);
+            PerformRoll(); // 2. Call the function
+            StartCoroutine(BecomeInvincible());
+
             // Reset next available time
             nextRollTime = Time.time + rollCooldown;
         }
     }
 
-    void Roll()
+    // 3. Added missing Roll function
+    void PerformRoll()
     {
         Debug.Log("Rolling!");
-        // Add your roll physics/animation here
-    }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy" && !isInvincible)
-        {
-            // Take Damage
-        }
+        // Add actual movement code here (e.g., rb.velocity = ...)
     }
 }
+
 
