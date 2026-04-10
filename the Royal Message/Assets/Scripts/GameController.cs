@@ -4,7 +4,7 @@ using UnityEngine.Rendering;
 public class GameController : MonoBehaviour
 {
     Camera mainCamera;
-    public PlayerPrefs playerMovement;
+    
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
