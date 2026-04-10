@@ -466,11 +466,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.3962264, g: 0.0022427586, b: 0.0022427586, a: 1}
+    m_HighlightedColor: {r: 0.85660374, g: 0.08242789, b: 0.08242789, a: 1}
+    m_PressedColor: {r: 0.6377357, g: 0.26833028, b: 0.26833028, a: 1}
+    m_SelectedColor: {r: 0.690566, g: 0.13941614, b: 0.13941614, a: 1}
+    m_DisabledColor: {r: 0.81886786, g: 0.1653186, b: 0.1653186, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -868,9 +868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f416fed18daacfd4a99bc9b77707514c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lathanswalkingcodes
-  moveSpeed: 5
-  rb: {fileID: 0}
-  moveInput: {x: 0, y: 0}
 --- !u!50 &859004957
 Rigidbody2D:
   serializedVersion: 5
