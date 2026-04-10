@@ -1,30 +1,34 @@
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+
 public class HealthBar : MonoBehaviour
 {
     public Slider healthSlider;
+    public Gradient gradient;
+    public Image fill; // Drag the "Fill" object from the Slider here
+
     public float maxHealth = 100f;
     private float currentHealth;
 
     void Start()
     {
         currentHealth = maxHealth;
-
-       
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
+
+
+        fill.color = gradient.Evaluate(1f);
     }
 
-    // Call this method whenever the player takes damage
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
-
-        // Clamp health so it doesn't go below 0
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        // Update the UI
         healthSlider.value = currentHealth;
+
+
+        fill.color = gradient.Evaluate(healthSlider.normalizedValue);
     }
     void Update()
     {
