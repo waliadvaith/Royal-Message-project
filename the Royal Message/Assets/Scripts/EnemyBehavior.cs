@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    float health;
+    public float health;
     private Rigidbody2D rb;
     public EnemyBehavior movement;
 
