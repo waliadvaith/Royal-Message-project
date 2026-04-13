@@ -5,7 +5,9 @@ public class CharacterMovement : MonoBehaviour
     public float speed = 5.0f;
     private Rigidbody2D rb;
     private Vector2 movement;
-    
+    public SpriteRenderer spriteRenderer;
+
+
 
     void Start()
     {
@@ -15,17 +17,35 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        
-    
-    // Get input in Update for responsiveness
-    movement.x = Input.GetAxisRaw("Horizontal");
+
+
+        // Get input in Update for responsiveness
+        movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
     }
 
     void FixedUpdate()
     {
-        // Apply movement to the Rigidbody in FixedUpdate (physics-safe)
-        rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
+        if (movement.x > 0)
+        {
+            switch (spriteRenderer.name)
+            {
+
+            }
+        }
+            if (movement.x < 0)
+            {
+
+            }
+            if (movement.y > 0)
+            {
+
+            }
+            if (movement.y < 0)
+            {
+            }
+            // Apply movement to the Rigidbody in FixedUpdate (physics-safe)
+            rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
     }
 }
