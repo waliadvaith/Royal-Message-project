@@ -29,10 +29,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (movement.x > 0)
         {
-            switch (spriteRenderer.name)
-            {
-
-            }
+            
         }
             if (movement.x < 0)
             {
