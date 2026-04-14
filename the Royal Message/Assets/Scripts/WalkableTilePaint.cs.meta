@@ -1,2 +1,18 @@
 fileFormatVersion: 2
 guid: 9f67553d27843cc4dbc9c1e04e0896ad
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - grass: {fileID: 11400000, guid: 1092232faf404794a85addf047905e12, type: 2}
+  - topPath: {fileID: 11400000, guid: 981bcb452042ba6479fbf68ab8d9b7cb, type: 2}
+  - centerPath: {fileID: 11400000, guid: 60175cad5bfa0524a8c2faae56d821ad, type: 2}
+  - bottomPath: {fileID: 11400000, guid: 1092232faf404794a85addf047905e12, type: 2}
+  - decorationMap: {instanceID: 0}
+  - walkablePath: {instanceID: 0}
+  - player: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
