@@ -551,7 +551,7 @@ MonoBehaviour:
   player: {fileID: 1008760005}
   grassLayerHeight: 3
   renderDistance: 15
-  preBuildAmount: 20
+  preBuildAmount: 5
   cellSizeMultiplier: 1
 --- !u!1 &1008760000
 GameObject:
@@ -900,6 +900,14 @@ PrefabInstance:
     - target: {fileID: 382425967236556630, guid: 43295fadb83d1c344915b2432e449fbc, type: 3}
       propertyPath: m_Name
       value: EVIL KNIGHT_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674547961365081396, guid: 43295fadb83d1c344915b2432e449fbc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674547961365081396, guid: 43295fadb83d1c344915b2432e449fbc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4674547961365081396, guid: 43295fadb83d1c344915b2432e449fbc, type: 3}
       propertyPath: m_LocalPosition.x
