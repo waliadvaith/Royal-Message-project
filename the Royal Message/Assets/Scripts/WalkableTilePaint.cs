@@ -34,12 +34,14 @@ public class WalkableTilePaint : MonoBehaviour
     public int renderDistance = 30;
     public int preBuildAmount = 20;
 
-    private int currentX = 0;
+    [Tooltip("Set to 2 if your tiles are 2x2 grid spaces wide, etc.")]
+    public int cellSizeMultiplier = 1; // <--- NEW SETTING
+
+    private int currentColumnIndex = 0;
 
     void Start()
     {
-        //
-        currentX = -5;
+        currentColumnIndex = -5;
         for (int i = 0; i < preBuildAmount; i++)
         {
             GenerateColumn();
@@ -48,7 +50,8 @@ public class WalkableTilePaint : MonoBehaviour
 
     void Update()
     {
-        if (player.position.x > currentX - renderDistance)
+        // We multiply currentColumnIndex by cellSizeMultiplier to find the actual world X
+        if (player.position.x > (currentColumnIndex * cellSizeMultiplier) - renderDistance)
         {
             GenerateColumn();
         }
@@ -61,31 +64,32 @@ public class WalkableTilePaint : MonoBehaviour
 
         for (int y = topLimit; y >= bottomLimit; y--)
         {
-            Vector3Int pos = new Vector3Int(currentX, y, 0);
+            // Apply the multiplier to both X and Y coordinates
+            Vector3Int pos = new Vector3Int(
+                currentColumnIndex * cellSizeMultiplier,
+                y * cellSizeMultiplier,
+                0
+            );
 
-            // 
-            if (y == 0)
+            if (y == 1 || y == 0|| y == -1)
             {
                 walkablePath.SetTile(pos, centerPath);
             }
-            else if (y == 1)
+            else if (y == 2)
             {
                 walkablePath.SetTile(pos, topPath);
             }
-            else if (y == -1)
+            else if (y == -2)
             {
                 walkablePath.SetTile(pos, bottomPath);
             }
-            //
             else
             {
                 walkablePath.SetTile(pos, grass);
-
-                //
                 TrySpawnDecoration(pos);
             }
         }
-        currentX++;
+        currentColumnIndex++;
     }
 
     void TrySpawnDecoration(Vector3Int pos)
