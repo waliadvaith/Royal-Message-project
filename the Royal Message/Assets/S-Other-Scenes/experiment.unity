@@ -241,6 +241,7 @@ MonoBehaviour:
   grassLayerHeight: 10
   renderDistance: 15
   preBuildAmount: 20
+  cellSizeMultiplier: 1
 --- !u!1 &1008760000
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +348,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
   speed: 3
+  yMin: -2
+  yMax: 0.5
   spriteRenderer: {fileID: 0}
 --- !u!212 &1008760004
 SpriteRenderer:
