@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CharacterMovementSideScroller : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
     public float speed = 5.0f;
 
@@ -23,7 +23,8 @@ public class CharacterMovementSideScroller : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         
-
+        if (movement.x > 0) spriteRenderer.flipX = false;
+        else if (movement.x < 0) spriteRenderer.flipX = true;
     }
 
     void FixedUpdate()
