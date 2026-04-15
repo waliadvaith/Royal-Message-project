@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SimpleCharacterMovement : MonoBehaviour
 {
-    private Rigidbody rb;
+    public Rigidbody2D rb;
     public float speed = 5.0f;
     private Vector2 movement;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class SimpleCharacterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
+        rb.MovePosition(movement.normalized * speed * Time.fixedDeltaTime);
     }
 
 }
