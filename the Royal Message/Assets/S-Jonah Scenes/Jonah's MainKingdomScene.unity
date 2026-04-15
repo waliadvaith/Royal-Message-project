@@ -7113,6 +7113,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!4 &1778390551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7357976175053252240, guid: 918c3a1866cc7a144a3bead61b60bb42, type: 3}
+  m_PrefabInstance: {fileID: 690026765364699819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1914952010
 GameObject:
   m_ObjectHideFlags: 0
@@ -7354,7 +7359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54101d277e16ffa4caafb28a1873e729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  target: {fileID: 0}
+  target: {fileID: 1778390551}
   smoothSpeed: 5
   offset: {x: 0, y: 0, z: -10}
 --- !u!1001 &690026765364699819
@@ -7421,6 +7426,6 @@ SceneRoots:
   - {fileID: 2142177115}
   - {fileID: 1395232819}
   - {fileID: 1914952012}
-  - {fileID: 1342194}
   - {fileID: 690026765364699819}
   - {fileID: 1012497400}
+  - {fileID: 1342194}
