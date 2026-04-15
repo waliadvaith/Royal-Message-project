@@ -177,15 +177,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f67553d27843cc4dbc9c1e04e0896ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WalkableTilePaint
-  grass: {fileID: 11400000, guid: 1092232faf404794a85addf047905e12, type: 2}
-  topPath: {fileID: 11400000, guid: 981bcb452042ba6479fbf68ab8d9b7cb, type: 2}
-  centerPath: {fileID: 11400000, guid: 60175cad5bfa0524a8c2faae56d821ad, type: 2}
-  bottomPath: {fileID: 11400000, guid: 1092232faf404794a85addf047905e12, type: 2}
+  grass: {fileID: 11400000, guid: 3ffffe15ff5019442a2cac9f826d0014, type: 2}
+  topPath: {fileID: 11400000, guid: 593ebf4b47cb9c54591e01ae92c157ad, type: 2}
+  centerPath: {fileID: 11400000, guid: 7769066beea04644ca32cd2a4e6639df, type: 2}
+  bottomPath: {fileID: 11400000, guid: 9291327ba6fe9ee4ea19f311319461d5, type: 2}
   decorationMap: {fileID: 0}
   decorations: []
-  nothingSpawnChance: 90
+  nothingSpawnChance: 0
   walkablePath: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 865528373}
   grassLayerHeight: 10
   renderDistance: 30
   preBuildAmount: 20
