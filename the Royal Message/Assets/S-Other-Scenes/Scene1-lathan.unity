@@ -296,6 +296,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rectangular Palette
       objectReference: {fileID: 0}
+    - target: {fileID: 7764005808985482930, guid: a8dad923bfc1a394794c46e70473f585, type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764005808985482930, guid: a8dad923bfc1a394794c46e70473f585, type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1009,8 +1017,8 @@ Transform:
   m_GameObject: {fileID: 1971993180}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.368895, y: 0.9319012, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -14.78, y: 5.28, z: 0}
+  m_LocalScale: {x: 6.5374, y: 4.429, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
