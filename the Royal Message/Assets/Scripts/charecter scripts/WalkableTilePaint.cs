@@ -26,16 +26,13 @@ public class WalkableTilePaint : MonoBehaviour
     public float nothingSpawnChance = 90f;
 
     [Header("Setup")]
-    public Tilemap walkablePath;
+    public Tilemap groundPath; // Updated name
     public Transform player;
 
     [Header("Generation Settings")]
     public int grassLayerHeight = 10;
     public int renderDistance = 30;
     public int preBuildAmount = 20;
-
-    [Tooltip("Set to 2 if your tiles are 2x2 grid spaces wide, etc.")]
-    public int cellSizeMultiplier = 1; // <--- NEW SETTING
 
     private int currentColumnIndex = 0;
 
@@ -50,8 +47,8 @@ public class WalkableTilePaint : MonoBehaviour
 
     void Update()
     {
-        // We multiply currentColumnIndex by cellSizeMultiplier to find the actual world X
-        if (player.position.x > (currentColumnIndex * cellSizeMultiplier) - renderDistance)
+        
+        if (player.position.x > currentColumnIndex - renderDistance)
         {
             GenerateColumn();
         }
@@ -64,28 +61,25 @@ public class WalkableTilePaint : MonoBehaviour
 
         for (int y = topLimit; y >= bottomLimit; y--)
         {
-            // Apply the multiplier to both X and Y coordinates
-            Vector3Int pos = new Vector3Int(
-                currentColumnIndex * cellSizeMultiplier,
-                y * cellSizeMultiplier,
-                0
-            );
+            Vector3Int pos = new Vector3Int(currentColumnIndex, y, 0);
 
-            if (y == 1 || y == 0|| y == -1)
+            if (y == 1 || y == 0 || y == -1)
             {
-                walkablePath.SetTile(pos, centerPath);
+                groundPath.SetTile(pos, centerPath);
             }
             else if (y == 2)
             {
-                walkablePath.SetTile(pos, topPath);
+                groundPath.SetTile(pos, topPath);
+                TrySpawnDecoration(pos);
             }
             else if (y == -2)
             {
-                walkablePath.SetTile(pos, bottomPath);
+                groundPath.SetTile(pos, bottomPath);
+                TrySpawnDecoration(pos);
             }
             else
             {
-                walkablePath.SetTile(pos, grass);
+                groundPath.SetTile(pos, grass);
                 TrySpawnDecoration(pos);
             }
         }

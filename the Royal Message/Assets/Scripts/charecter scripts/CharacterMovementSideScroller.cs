@@ -6,11 +6,11 @@ public class CharacterMovement : MonoBehaviour
 
     [Header("Movement Limits")]
     public float yMin = -2.0f; 
-    public float yMax = 0.5f;  
+    public float yMax = 0.5f;
+    public float xMax = -10f;
 
     private Rigidbody2D rb;
     private Vector2 movement;
-    public SpriteRenderer spriteRenderer;
 
     void Start()
     {
@@ -23,8 +23,6 @@ public class CharacterMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         
-        if (movement.x > 0) spriteRenderer.flipX = false;
-        else if (movement.x < 0) spriteRenderer.flipX = true;
     }
 
     void FixedUpdate()
@@ -34,7 +32,7 @@ public class CharacterMovement : MonoBehaviour
 
         
         targetPosition.y = Mathf.Clamp(targetPosition.y, yMin, yMax);
-
+        targetPosition.x = Mathf.Max(targetPosition.x, xMax);
         
         rb.MovePosition(targetPosition);
     }

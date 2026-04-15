@@ -6,7 +6,7 @@ public class SimpleCharacterMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed = 5.0f;
-    private Vector2 movement;
+    private Vector3 movement;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
