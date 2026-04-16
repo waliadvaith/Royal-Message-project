@@ -89,6 +89,7 @@ public class WalkableTilePaint : MonoBehaviour
     void TrySpawnDecoration(Vector3Int pos)
     {
         float roll = Random.Range(0f, 100f);
+        
         if (roll < nothingSpawnChance) return;
 
         foreach (var deco in decorations)

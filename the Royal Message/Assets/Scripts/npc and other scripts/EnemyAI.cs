@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI; // MUST HAVE THIS
 
 public class EnemyAI : MonoBehaviour
 {

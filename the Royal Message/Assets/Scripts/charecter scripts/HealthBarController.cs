@@ -5,36 +5,23 @@ public class HealthBar : MonoBehaviour
 {
     public Slider healthSlider;
     public Gradient gradient;
-    public Image fill; // Drag the "Fill" object from the Slider here
+    public Image fill;
 
-    public float maxHealth = 100f;
-    private float currentHealth;
-
-    void Start()
+    public void SetMaxHealth(float health)
     {
-        currentHealth = maxHealth;
-        healthSlider.maxValue = maxHealth;
-        healthSlider.value = maxHealth;
+        healthSlider.maxValue = health;
+        healthSlider.value = health;
 
-
-        fill.color = gradient.Evaluate(1f);
+        // Sets initial color to the far right of the gradient (Green)
+        if (fill != null) fill.color = gradient.Evaluate(1f);
     }
 
-    public void TakeDamage(float amount)
+    public void UpdateHealthBar(float health)
     {
-        currentHealth -= amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        healthSlider.value = health;
 
-        healthSlider.value = currentHealth;
-
-
-        fill.color = gradient.Evaluate(healthSlider.normalizedValue);
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(10);
-        }
+        // Changes color based on how much health is left
+        if (fill != null)
+            fill.color = gradient.Evaluate(healthSlider.normalizedValue);
     }
 }
