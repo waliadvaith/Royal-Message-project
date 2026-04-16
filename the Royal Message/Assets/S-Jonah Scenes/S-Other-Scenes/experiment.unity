@@ -236,12 +236,11 @@ MonoBehaviour:
     tile: {fileID: 0}
     spawnChance: 60
   nothingSpawnChance: 60
-  walkablePath: {fileID: 1793165269}
+  groundPath: {fileID: 0}
   player: {fileID: 1008760005}
   grassLayerHeight: 10
   renderDistance: 15
   preBuildAmount: 20
-  cellSizeMultiplier: 1
 --- !u!1 &1008760000
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +350,7 @@ MonoBehaviour:
   speed: 3
   yMin: -2
   yMax: 0.5
-  spriteRenderer: {fileID: 0}
+  xMax: -10
 --- !u!212 &1008760004
 SpriteRenderer:
   serializedVersion: 2
