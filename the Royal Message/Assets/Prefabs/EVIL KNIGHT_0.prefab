@@ -12,12 +12,11 @@ GameObject:
   - component: {fileID: 407624437860399682}
   - component: {fileID: 1223088504531297076}
   - component: {fileID: 431638933760326213}
-  - component: {fileID: 2045988100086343149}
   - component: {fileID: 7446917847541209172}
   - component: {fileID: -1308042347399313931}
   m_Layer: 0
   m_Name: EVIL KNIGHT_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,20 +169,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2045988100086343149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2879228586114085019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb08582f7f1038408a28dea5e61f2ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyBehavior
-  health: 0
-  movement: {fileID: 0}
 --- !u!114 &7446917847541209172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
-  healthBar: {fileID: 0}
+  currentHealth: 0
+  healthBar: {fileID: 1192978220683885228}
 --- !u!114 &-1308042347399313931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ebf3c5074b86845b3ab8ec1b6f8c7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthBar
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 8672853768731623722}
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -241,7 +227,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  fill: {fileID: 0}
+  fill: {fileID: 4500548268243878520}
 --- !u!1 &3326848789257753034
 GameObject:
   m_ObjectHideFlags: 0

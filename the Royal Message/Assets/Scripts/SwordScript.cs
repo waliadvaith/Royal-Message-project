@@ -4,26 +4,40 @@ public class SwordScript : MonoBehaviour
 {
     public Animator swordAnimator;
     public float damagePerHit = 25f;
+    private bool isAttacking = false; // The gatekeeper
 
     void Update()
     {
-        // Simple Spacebar swing for testing
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            swordAnimator.SetTrigger("isAttack");
+            Attack();
         }
+    }
+
+    void Attack()
+    {
+        isAttacking = true;
+        swordAnimator.SetTrigger("isAttack");
+
+        // Reset the attack after 0.5 seconds (or however long your swing is)
+        Invoke("EndAttack", 0.5f);
+    }
+
+    void EndAttack()
+    {
+        isAttacking = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 1. Look for Health script on the object or its parent
-        Health victimHealth = other.GetComponentInParent<Health>();
-
-        // 2. If it exists and is an Enemy, deal damage
-        if (victimHealth != null && other.CompareTag("Enemy"))
+        // Now it only works if isAttacking is TRUE
+        if (isAttacking && other.CompareTag("Enemy"))
         {
-            victimHealth.TakeDamage(damagePerHit);
-            Debug.Log("Dealt " + damagePerHit + " damage to " + other.name);
+            Health victimHealth = other.GetComponentInParent<Health>();
+            if (victimHealth != null)
+            {
+                victimHealth.TakeDamage(damagePerHit);
+            }
         }
     }
 }

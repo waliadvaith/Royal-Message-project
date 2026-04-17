@@ -28,6 +28,7 @@ public class Health : MonoBehaviour
     {
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        Debug.Log("Something took damage");
 
         // Update the visual bar
         if (healthBar != null)
