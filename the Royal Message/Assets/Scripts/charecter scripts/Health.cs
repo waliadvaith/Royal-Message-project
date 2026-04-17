@@ -3,7 +3,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [Header("Settings")]
-    public float maxHealth = 100f;
+    public float maxHealth = 999f;
     public float currentHealth;
 
     [Header("UI Connection")]

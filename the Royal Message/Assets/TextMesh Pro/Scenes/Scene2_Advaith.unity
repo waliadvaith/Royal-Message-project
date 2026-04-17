@@ -577,6 +577,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7446917847541209172, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7446917847541209172, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
+      propertyPath: currentHealth
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7509550871837174964, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -617,7 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwordScript
   swordAnimator: {fileID: 1232880279}
-  damagePerHit: 10
+  damagePerHit: 25
   isAttacking: 0
 --- !u!1 &1253338321
 GameObject:
@@ -1746,6 +1754,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7446917847541209172, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7509550871837174964, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1811,6 +1823,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752741697358864511, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 2425990011548505505, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: healthBar
       value: 
@@ -1819,6 +1871,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: charactermodel
       objectReference: {fileID: 0}
+    - target: {fileID: 3180388754390317565, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2310754
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180388754390317565, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2453481
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180388754390317565, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.43703395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180388754390317565, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.4356485
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180388754390317565, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.8800854
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180388754390317565, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.87374985
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180388754390317565, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180388754390317565, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206782261000782356, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8480768784896938275, guid: 632c0ac8e2734c944af0a3a05e0cee60, type: 3}
     - target: {fileID: 8881499942292214847, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: swordAnimator
       value: 
