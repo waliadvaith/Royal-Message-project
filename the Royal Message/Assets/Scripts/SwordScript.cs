@@ -1,43 +1,49 @@
 using UnityEngine;
+using System.Collections.Generic; // Added for the hit list
 
 public class SwordScript : MonoBehaviour
 {
     public Animator swordAnimator;
     public float damagePerHit = 25f;
-    private bool isAttacking = false; // The gatekeeper
+
+    [Header("State Control")]
+    public bool isAttacking = false; // This is our gate
+    private List<Collider2D> hitList = new List<Collider2D>(); // Prevents double-hitting
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Attack();
+            swordAnimator.SetTrigger("isAttack");
         }
     }
 
-    void Attack()
+    // --- CALL THESE VIA ANIMATION EVENTS ---
+    public void StartAttack()
     {
         isAttacking = true;
-        swordAnimator.SetTrigger("isAttack");
-
-        // Reset the attack after 0.5 seconds (or however long your swing is)
-        Invoke("EndAttack", 0.5f);
+        hitList.Clear(); // Reset so we can hit things again this swing
     }
 
-    void EndAttack()
+    public void EndAttack()
     {
         isAttacking = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Now it only works if isAttacking is TRUE
-        if (isAttacking && other.CompareTag("Enemy"))
+        // 1. Only proceed if the gate is OPEN (isAttacking is true)
+        if (!isAttacking) return;
+
+        // 2. Look for Health script
+        Health victimHealth = other.GetComponentInParent<Health>();
+
+        // 3. Check tag and ensure we haven't hit this specific enemy in this swing yet
+        if (victimHealth != null && other.CompareTag("Enemy") && !hitList.Contains(other))
         {
-            Health victimHealth = other.GetComponentInParent<Health>();
-            if (victimHealth != null)
-            {
-                victimHealth.TakeDamage(damagePerHit);
-            }
+            victimHealth.TakeDamage(damagePerHit);
+            hitList.Add(other); // Add to list so they don't get hit twice
+            Debug.Log("Dealt " + damagePerHit + " damage to " + other.name);
         }
     }
 }
