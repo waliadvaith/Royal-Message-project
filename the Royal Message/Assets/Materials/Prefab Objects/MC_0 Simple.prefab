@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5760492289368541546}
   - component: {fileID: 7954241827757788876}
   - component: {fileID: 7012584634708242243}
-  - component: {fileID: 2937505575596039683}
   m_Layer: 0
   m_Name: MC_0 Simple
   m_TagString: Untagged
@@ -213,15 +212,3 @@ MonoBehaviour:
   speed: 5
   isInvincible: 0
   rollCooldown: 2
---- !u!114 &2937505575596039683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10275703651693110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a4f5047227f3749bb997daed2663dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SwordScript
