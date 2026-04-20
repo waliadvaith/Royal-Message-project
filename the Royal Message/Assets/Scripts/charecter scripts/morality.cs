@@ -25,4 +25,27 @@ public class morality : MonoBehaviour
             moralitySlider.value = (currentMorality + maxMorality) / (2 * maxMorality);
         }
     }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
+
+    public override bool Equals(object other)
+    {
+        return base.Equals(other);
+    }
+
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+
+    public morality(float currentMorality, float maxMorality, Slider moralitySlider)
+    {
+        this.currentMorality = currentMorality;
+        this.maxMorality = maxMorality;
+        this.moralitySlider = moralitySlider;
+    }
+
 }

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 43069466}
   - component: {fileID: 43069465}
   - component: {fileID: 43069464}
+  - component: {fileID: 43069469}
   m_Layer: 0
   m_Name: MC_0
   m_TagString: Untagged
@@ -302,6 +303,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43069469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43069462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d5a9113ad06484fbacdc6b19dce203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::morality
+  currentMorality: 0
+  maxMorality: 100
+  moralitySlider: {fileID: 0}
 --- !u!1 &47622320
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,11 +1004,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 34
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
-  orthographic size: 12.295989
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1017,7 +1033,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.86, y: 1.67, z: -10}
+  m_LocalPosition: {x: -11.9, y: 7.53, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
