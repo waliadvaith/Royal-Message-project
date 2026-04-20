@@ -176,6 +176,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d653f522ef25e4242a3384228e117d32, type: 3}
+--- !u!4 &10341084 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 597537337316648930, guid: d653f522ef25e4242a3384228e117d32, type: 3}
+  m_PrefabInstance: {fileID: 10341083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &36128974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1307,7 +1312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54101d277e16ffa4caafb28a1873e729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  target: {fileID: 0}
+  target: {fileID: 10341084}
   smoothSpeed: 5
   offset: {x: 0, y: 0, z: -10}
 --- !u!114 &1290214071
