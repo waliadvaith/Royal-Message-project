@@ -3,16 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
+<<<<<<< Updated upstream
   tags:
   - Enemy
+=======
+  tags: []
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Objects/Organism
   - Water
   - UI
-  - 
+  - Tilemap
   - 
   - 
   - 
@@ -42,11 +46,22 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< Updated upstream
   - name: Main Objects
     uniqueID: 2638428327
     locked: 0
   - name: Secondary Objects
     uniqueID: 2272822305
+=======
+  - name: Objects
+    uniqueID: 655188061
+    locked: 0
+  - name: Weapons
+    uniqueID: 1970796611
+    locked: 0
+  - name: Tilemap
+    uniqueID: 178779887
+>>>>>>> Stashed changes
     locked: 0
   m_RenderingLayers:
   - Default

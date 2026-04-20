@@ -766,6 +766,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a737be957629b9d49963438c82a4e69f, type: 3}
   m_Name: 
+<<<<<<< Updated upstream:the Royal Message/Assets/_Recovery/0 (1).unity
   m_EditorClassIdentifier: Assembly-CSharp::Follow
   speed: 5
   target: {fileID: 1990171274}
@@ -904,10 +905,34 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &1033571452
 Transform:
+=======
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &799672760
+CanvasRenderer:
+>>>>>>> Stashed changes:the Royal Message/Assets/Scenes/Scene1-lathan.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream:the Royal Message/Assets/_Recovery/0 (1).unity
   m_GameObject: {fileID: 1033571447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -917,6 +942,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_GameObject: {fileID: 799672757}
+  m_CullTransparentMesh: 1
+--- !u!1 &1432223170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1432223171}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1432223171
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432223170}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 799672758}
+  m_Father: {fileID: 588155653}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+>>>>>>> Stashed changes:the Royal Message/Assets/Scenes/Scene1-lathan.unity
 --- !u!1001 &1463685171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1021,7 +1086,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::livesleft
   maxHealth: 100
   currentHealth: 100
+<<<<<<< Updated upstream:the Royal Message/Assets/_Recovery/0 (1).unity
   healthSlider: {fileID: 0}
+=======
+  healthSlider: {fileID: 588155654}
+>>>>>>> Stashed changes:the Royal Message/Assets/Scenes/Scene1-lathan.unity
 --- !u!4 &1990171274 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4442001958113585746, guid: f41e2b7d60dcc1a45987d5aba71e2092, type: 3}
@@ -1066,4 +1135,7 @@ SceneRoots:
   - {fileID: 1463685171}
   - {fileID: 127917521}
   - {fileID: 47622324}
+<<<<<<< Updated upstream:the Royal Message/Assets/_Recovery/0 (1).unity
   - {fileID: 1033571452}
+=======
+>>>>>>> Stashed changes:the Royal Message/Assets/Scenes/Scene1-lathan.unity
