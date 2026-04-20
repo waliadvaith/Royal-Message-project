@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7524372560348015787}
   - component: {fileID: 2425990011548505505}
   - component: {fileID: 6069189725442015679}
+  - component: {fileID: 9049784238377797067}
   m_Layer: 0
   m_Name: MC_Jonah
   m_TagString: Player
@@ -197,6 +198,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharMovement
   speed: 5
+--- !u!95 &9049784238377797067
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960281589503791276}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e48b60cce14db1b419156e34fa671172, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6135386090158633759
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +233,7 @@ GameObject:
   - component: {fileID: 2907859801003852473}
   - component: {fileID: 5479079823869283557}
   - component: {fileID: 3180388754390317565}
-  - component: {fileID: 2263730739915633951}
+  - component: {fileID: 5708158781745849042}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -301,7 +324,7 @@ Animation:
   m_GameObject: {fileID: 6135386090158633759}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 190f962e10ec59f4c9573d0d17f90ff7, type: 2}
+  m_Animation: {fileID: 7400000, guid: ab69da0fcbd501a428cb85624bf7035a, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -318,7 +341,7 @@ Animator:
   m_GameObject: {fileID: 6135386090158633759}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 41d2d31f0ab84a14db8aa4d8a9f05cfc, type: 2}
+  m_Controller: {fileID: 9100000, guid: eb4739bed2be2dd439d37edd0bcee234, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -376,7 +399,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.22, y: 0.92}
   m_EdgeRadius: 0
---- !u!114 &2263730739915633951
+--- !u!114 &5708158781745849042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
