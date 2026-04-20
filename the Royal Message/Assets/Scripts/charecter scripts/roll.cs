@@ -9,6 +9,9 @@ public class Roll : MonoBehaviour
     public bool isInvincible = false;
     public float rollCooldown = 2f;
     private float nextRollTime = 0f;
+
+
+
     private Vector2 movement;
     private Vector2 velocity;
     void Start()
@@ -47,9 +50,15 @@ public class Roll : MonoBehaviour
     void PerformRoll()
     {
         Debug.Log("Rolling!");
+
+
+        // Add actual movement code here (e.g., rb.velocity = ...)
+
+
         {
             rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
         }
+
     }
 }
 

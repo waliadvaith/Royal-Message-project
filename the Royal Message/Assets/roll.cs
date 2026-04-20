@@ -2,16 +2,13 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class roll : MonoBehaviour
+public class Roll : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rb;
     public bool isInvincible = false;
     public float rollCooldown = 2f;
     private float nextRollTime = 0f;
-
-
-
     private Vector2 movement;
     private Vector2 velocity;
     void Start()
@@ -50,15 +47,9 @@ public class roll : MonoBehaviour
     void PerformRoll()
     {
         Debug.Log("Rolling!");
-
-
-        // Add actual movement code here (e.g., rb.velocity = ...)
-
-
         {
             rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
         }
-
     }
 }
 
