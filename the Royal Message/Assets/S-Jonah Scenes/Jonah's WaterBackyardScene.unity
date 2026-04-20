@@ -220,11 +220,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 597537337316648930, guid: d653f522ef25e4242a3384228e117d32, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.29923
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 597537337316648930, guid: d653f522ef25e4242a3384228e117d32, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.95771
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 597537337316648930, guid: d653f522ef25e4242a3384228e117d32, type: 3}
       propertyPath: m_LocalPosition.z
@@ -258,14 +258,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2907859801003852473, guid: d653f522ef25e4242a3384228e117d32, type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907859801003852473, guid: d653f522ef25e4242a3384228e117d32, type: 3}
+      propertyPath: 'm_Animations.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7400000, guid: 190f962e10ec59f4c9573d0d17f90ff7, type: 2}
     - target: {fileID: 2960281589503791276, guid: d653f522ef25e4242a3384228e117d32, type: 3}
       propertyPath: m_Name
       value: MC_Jonah
       objectReference: {fileID: 0}
+    - target: {fileID: 5479079823869283557, guid: d653f522ef25e4242a3384228e117d32, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: eb4739bed2be2dd439d37edd0bcee234, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2960281589503791276, guid: d653f522ef25e4242a3384228e117d32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1211619155}
   m_SourcePrefab: {fileID: 100100000, guid: d653f522ef25e4242a3384228e117d32, type: 3}
 --- !u!1 &90543362
 GameObject:
@@ -11276,6 +11291,33 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1211619148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2960281589503791276, guid: d653f522ef25e4242a3384228e117d32, type: 3}
+  m_PrefabInstance: {fileID: 43356080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1211619155
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211619148}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e48b60cce14db1b419156e34fa671172, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1269467552
 GameObject:
   m_ObjectHideFlags: 0
