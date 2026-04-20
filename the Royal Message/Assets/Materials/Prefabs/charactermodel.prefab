@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2960281589503791276}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.42, y: 0.12, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf195d67e3237c440bcbd2b354433ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 100
+  maxHealth: 10000
   currentHealth: 0
   healthBar: {fileID: 0}
 --- !u!1 &6135386090158633759
@@ -210,10 +210,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1752741697358864511}
   - component: {fileID: 8206782261000782356}
-  - component: {fileID: 2907859801003852473}
   - component: {fileID: 5479079823869283557}
-  - component: {fileID: 8881499942292214847}
   - component: {fileID: 3180388754390317565}
+  - component: {fileID: 7260655632443897272}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -229,13 +228,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6135386090158633759}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: -1.18, y: -0.73, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.84, y: -0.51, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 597537337316648930}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &8206782261000782356
 SpriteRenderer:
   serializedVersion: 2
@@ -285,7 +284,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 220715021686296392, guid: aece9a07f697a6d4691345bd12d54fc8, type: 3}
+  m_Sprite: {fileID: 8480768784896938275, guid: 632c0ac8e2734c944af0a3a05e0cee60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -295,22 +294,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!111 &2907859801003852473
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6135386090158633759}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 190f962e10ec59f4c9573d0d17f90ff7, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!95 &5479079823869283557
 Animator:
   serializedVersion: 7
@@ -333,20 +316,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8881499942292214847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6135386090158633759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a4f5047227f3749bb997daed2663dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SwordScript
-  swordAnimator: {fileID: 5479079823869283557}
-  damagePerHit: 25
 --- !u!61 &3180388754390317565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -381,15 +350,32 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7999338, y: 0.011719346}
+  m_Offset: {x: -0.43703395, y: -0.4356485}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.8603305, y: 0.48726156}
-    oldSize: {x: 2.22, y: 0.92}
+    pivot: {x: 0.8800854, y: 0.87374985}
+    oldSize: {x: 1.14, y: 1.14}
     newSize: {x: 2.22, y: 0.92}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.22, y: 0.92}
+  m_Size: {x: 1.2310754, y: 1.2453481}
   m_EdgeRadius: 0
+--- !u!114 &7260655632443897272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135386090158633759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8c4abdd8b43614f83af3d52333033d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwordScript
+  swordAnimator: {fileID: 5479079823869283557}
+  damagePerHit: 25
+  attackCooldown: 1
+  targetTag: Enemy
+  sideOffset: 0.5

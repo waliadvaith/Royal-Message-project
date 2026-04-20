@@ -1,49 +1,98 @@
 using UnityEngine;
-using System.Collections.Generic; // Added for the hit list
+using System.Collections.Generic;
 
 public class SwordScript : MonoBehaviour
 {
+    [Header("References")]
     public Animator swordAnimator;
+
+    [Header("Combat Settings")]
     public float damagePerHit = 25f;
+    public float attackCooldown = 1.0f;
+    [Tooltip("Set to 'Enemy' for Player, 'Player' for Enemies")]
+    public string targetTag = "Player";
 
-    [Header("State Control")]
-    public bool isAttacking = false; // This is our gate
-    private List<Collider2D> hitList = new List<Collider2D>(); // Prevents double-hitting
+    [Header("Positioning & Flipping")]
+    public float sideOffset = 0.5f;
 
-    void Update()
+    private bool isAttacking = false;
+    private float nextAttackTime = 0f;
+    private List<Collider2D> hitList = new List<Collider2D>();
+    private Transform targetTransform;
+
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (swordAnimator == null) swordAnimator = GetComponent<Animator>();
+
+        // Only look for a target if this is an Enemy sword
+        if (transform.root.CompareTag("Enemy"))
         {
-            swordAnimator.SetTrigger("isAttack");
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) targetTransform = p.transform;
         }
     }
 
-    // --- CALL THESE VIA ANIMATION EVENTS ---
-    public void StartAttack()
+    void Update()
     {
-        isAttacking = true;
-        hitList.Clear(); // Reset so we can hit things again this swing
+        // 1. POSITION & FLIP (ONLY for Enemies)
+        // This ensures the Player's sword stays exactly where you put it manually
+        if (transform.root.CompareTag("Enemy") && targetTransform != null)
+        {
+            UpdateEnemySwordOrientation();
+        }
+
+        // 2. PLAYER INPUT
+        if (transform.root.CompareTag("Player") && Input.GetKeyDown(KeyCode.Space))
+        {
+            TryAttack();
+        }
     }
 
-    public void EndAttack()
+    void UpdateEnemySwordOrientation()
     {
-        isAttacking = false;
+        float targetX = targetTransform.position.x;
+        float myX = transform.root.position.x;
+
+        // Swapped the rotation logic to fix the "reversing" issue
+        if (targetX < myX)
+        {
+            // PLAYER IS ON LEFT
+            transform.localPosition = new Vector3(-sideOffset, transform.localPosition.y, 0);
+            transform.localRotation = Quaternion.Euler(0, 0, -90f); // Normal rotation
+        }
+        else
+        {
+            // PLAYER IS ON RIGHT
+            transform.localPosition = new Vector3(sideOffset, transform.localPosition.y, 0);
+            transform.localRotation = Quaternion.Euler(0, 180, -90f); // Flipped rotation
+        }
     }
+
+    public void TryAttack()
+    {
+        if (Time.time >= nextAttackTime)
+        {
+            if (swordAnimator != null)
+            {
+                swordAnimator.SetTrigger("isAttack");
+                nextAttackTime = Time.time + attackCooldown;
+            }
+        }
+    }
+
+    public void StartAttack() { isAttacking = true; hitList.Clear(); }
+    public void EndAttack() { isAttacking = false; }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 1. Only proceed if the gate is OPEN (isAttacking is true)
-        if (!isAttacking) return;
-
-        // 2. Look for Health script
-        Health victimHealth = other.GetComponentInParent<Health>();
-
-        // 3. Check tag and ensure we haven't hit this specific enemy in this swing yet
-        if (victimHealth != null && other.CompareTag("Enemy") && !hitList.Contains(other))
+        if (isAttacking && other.CompareTag(targetTag) && !hitList.Contains(other))
         {
-            victimHealth.TakeDamage(damagePerHit);
-            hitList.Add(other); // Add to list so they don't get hit twice
-            Debug.Log("Dealt " + damagePerHit + " damage to " + other.name);
+            Health victimHealth = other.GetComponent<Health>() ?? other.GetComponentInParent<Health>();
+            if (victimHealth != null)
+            {
+                victimHealth.TakeDamage(damagePerHit);
+                hitList.Add(other);
+            }
         }
     }
 }
