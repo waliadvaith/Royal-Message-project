@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Roll : MonoBehaviour
+public class roll : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rb;
