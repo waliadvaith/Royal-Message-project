@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fbf79616daaf54aa93d396fadfb7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
-  speed: 4
+  speed: 30
   yMin: -1000
   yMax: 1000
   xMax: -8000
@@ -518,7 +518,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!212 &154051332
 SpriteRenderer:
   serializedVersion: 2
@@ -1422,7 +1422,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!212 &765544626
 SpriteRenderer:
   serializedVersion: 2
@@ -1754,7 +1754,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!212 &1132411000
 SpriteRenderer:
   serializedVersion: 2
@@ -1921,7 +1921,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!95 &1224612135
 Animator:
   serializedVersion: 7
@@ -2063,7 +2063,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1288609980
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2275,7 +2275,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!212 &1562771480
 SpriteRenderer:
   serializedVersion: 2
@@ -2532,7 +2532,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!212 &1667072189
 SpriteRenderer:
   serializedVersion: 2
