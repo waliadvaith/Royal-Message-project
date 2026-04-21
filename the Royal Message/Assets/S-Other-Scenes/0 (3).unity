@@ -744,6 +744,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 597537337316648930, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
   m_PrefabInstance: {fileID: 4996056421075105268}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1110147526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110147527}
+  - component: {fileID: 1110147528}
+  m_Layer: 0
+  m_Name: WeaponHotbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110147527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110147526}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1008760005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110147528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110147526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb79092ed307a04eadd5d28f054f5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarManager
+  weapons:
+  - {fileID: 1148381260}
+  - {fileID: 0}
 --- !u!1001 &1127843320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -813,6 +860,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
+--- !u!1 &1148381260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6135386090158633759, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+  m_PrefabInstance: {fileID: 4996056421075105268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1253338321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2178,9 +2230,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: charactermodel
       objectReference: {fileID: 0}
+    - target: {fileID: 7260655632443897272, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: damagePerHit
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 597537337316648930, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1110147527}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
 --- !u!1660057539 &9223372036854775807

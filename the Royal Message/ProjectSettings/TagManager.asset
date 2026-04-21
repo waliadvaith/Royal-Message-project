@@ -3,10 +3,6 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-<<<<<<< HEAD
-=======
-  tags: []
->>>>>>> 10a7b71013d552b1a948ef878e29b001699015d5
   tags:
   - Enemy
   layers:
@@ -20,10 +16,6 @@ TagManager:
   - 
   - 
   - 
-  - Background
-  - Characters
-  - Weapons
-  - UI1
   - 
   - 
   - 
@@ -49,12 +41,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Main Objects
-    uniqueID: 3645750007
-    locked: 0
-  - name: Secondary Objects
-    uniqueID: 2685419529
     locked: 0
   m_RenderingLayers:
   - Default
