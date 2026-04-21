@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,6 +17,10 @@ TagManager:
   - 
   - 
   - 
+  - Background
+  - Characters
+  - Weapons
+  - UI1
   - 
   - 
   - 
