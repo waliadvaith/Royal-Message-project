@@ -8,7 +8,9 @@ public class Health : MonoBehaviour
 
     [Header("UI Connection")]
     public HealthBar healthBar; // Drag the Slider's HealthBar script here
-
+    [Header("Drops")]
+    public GameObject healthPotPrefab; // Drag your Red Block prefab here
+    [Range(0, 100)] public float dropChance = 30f; // 30% chance to drop
     void Awake()
     {
         // Set health before anything else happens
@@ -75,7 +77,21 @@ public class Health : MonoBehaviour
         else
         {
             // --- ENEMY/OTHER DEATH (Instant Destruction) ---
+            if (gameObject.CompareTag("Enemy"))
+            {
+                // Roll for a drop
+                if (Random.Range(0f, 100f) <= dropChance)
+                {
+                    if (healthPotPrefab != null)
+                    {
+                        Instantiate(healthPotPrefab, transform.position, Quaternion.identity);
+                    }
+                }
+
+                Destroy(gameObject);
+            }
             Destroy(gameObject);
+
         }
     }
 }

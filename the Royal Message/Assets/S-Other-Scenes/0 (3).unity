@@ -280,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 93483801}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.499, y: 0, z: 0}
+  m_LocalPosition: {x: 0.469, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -554,10 +554,6 @@ PrefabInstance:
     - target: {fileID: 3170559716519272986, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477729884681314804, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
-      propertyPath: detectionRange
-      value: 11111111
       objectReference: {fileID: 0}
     - target: {fileID: 7509550871837174964, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1189,17 +1185,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &1402364404 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5643533069063494921, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
-  m_PrefabInstance: {fileID: 1972637054}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1490836353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,10 +2036,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -1308042347399313931, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
-      propertyPath: fill
-      value: 
-      objectReference: {fileID: 1402364404}
     - target: {fileID: 2879228586114085019, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
       propertyPath: m_Name
       value: EVIL KNIGHT_0 (2)
@@ -2111,10 +2092,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1355731665}
-    - target: {fileID: 7951705370878726011, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
-      propertyPath: targetTag
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

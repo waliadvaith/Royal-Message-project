@@ -16,7 +16,7 @@ public class CrossbowScript : MonoBehaviour
         {
             AimAtMouse();
 
-            if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && Time.time >= nextFireTime)
+            if ((Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space)) && Time.time >= nextFireTime)
             {
                 Shoot();
                 nextFireTime = Time.time + fireRate;

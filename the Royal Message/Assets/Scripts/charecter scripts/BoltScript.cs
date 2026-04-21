@@ -29,7 +29,7 @@ public class BoltScript : MonoBehaviour
             {
                 enemyHP.TakeDamage(damage);
             }
-            Destroy(gameObject); // Poof on hit
+            Destroy(gameObject);// Poof on hit
         }
 
 
