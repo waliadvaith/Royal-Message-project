@@ -3,6 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
+<<<<<<< HEAD
+=======
+  tags: []
+>>>>>>> 10a7b71013d552b1a948ef878e29b001699015d5
   tags:
   - Enemy
   layers:
@@ -16,6 +20,10 @@ TagManager:
   - 
   - 
   - 
+  - Background
+  - Characters
+  - Weapons
+  - UI1
   - 
   - 
   - 

@@ -50,8 +50,10 @@ public class SwordScript : MonoBehaviour
 
     void UpdateEnemySwordOrientation()
     {
+        if (targetTransform == null) return;
         float targetX = targetTransform.position.x;
         float myX = transform.root.position.x;
+
 
         // Swapped the rotation logic to fix the "reversing" issue
         if (targetX < myX)

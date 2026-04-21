@@ -44,7 +44,38 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        Debug.Log(gameObject.name + " was defeated!");
-        Destroy(gameObject); // Deletes the enemy and their health bar
+        if (gameObject.CompareTag("Player"))
+        {
+            // --- PLAYER DEATH (Soft Death) ---
+            Debug.Log("Player has died. Triggering Death Screen.");
+
+            // 1. Stop Movement (prevents sliding after death)
+            if (GetComponent<Rigidbody2D>() != null)
+                GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+
+            // 2. Disable Controls and Scripts
+            // (Replace 'PlayerController' with your actual movement script name)
+            if (GetComponent<CharacterMovement>() != null)
+                GetComponent<CharacterMovement>().enabled = false;
+
+            // 3. Hide the character but keep the object alive
+            if (GetComponent<SpriteRenderer>() != null)
+                GetComponent<SpriteRenderer>().enabled = false;
+
+            // 4. Disable Colliders so enemies stop bumping into you
+            if (GetComponent<Collider2D>() != null)
+                GetComponent<Collider2D>().enabled = false;
+
+            // 5. Change Tag so enemies stop trying to attack you
+            gameObject.tag = "Untagged";
+
+            // 6. Show the Death Screen UI
+            // deathScreenUI.SetActive(true);
+        }
+        else
+        {
+            // --- ENEMY/OTHER DEATH (Instant Destruction) ---
+            Destroy(gameObject);
+        }
     }
 }
