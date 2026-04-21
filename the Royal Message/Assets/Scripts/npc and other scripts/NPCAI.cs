@@ -31,6 +31,7 @@ public class NPCAI : MonoBehaviour
         if (playerIsClose && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Interacting with NPC...");
+
       
         }
     }
