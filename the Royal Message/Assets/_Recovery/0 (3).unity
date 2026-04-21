@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 45927600}
   - component: {fileID: 45927602}
   - component: {fileID: 45927601}
+  - component: {fileID: 45927603}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -255,6 +256,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &45927603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45927599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e6f1299d52339448ff4675cf3e4945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::roll
+  speed: 5
+  isInvincible: 1
+  rollCooldown: 2
 --- !u!1 &387144638
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +318,7 @@ GameObject:
   - component: {fileID: 734936724}
   - component: {fileID: 734936726}
   - component: {fileID: 734936725}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,8 +373,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -861,6 +877,26 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &1424406214 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2960281589503791276, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+  m_PrefabInstance: {fileID: 4996056421075105268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1424406220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424406214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e6f1299d52339448ff4675cf3e4945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::roll
+  speed: 5
+  isInvincible: 1
+  rollCooldown: 0.1
 --- !u!1 &1490836353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,6 +1959,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2960281589503791276, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1424406220}
     - targetCorrespondingSourceObject: {fileID: 6135386090158633759, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1232880283}
