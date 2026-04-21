@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7446917847541209172}
   - component: {fileID: -1308042347399313931}
   - component: {fileID: 7477729884681314804}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EVIL KNIGHT_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -84,9 +84,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1656538969
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8452206207373491569, guid: 499bb5d520c9f4247a155cffb5b6522c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -157,7 +157,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 5
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
   moveSpeed: 2
   stopDistance: 1.5
-  detectionRange: 15
+  detectionRange: 1111111
 --- !u!1 &3326848789257753034
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 7659570311401711071}
   - component: {fileID: 8325346091621447328}
   - component: {fileID: 3393603599109606559}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 5666417433173082351}
   - component: {fileID: 1159891711358134352}
   - component: {fileID: 7951705370878726011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}

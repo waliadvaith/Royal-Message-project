@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour
 
     [Header("Flash Settings")]
     public Color flashColor = Color.white;
-    public float flashDuration = 0.2f; // How long the total fade takes
+    public float flashDuration = 0.2f;
     private Coroutine flashRoutine;
 
     public void SetMaxHealth(float health)
@@ -22,7 +22,21 @@ public class HealthBar : MonoBehaviour
 
     public void UpdateHealthBar(float health)
     {
+        // Force health to 0 if it's super low (prevents that "tiny sliver" look)
+        if (health <= 0.01f) health = 0;
+
         healthSlider.value = health;
+
+        // If dead, ensure the fill color is at the very start of the gradient
+        if (health <= 0)
+        {
+            if (flashRoutine != null) StopCoroutine(flashRoutine);
+            fill.color = gradient.Evaluate(0f);
+
+            // Optional: Hide the fill completely if it's at zero
+            // fill.enabled = false; 
+            return;
+        }
 
         if (gameObject.activeInHierarchy)
         {
@@ -34,24 +48,20 @@ public class HealthBar : MonoBehaviour
     private IEnumerator SmoothFlashRoutine()
     {
         float elapsed = 0f;
+
+        // Use normalizedValue (0 to 1) to get the correct color from the gradient
         Color targetColor = gradient.Evaluate(healthSlider.normalizedValue);
 
-        // 1. Immediately snap to flash color
         fill.color = flashColor;
 
-        // 2. Smoothly fade back to the gradient color
         while (elapsed < flashDuration)
         {
             elapsed += Time.deltaTime;
             float lerpPercent = elapsed / flashDuration;
-
-            // This blends between White and your Purple/Red gradient
             fill.color = Color.Lerp(flashColor, targetColor, lerpPercent);
-
             yield return null;
         }
 
-        // 3. Ensure it lands exactly on the gradient color
         fill.color = targetColor;
         flashRoutine = null;
     }
