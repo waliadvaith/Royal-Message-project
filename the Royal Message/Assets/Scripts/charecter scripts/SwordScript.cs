@@ -9,8 +9,7 @@ public class SwordScript : MonoBehaviour
     [Header("Combat Settings")]
     public float damagePerHit = 25f;
     public float attackCooldown = 1.0f;
-    [Tooltip("Set to 'Enemy' for Player, 'Player' for Enemies")]
-    public string targetTag = "Player";
+    public string targetTag = "Enemy"; // Set to 'Enemy' for Player, 'Player' for Enemies
 
     [Header("Positioning & Flipping")]
     public float sideOffset = 0.5f;
@@ -24,7 +23,7 @@ public class SwordScript : MonoBehaviour
     {
         if (swordAnimator == null) swordAnimator = GetComponent<Animator>();
 
-        // Only look for a target if this is an Enemy sword
+        // Only Enemies need to find a target to look at
         if (transform.root.CompareTag("Enemy"))
         {
             GameObject p = GameObject.FindGameObjectWithTag("Player");
@@ -34,39 +33,39 @@ public class SwordScript : MonoBehaviour
 
     void Update()
     {
-        // 1. POSITION & FLIP (ONLY for Enemies)
-        // This ensures the Player's sword stays exactly where you put it manually
+        // 1. ORIENTATION (Only for Enemies)
         if (transform.root.CompareTag("Enemy") && targetTransform != null)
         {
             UpdateEnemySwordOrientation();
         }
 
-        // 2. PLAYER INPUT
-        if (transform.root.CompareTag("Player") && Input.GetKeyDown(KeyCode.Space))
+        // 2. INPUT (Only for Player)
+        // This only runs when the Hotbar has this object "Active"
+        if (transform.root.CompareTag("Player"))
         {
-            TryAttack();
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                TryAttack();
+            }
         }
     }
 
     void UpdateEnemySwordOrientation()
     {
         if (targetTransform == null) return;
+
         float targetX = targetTransform.position.x;
         float myX = transform.root.position.x;
 
-
-        // Swapped the rotation logic to fix the "reversing" issue
-        if (targetX < myX)
+        if (targetX < myX) // Player is Left
         {
-            // PLAYER IS ON LEFT
             transform.localPosition = new Vector3(-sideOffset, transform.localPosition.y, 0);
-            transform.localRotation = Quaternion.Euler(0, 0, -90f); // Normal rotation
+            transform.localRotation = Quaternion.Euler(0, 0, -90f);
         }
-        else
+        else // Player is Right
         {
-            // PLAYER IS ON RIGHT
             transform.localPosition = new Vector3(sideOffset, transform.localPosition.y, 0);
-            transform.localRotation = Quaternion.Euler(0, 180, -90f); // Flipped rotation
+            transform.localRotation = Quaternion.Euler(0, 180, -90f);
         }
     }
 
@@ -82,6 +81,14 @@ public class SwordScript : MonoBehaviour
         }
     }
 
+    // Reset attacking state if the weapon is swapped mid-animation
+    void OnDisable()
+    {
+        isAttacking = false;
+        hitList.Clear();
+    }
+
+    // --- Animation Events ---
     public void StartAttack() { isAttacking = true; hitList.Clear(); }
     public void EndAttack() { isAttacking = false; }
 

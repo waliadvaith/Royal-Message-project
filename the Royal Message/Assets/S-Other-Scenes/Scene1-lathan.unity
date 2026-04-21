@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 43069466}
   - component: {fileID: 43069465}
   - component: {fileID: 43069464}
+  - component: {fileID: 43069469}
   m_Layer: 0
   m_Name: MC_0
   m_TagString: Untagged
@@ -302,6 +303,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43069469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43069462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f643c775fe4c0143bfe76058b4d2f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterMovementSideScroller
+  speed: 5
+  switchRate: 0.5
+  yMin: -2
+  yMax: 0.5
+  spriteRenderer: {fileID: 0}
 --- !u!1 &47622320
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +457,7 @@ GameObject:
   - component: {fileID: 154051332}
   - component: {fileID: 154051331}
   - component: {fileID: 154051330}
+  - component: {fileID: 154051334}
   m_Layer: 0
   m_Name: EVIL KNIGHT_0
   m_TagString: Untagged
@@ -507,7 +526,7 @@ Rigidbody2D:
   m_Mass: 1234
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 110.86
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -518,7 +537,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 6
 --- !u!212 &154051332
 SpriteRenderer:
   serializedVersion: 2
@@ -593,6 +612,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154051334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154051329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00097bba42cc13c408d26f4fbed4b705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAI
 --- !u!1 &195087392
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,11 +1019,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 34
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
-  orthographic size: 12.295989
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1017,7 +1048,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.86, y: 1.67, z: -10}
+  m_LocalPosition: {x: -11.9, y: 7.53, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
