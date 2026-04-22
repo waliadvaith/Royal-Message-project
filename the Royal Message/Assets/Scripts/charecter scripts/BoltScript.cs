@@ -2,36 +2,32 @@ using UnityEngine;
 
 public class BoltScript : MonoBehaviour
 {
-    public float speed = 15f;
+    public float speed = 20f;
     public float damage = 20f;
-    public float lifetime = 3f;
+    public float lifeTime = 2f;
 
     void Start()
     {
-        // Clean up the block so the scene doesn't get messy
-        Destroy(gameObject, lifetime);
+        // Destroy itself after a few seconds so the game doesn't lag
+        Destroy(gameObject, lifeTime);
     }
 
     void Update()
     {
-        // Moves forward (to the right of the block)
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        // Move forward based on where the crossbow was pointing
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Use your "Negative Damage" logic if you want it to heal!
-        // But for now, let's stick to damaging enemies.
         if (other.CompareTag("Enemy"))
         {
-            Health enemyHP = other.GetComponent<Health>() ?? other.GetComponentInParent<Health>();
+            Health enemyHP = other.GetComponent<Health>();
             if (enemyHP != null)
             {
                 enemyHP.TakeDamage(damage);
             }
-            Destroy(gameObject);// Poof on hit
+            Destroy(gameObject); // Poof!
         }
-
-
     }
 }

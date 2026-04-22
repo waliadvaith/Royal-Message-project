@@ -1,64 +1,102 @@
 using UnityEngine;
+using System.Collections;
 
 public class CrossbowScript : MonoBehaviour
 {
-    [Header("Settings")]
+    public enum WeaponState { Empty, Reloading, Loaded }
+    [Header("Debug Info")]
+    public WeaponState currentState = WeaponState.Empty;
+
+    [Header("References")]
     public GameObject boltPrefab;
     public Transform firePoint;
-    public float fireRate = 0.5f;
+    public Animator crossbowAnim;
+    public float visualOffset = 0f;
 
-    private float nextFireTime = 0f;
+    [Header("Timing")]
+    public float emptyDelay = 0.2f;
+
+    private bool isWaitingToReload = false;
 
     void Update()
     {
-        // Only the Player aims and shoots
-        if (transform.root.CompareTag("Player"))
-        {
-            AimAtMouse();
+        if (!transform.root.CompareTag("Player")) return;
 
-            if ((Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.Space)) && Time.time >= nextFireTime)
+        AimAtMouse();
+
+        if (currentState == WeaponState.Empty && !isWaitingToReload)
+        {
+            StartCoroutine(WaitAndReload());
+        }
+        else if (currentState == WeaponState.Reloading)
+        {
+            CheckReloadProgress();
+        }
+        else if (currentState == WeaponState.Loaded)
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                Shoot();
-                nextFireTime = Time.time + fireRate;
+                Fire();
             }
+        }
+    }
+
+    IEnumerator WaitAndReload()
+    {
+        isWaitingToReload = true;
+
+        // Ensure bool is false so we stay in Idle
+        crossbowAnim.SetBool("isReloading", false);
+
+        yield return new WaitForSeconds(emptyDelay);
+
+        currentState = WeaponState.Reloading;
+        crossbowAnim.SetBool("isReloading", true);
+
+        isWaitingToReload = false;
+    }
+
+    void CheckReloadProgress()
+    {
+        AnimatorStateInfo stateInfo = crossbowAnim.GetCurrentAnimatorStateInfo(0);
+
+        if (stateInfo.IsName("crossbowreload"))
+        {
+            if (stateInfo.normalizedTime >= 0.95f && !crossbowAnim.IsInTransition(0))
+            {
+                currentState = WeaponState.Loaded;
+            }
+        }
+    }
+
+    void Fire()
+    {
+        currentState = WeaponState.Empty;
+
+        // 1. THE FIX: Force the Animator to the "Idle" state IMMEDIATELY
+        // Replace "Idle" with the exact name of your empty/single-frame state
+        crossbowAnim.Play("Idle", 0, 0f);
+
+        // 2. Clear parameters
+        crossbowAnim.SetBool("isReloading", false);
+        crossbowAnim.SetTrigger("isFiring");
+
+        // 3. Spawn bolt
+        if (boltPrefab != null && firePoint != null)
+        {
+            Instantiate(boltPrefab, firePoint.position, transform.rotation * Quaternion.Euler(0, 0, 180));
         }
     }
 
     void AimAtMouse()
     {
-        // 1. Get Mouse Position in World Space
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        // 2. Calculate Direction
         Vector2 direction = (Vector2)(mousePos - transform.position);
-
-        // 3. Calculate Angle in Degrees
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle + visualOffset);
 
-        // 4. Apply Rotation
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-
-        // 5. Flip Fix (Optional)
-        // If the crossbow is pointing left, it will be upside down. 
-        // This flips the Y scale to keep it looking right-side up.
-        Vector3 localScale = Vector3.one;
-        if (angle > 90 || angle < -90)
-        {
-            localScale.y = -1f;
-        }
-        else
-        {
-            localScale.y = 1f;
-        }
-        transform.localScale = localScale;
-    }
-
-    void Shoot()
-    {
-        if (boltPrefab != null && firePoint != null)
-        {
-            // Spawn the bolt using the current rotation of the crossbow/firePoint
-            Instantiate(boltPrefab, firePoint.position, firePoint.rotation);
-        }
+        Vector3 s = transform.localScale;
+        s.y = (angle > 90 || angle < -90) ? -1f : 1f;
+        transform.localScale = s;
     }
 }
