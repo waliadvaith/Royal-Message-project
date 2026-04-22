@@ -185,12 +185,12 @@ TextureImporter:
       name: slash animation_0
       rect:
         serializedVersion: 2
-        x: 123
-        y: 31
-        width: 66
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 293
+        y: 22
+        width: 73
+        height: 105
+      alignment: 9
+      pivot: {x: 2, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
