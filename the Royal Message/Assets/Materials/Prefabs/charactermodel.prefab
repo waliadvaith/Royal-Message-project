@@ -200,6 +200,8 @@ MonoBehaviour:
   maxHealth: 300
   currentHealth: 0
   healthBar: {fileID: 0}
+  healthPotPrefab: {fileID: 0}
+  dropChance: 30
 --- !u!1 &5030770418786518129
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HotbarManager
   weapons:
   - {fileID: 6135386090158633759}
-  - {fileID: 0}
+  - {fileID: 8186819952604968472, guid: c2024410df587ef47b2f3d76e8848e4a, type: 3}
 --- !u!1 &6135386090158633759
 GameObject:
   m_ObjectHideFlags: 0

@@ -549,6 +549,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407624437860399682, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8452206207373491569, guid: 499bb5d520c9f4247a155cffb5b6522c, type: 3}
     - target: {fileID: 2879228586114085019, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
       propertyPath: m_Name
       value: EVIL KNIGHT_0 (1)
@@ -1610,6 +1614,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407624437860399682, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8452206207373491569, guid: 499bb5d520c9f4247a155cffb5b6522c, type: 3}
     - target: {fileID: 2879228586114085019, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
       propertyPath: m_Name
       value: EVIL KNIGHT_0 (2)
@@ -1679,6 +1687,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407624437860399682, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8452206207373491569, guid: 499bb5d520c9f4247a155cffb5b6522c, type: 3}
     - target: {fileID: 2879228586114085019, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
       propertyPath: m_Name
       value: EVIL KNIGHT_0 (3)
@@ -1748,6 +1760,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407624437860399682, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8452206207373491569, guid: 499bb5d520c9f4247a155cffb5b6522c, type: 3}
     - target: {fileID: 2879228586114085019, guid: 9c92e113632c8194ca99ccd88c9e463d, type: 3}
       propertyPath: m_Name
       value: EVIL KNIGHT_0
