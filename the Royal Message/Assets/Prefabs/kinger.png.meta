@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 4b7f832b814f6ce439676081f4dc9871
+guid: 54d2f7b27b988bf4da7b6d536b498009
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8701022951074305063
-    second: water tile pallet_0
+      213: -2824228450615026463
+    second: kinger_0
+  - first:
+      213: -5396482643529587897
+    second: kinger_1
+  - first:
+      213: -4790320868580934046
+    second: kinger_2
+  - first:
+      213: 6944617858850041213
+    second: kinger_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +161,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water tile pallet_0
+      name: kinger_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 6
+        y: 2
+        width: 20
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,184 +176,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9dbe1bad9b1cf3780800000000000000
-      internalID: -8701022951074305063
+      spriteID: 1ec1a8400335ec8d0800000000000000
+      internalID: -2824228450615026463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water tile pallet_1
+      name: kinger_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 39
+        y: 1
+        width: 18
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 09506f2b0ae922c4a8eaae08544d7b7c
-      internalID: 991105079
+      spriteID: 743abd3a0a7db15b0800000000000000
+      internalID: -5396482643529587897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water tile pallet_2
+      name: kinger_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 71
+        y: 1
+        width: 18
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4f90037d33648584c9e5107ec5d137a5
-      internalID: -1330731817
+      spriteID: 26eb71cdc8c558db0800000000000000
+      internalID: -4790320868580934046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water tile pallet_3
+      name: kinger_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 101
+        y: 1
+        width: 22
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 58457ba7251703b4cbe19e63def13352
-      internalID: 135050018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water tile pallet_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78358b55fe9a2fa45aaab1ef43d20f69
-      internalID: 1559884601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water tile pallet_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae586f105d9170b499c505578166d118
-      internalID: 1557039794
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water tile pallet_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8886ec123cd581346afc15c37e341662
-      internalID: -487312366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water tile pallet_7
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ce460516d7b47444b7e79008449357f
-      internalID: 911070503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water tile pallet_8
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cac6f7fa62f69649869691e0274b26e
-      internalID: 1396282457
+      spriteID: d7d2791062d306060800000000000000
+      internalID: 6944617858850041213
       vertices: []
       indices: 
       edges: []
@@ -353,7 +252,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b8b4c8a4a395a654dabe7f49c642e34c
+    spriteID: 4779a35aea100e449829a26618b71608
     internalID: 0
     vertices: []
     indices: 
@@ -361,19 +260,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      water tile pallet_0: -8701022951074305063
-      water tile pallet_1: 991105079
-      water tile pallet_2: -1330731817
-      water tile pallet_3: 135050018
-      water tile pallet_4: 1559884601
-      water tile pallet_5: 1557039794
-      water tile pallet_6: -487312366
-      water tile pallet_7: 911070503
-      water tile pallet_8: 1396282457
+      kinger_0: -2824228450615026463
+      kinger_1: -5396482643529587897
+      kinger_2: -4790320868580934046
+      kinger_3: 6944617858850041213
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
