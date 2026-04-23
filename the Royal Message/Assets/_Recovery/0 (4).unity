@@ -2186,6 +2186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: charactermodel
       objectReference: {fileID: 0}
+    - target: {fileID: 7260655632443897272, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: damagePerHit
+      value: 3.4028235e+38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
