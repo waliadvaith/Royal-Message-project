@@ -24,4 +24,10 @@ public class CharMovement : MonoBehaviour
        
         rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
     }
+
+    private void LateUpdate()
+    {
+
+    }
+
 }

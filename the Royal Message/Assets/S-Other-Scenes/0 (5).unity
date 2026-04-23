@@ -558,6 +558,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734936723}
   m_CullTransparentMesh: 1
+--- !u!114 &903246412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1172378203534832246, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+  m_PrefabInstance: {fileID: 4996056421075105268}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb79092ed307a04eadd5d28f054f5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarManager
 --- !u!1 &1005589306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,7 +1840,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
-      value: Barbarian (6)
+      value: BarbAlly
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1997,6 +2008,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1007820021671308521, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172378203534832246, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: posUp.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172378203534832246, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: posDown.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172378203534832246, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: posSide.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172378203534832246, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: posSide.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172378203534832246, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: sideOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: emptyDelay
       value: 0.1
@@ -2013,6 +2048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: charactermodel
       objectReference: {fileID: 0}
+    - target: {fileID: 7016785085896257186, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: hotbar
+      value: 
+      objectReference: {fileID: 903246412}
     - target: {fileID: 7016785085896257186, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: backSprite
       value: 
@@ -2032,6 +2071,10 @@ PrefabInstance:
     - target: {fileID: 7260655632443897272, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: attackCooldown
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8206782261000782356, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
