@@ -3,58 +3,32 @@ using System.Collections.Generic;
 
 public class SwordScript : MonoBehaviour
 {
-    public Animator swordAnimator;
+    [Header("Combat Settings")]
     public float damagePerHit = 25f;
     public float attackCooldown = 1.0f;
-    public string targetTag = "Enemy";
-    public float sideOffset = 0.5f;
+    public string targetTag = "Enemy"; // Set to "Player" for Barbarians
 
+    public Animator swordAnimator;
     private bool isAttacking = false;
     private float nextAttackTime = 0f;
     private List<Collider2D> hitList = new List<Collider2D>();
-    private Transform targetTransform;
+    private bool isPlayer;
 
     void Start()
     {
         if (swordAnimator == null) swordAnimator = GetComponent<Animator>();
-
-        // Enemies still need to find targets
-        if (transform.root.CompareTag("Enemy"))
-        {
-            GameObject p = GameObject.FindGameObjectWithTag("Player");
-            if (p != null) targetTransform = p.transform;
-        }
+        isPlayer = transform.root.CompareTag("Player");
     }
 
     void Update()
     {
-        // ENEMIES handle their own orientation
-        if (transform.root.CompareTag("Enemy") && targetTransform != null)
+        // Only the player uses keyboard input
+        if (isPlayer)
         {
-            UpdateEnemyOrientation();
-        }
-
-        // PLAYER just handles attack input
-        if (transform.root.CompareTag("Player") && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
-        {
-            TryAttack();
-        }
-    }
-
-    void UpdateEnemyOrientation()
-    {
-        float targetX = targetTransform.position.x;
-        float myX = transform.root.position.x;
-
-        if (targetX < myX)
-        {
-            transform.localPosition = new Vector3(-sideOffset, 0, 0);
-            transform.localRotation = Quaternion.Euler(0, 0, -90f);
-        }
-        else
-        {
-            transform.localPosition = new Vector3(sideOffset, 0, 0);
-            transform.localRotation = Quaternion.Euler(0, 180, -90f);
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                TryAttack();
+            }
         }
     }
 
@@ -62,12 +36,15 @@ public class SwordScript : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            swordAnimator.SetTrigger("isAttack");
-            nextAttackTime = Time.time + attackCooldown;
+            if (swordAnimator != null)
+            {
+                swordAnimator.SetTrigger("isAttack");
+                nextAttackTime = Time.time + attackCooldown;
+            }
         }
     }
 
-    void OnDisable() { isAttacking = false; }
+    // IMPORTANT: Make sure these are called by Animation Events in your Attack Clip!
     public void StartAttack() { isAttacking = true; hitList.Clear(); }
     public void EndAttack() { isAttacking = false; }
 
@@ -76,7 +53,11 @@ public class SwordScript : MonoBehaviour
         if (isAttacking && other.CompareTag(targetTag) && !hitList.Contains(other))
         {
             Health v = other.GetComponent<Health>() ?? other.GetComponentInParent<Health>();
-            if (v != null) { v.TakeDamage(damagePerHit); hitList.Add(other); }
+            if (v != null)
+            {
+                v.TakeDamage(damagePerHit);
+                hitList.Add(other);
+            }
         }
     }
 }

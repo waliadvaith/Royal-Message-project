@@ -2,43 +2,47 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public float moveSpeed = 3.0f;
-    public float stopDistance = 1.5f; // Distance where enemy stops to swing
-    public float detectionRange = 15.0f;
+    public float speed = 2.5f;
+    public float attackRange = 1.2f;
 
-    private Transform player;
-    private SwordScript mySword;
+    private Transform playerTransform;
     private Rigidbody2D rb;
+    private SwordScript mySword;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // Find the sword script on the child object
         mySword = GetComponentInChildren<SwordScript>();
 
-        // Find the player automatically
-        GameObject playerObj = GameObject.FindWithTag("Player");
-        if (playerObj != null) player = playerObj.transform;
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null) playerTransform = p.transform;
     }
 
     void FixedUpdate()
     {
-        if (player == null) return;
+        if (playerTransform == null) return;
 
-        float distance = Vector2.Distance(transform.position, player.position);
+        float distance = Vector2.Distance(transform.position, playerTransform.position);
 
-        // 1. Move toward the player if they are in range but not too close
-        if (distance < detectionRange && distance > stopDistance)
+        // Move toward player
+        if (distance > attackRange * 0.9f)
         {
-            Vector2 direction = (player.position - transform.position).normalized;
-            rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+            Vector2 dir = ((Vector2)playerTransform.position - rb.position).normalized;
+            rb.MovePosition(rb.position + dir * speed * Time.fixedDeltaTime);
         }
-        // 2. Attack if close enough
-        else if (distance <= stopDistance)
+
+        // Sword Logic
+        if (mySword != null)
         {
-            if (mySword != null)
+            // Face the player
+            float side = (playerTransform.position.x < transform.position.x) ? -0.5f : 0.5f;
+            float yRot = (playerTransform.position.x < transform.position.x) ? 0 : 180;
+            mySword.transform.localPosition = new Vector3(side, 0, 0);
+            mySword.transform.localRotation = Quaternion.Euler(0, yRot, -90f);
+
+            // Attack if in range
+            if (distance <= attackRange)
             {
-                // This replaces the "Spacebar" for the enemy
                 mySword.TryAttack();
             }
         }
