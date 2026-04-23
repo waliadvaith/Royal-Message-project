@@ -31,31 +31,32 @@ public class CharacterMovement : MonoBehaviour
         UpdateCharacterSprite();
     }
 
+    public HotbarManager hotbar; // Drag your Hotbar script here
+
     void UpdateCharacterSprite()
     {
-        // Only change sprite if the player is actually moving
         if (movement.magnitude > 0)
         {
-            // Prioritize Vertical sprites (Up/Down)
             if (movement.y > 0)
             {
                 characterSR.sprite = backSprite;
+                hotbar.UpdateWeaponVisuals("Up", false);
             }
             else if (movement.y < 0)
             {
                 characterSR.sprite = frontSprite;
+                hotbar.UpdateWeaponVisuals("Down", false);
             }
-            // If not moving up/down, check horizontal
             else if (movement.x != 0)
             {
                 characterSR.sprite = sideSprite;
-
-                // Flip the side sprite based on direction
-                // If x is negative (left), flipX = true. If positive (right), flipX = false.
-                characterSR.flipX = (movement.x < 0);
+                bool isLeft = movement.x < 0;
+                characterSR.flipX = isLeft;
+                hotbar.UpdateWeaponVisuals("Side", isLeft);
             }
         }
     }
+
 
     void FixedUpdate()
     {

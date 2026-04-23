@@ -3,15 +3,10 @@ using System.Collections.Generic;
 
 public class SwordScript : MonoBehaviour
 {
-    [Header("References")]
     public Animator swordAnimator;
-
-    [Header("Combat Settings")]
     public float damagePerHit = 25f;
     public float attackCooldown = 1.0f;
-    public string targetTag = "Enemy"; // Set to 'Enemy' for Player, 'Player' for Enemies
-
-    [Header("Positioning & Flipping")]
+    public string targetTag = "Enemy";
     public float sideOffset = 0.5f;
 
     private bool isAttacking = false;
@@ -23,7 +18,7 @@ public class SwordScript : MonoBehaviour
     {
         if (swordAnimator == null) swordAnimator = GetComponent<Animator>();
 
-        // Only Enemies need to find a target to look at
+        // Enemies still need to find targets
         if (transform.root.CompareTag("Enemy"))
         {
             GameObject p = GameObject.FindGameObjectWithTag("Player");
@@ -33,38 +28,32 @@ public class SwordScript : MonoBehaviour
 
     void Update()
     {
-        // 1. ORIENTATION (Only for Enemies)
+        // ENEMIES handle their own orientation
         if (transform.root.CompareTag("Enemy") && targetTransform != null)
         {
-            UpdateEnemySwordOrientation();
+            UpdateEnemyOrientation();
         }
 
-        // 2. INPUT (Only for Player)
-        // This only runs when the Hotbar has this object "Active"
-        if (transform.root.CompareTag("Player"))
+        // PLAYER just handles attack input
+        if (transform.root.CompareTag("Player") && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-            {
-                TryAttack();
-            }
+            TryAttack();
         }
     }
 
-    void UpdateEnemySwordOrientation()
+    void UpdateEnemyOrientation()
     {
-        if (targetTransform == null) return;
-
         float targetX = targetTransform.position.x;
         float myX = transform.root.position.x;
 
-        if (targetX < myX) // Player is Left
+        if (targetX < myX)
         {
-            transform.localPosition = new Vector3(-sideOffset, transform.localPosition.y, 0);
+            transform.localPosition = new Vector3(-sideOffset, 0, 0);
             transform.localRotation = Quaternion.Euler(0, 0, -90f);
         }
-        else // Player is Right
+        else
         {
-            transform.localPosition = new Vector3(sideOffset, transform.localPosition.y, 0);
+            transform.localPosition = new Vector3(sideOffset, 0, 0);
             transform.localRotation = Quaternion.Euler(0, 180, -90f);
         }
     }
@@ -73,22 +62,12 @@ public class SwordScript : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            if (swordAnimator != null)
-            {
-                swordAnimator.SetTrigger("isAttack");
-                nextAttackTime = Time.time + attackCooldown;
-            }
+            swordAnimator.SetTrigger("isAttack");
+            nextAttackTime = Time.time + attackCooldown;
         }
     }
 
-    // Reset attacking state if the weapon is swapped mid-animation
-    void OnDisable()
-    {
-        isAttacking = false;
-        hitList.Clear();
-    }
-
-    // --- Animation Events ---
+    void OnDisable() { isAttacking = false; }
     public void StartAttack() { isAttacking = true; hitList.Clear(); }
     public void EndAttack() { isAttacking = false; }
 
@@ -96,12 +75,8 @@ public class SwordScript : MonoBehaviour
     {
         if (isAttacking && other.CompareTag(targetTag) && !hitList.Contains(other))
         {
-            Health victimHealth = other.GetComponent<Health>() ?? other.GetComponentInParent<Health>();
-            if (victimHealth != null)
-            {
-                victimHealth.TakeDamage(damagePerHit);
-                hitList.Add(other);
-            }
+            Health v = other.GetComponent<Health>() ?? other.GetComponentInParent<Health>();
+            if (v != null) { v.TakeDamage(damagePerHit); hitList.Add(other); }
         }
     }
 }
