@@ -1,19 +1,17 @@
-using Unity.Mathematics;
 using UnityEngine;
 
-public class CharacterMovementSideScroller : MonoBehaviour
+public class CharacterMovementFreeMovement : MonoBehaviour
 {
     public float speed = 5.0f;
-    public float switchRate = 0.5f; // Seconds between frames
-    private float nextSwitch;
 
-    [Header("Movement Limits")]
-    public float yMin = -2.0f;
-    public float yMax = 0.5f;
+    [Header("Visuals")]
+    public SpriteRenderer characterSR; // Drag your SpriteRenderer here
+    public Sprite frontSprite;         // Facing down
+    public Sprite backSprite;          // Facing up
+    public Sprite sideSprite;          // Facing left/right
 
     private Rigidbody2D rb;
     private Vector2 movement;
-    public SpriteRenderer spriteRenderer;
 
     void Start()
     {
@@ -22,31 +20,43 @@ public class CharacterMovementSideScroller : MonoBehaviour
 
     void Update()
     {
+        // Get input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        UpdateCharacterSprite();
+    }
+
+    void UpdateCharacterSprite()
+    {
+        // Only change sprite if the player is actually moving
+        if (movement.magnitude > 0)
         {
-            if (Input.GetKey(KeyCode.RightArrow) && Time.time > nextSwitch)
+            // Prioritize Vertical sprites (Up/Down)
+            if (movement.y > 0)
             {
-                nextSwitch = Time.time + switchRate;
+                characterSR.sprite = backSprite;
+            }
+            else if (movement.y < 0)
+            {
+                characterSR.sprite = frontSprite;
+            }
+            // If not moving up/down, check horizontal
+            else if (movement.x != 0)
+            {
+                characterSR.sprite = sideSprite;
+
+                // Flip the side sprite based on direction (Left = flipped, Right = normal)
+                characterSR.flipX = (movement.x < 0);
             }
         }
-
     }
 
     void FixedUpdate()
     {
-
+        // Simplified movement without any position clamping
         Vector2 targetPosition = rb.position + movement.normalized * speed * Time.fixedDeltaTime;
 
-
-        targetPosition.y = Mathf.Clamp(targetPosition.y, yMin, yMax);
-
-
         rb.MovePosition(targetPosition);
-
-
-
-
     }
 }

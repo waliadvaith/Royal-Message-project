@@ -1527,11 +1527,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!212 &1842694228 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6601637688761996463, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-  m_PrefabInstance: {fileID: 4996056421075105268}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1887299815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,7 +1994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: emptyDelay
-      value: 0.1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: crossbowAnim
@@ -2013,22 +2008,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: charactermodel
       objectReference: {fileID: 0}
-    - target: {fileID: 7016785085896257186, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: backSprite
-      value: 
-      objectReference: {fileID: 4769318998693152943, guid: 219eb86a0ac26a14a85d57e0a38d9f56, type: 3}
-    - target: {fileID: 7016785085896257186, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: sideSprite
-      value: 
-      objectReference: {fileID: 2829232388215122354, guid: 873d635ff0993554f8b87084f57741d5, type: 3}
-    - target: {fileID: 7016785085896257186, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: characterSR
-      value: 
-      objectReference: {fileID: 1842694228}
-    - target: {fileID: 7016785085896257186, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: frontSprite
-      value: 
-      objectReference: {fileID: 6863246505373101655, guid: e037dc6b97c76bb4a9593fb80ce3d887, type: 3}
     - target: {fileID: 7260655632443897272, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: attackCooldown
       value: 0.5
