@@ -19,7 +19,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:the Royal Message/Assets/Prefabs/BOLT_0.prefab
 --- !u!4 &5605313065470298749
+=======
+--- !u!4 &1215774368921698351
+>>>>>>> Stashed changes:the Royal Message/Assets/Prefabs/CrossbowBolt.prefab
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
