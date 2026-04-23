@@ -5,7 +5,6 @@ public class CharMovement : MonoBehaviour
     private Rigidbody2D rb;
     public float speed = 5.0f;
     private Vector2 movement;
-
     void Start()
     {
         
@@ -24,10 +23,4 @@ public class CharMovement : MonoBehaviour
        
         rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
     }
-
-    private void LateUpdate()
-    {
-
-    }
-
 }
