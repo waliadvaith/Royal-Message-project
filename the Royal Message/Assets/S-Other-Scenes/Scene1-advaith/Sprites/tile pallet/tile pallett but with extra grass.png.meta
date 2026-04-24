@@ -211,8 +211,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: a2294fb040b4c584698d986e67e88dcc
       internalID: -1780245906
+=======
+      spriteID: f66ebf9ef3b82d945834f1ae3e822f9b
+      internalID: 28922038
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -233,8 +238,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 5a24117b8d52d0e45915eb8c9fd51a24
       internalID: -571655991
+=======
+      spriteID: 8c2ad5286701c814db94918bbb17e8f7
+      internalID: -2125404412
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -255,8 +265,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 1f8b15aa918821c4aa957ad94f75c631
       internalID: 1125228562
+=======
+      spriteID: a011c052b449cbf4a972eb224fe262a5
+      internalID: -2086191593
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -277,8 +292,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: a19c3284697b41a428bddcf2b04760b2
       internalID: 1437797621
+=======
+      spriteID: d4997f6db4ace9849a7e79e5790976f1
+      internalID: -260833568
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -299,8 +319,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 31f06d3124eadd34c8212070f43233a8
       internalID: 828838998
+=======
+      spriteID: e04ab8256f0ca80409649dbde4b562e2
+      internalID: -752929826
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -321,8 +346,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 788b33f542d416e44a769dfcdfd8cb0f
       internalID: 248132630
+=======
+      spriteID: 72b15009158929a43ad4f15bf88cbb8e
+      internalID: 1155981698
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -343,8 +373,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 717a05ccc76826f4eaf5c5a59e446c13
       internalID: -1974696088
+=======
+      spriteID: 99e40ed5a7f69d542a1e02c34ec3cb35
+      internalID: -475317575
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -365,8 +400,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: a0b420b680a91f14ea5cec5e382636fe
       internalID: 683814719
+=======
+      spriteID: b3c7dce16196b414d86c11bb7105ee36
+      internalID: -1972789649
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -375,7 +415,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<< Updated upstream
     spriteID: 893dea55ade69bb4baf8a445a4772831
+=======
+    spriteID: 76efb688f037fbd4694b0f1b65975223
+>>>>>>> Stashed changes
     internalID: 0
     vertices: []
     indices: 
@@ -385,6 +429,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
+<<<<<<< Updated upstream
         value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":4.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       tile pallett but with extra grass_0: -3646541174363163679
@@ -397,6 +442,20 @@ TextureImporter:
       tile pallett but with extra grass_7: 248132630
       tile pallett but with extra grass_8: -1974696088
       tile pallett but with extra grass_9: 683814719
+=======
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      tile pallett but with extra grass_0: -3646541174363163679
+      tile pallett but with extra grass_1: 1194915922463569831
+      tile pallett but with extra grass_2: 28922038
+      tile pallett but with extra grass_3: -2125404412
+      tile pallett but with extra grass_4: -2086191593
+      tile pallett but with extra grass_5: -260833568
+      tile pallett but with extra grass_6: -752929826
+      tile pallett but with extra grass_7: 1155981698
+      tile pallett but with extra grass_8: -475317575
+      tile pallett but with extra grass_9: -1972789649
+>>>>>>> Stashed changes
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
