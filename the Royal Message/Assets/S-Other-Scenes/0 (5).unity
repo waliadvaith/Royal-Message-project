@@ -1835,25 +1835,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1081075098404976176, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 6129623461325850513, guid: afc4605ad335f2647bc9bf110020a4c5, type: 3}
-    - target: {fileID: 2268049477181738487, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2268049477181738487, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2268049477181738487, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.703
-      objectReference: {fileID: 0}
-    - target: {fileID: 2268049477181738487, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.619
+    - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: emptyDelay
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2425990011548505505, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: healthBar
@@ -1863,14 +1847,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: charactermodel
       objectReference: {fileID: 0}
-    - target: {fileID: 6601637688761996463, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3573036208370857778, guid: 9f865cef4a5fa584ba1bb409fa2b609a, type: 3}
-    - target: {fileID: 7016785085896257186, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: frontSprite
-      value: 
-      objectReference: {fileID: 3573036208370857778, guid: 9f865cef4a5fa584ba1bb409fa2b609a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1932,13 +1908,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: pancakes
       objectReference: {fileID: 0}
-    - target: {fileID: 8198439031316736810, guid: 35259c962e73dd54c9607e3e39701b2a, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 8140536600831924283, guid: 35259c962e73dd54c9607e3e39701b2a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8198439031316736810, guid: 35259c962e73dd54c9607e3e39701b2a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198439031316736810, guid: 35259c962e73dd54c9607e3e39701b2a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

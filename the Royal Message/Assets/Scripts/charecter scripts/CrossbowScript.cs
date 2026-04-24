@@ -25,7 +25,6 @@ public class CrossbowScript : MonoBehaviour
 
     void OnEnable()
     {
-        // Fix for the glitchy animation: Force the animator to reset when equipped
         if (crossbowAnim != null)
         {
             crossbowAnim.Rebind();
@@ -39,7 +38,6 @@ public class CrossbowScript : MonoBehaviour
 
         AimAtMouse();
 
-        // Only reload if we actually HAVE ammo left
         if (currentState == WeaponState.Empty && !isWaitingToReload && currentAmmo > 0)
         {
             StartCoroutine(WaitAndReload());
@@ -61,12 +59,10 @@ public class CrossbowScript : MonoBehaviour
     {
         isWaitingToReload = true;
         crossbowAnim.SetBool("isReloading", false);
-
         yield return new WaitForSeconds(emptyDelay);
 
         currentState = WeaponState.Reloading;
         crossbowAnim.SetBool("isReloading", true);
-
         isWaitingToReload = false;
     }
 
@@ -84,10 +80,9 @@ public class CrossbowScript : MonoBehaviour
 
     void Fire()
     {
-        // Spend one ammo
         currentAmmo--;
-
         currentState = WeaponState.Empty;
+
         crossbowAnim.Play("Idle", 0, 0f);
         crossbowAnim.SetBool("isReloading", false);
         crossbowAnim.SetTrigger("isFiring");
@@ -98,12 +93,11 @@ public class CrossbowScript : MonoBehaviour
         }
     }
 
-    // Call this from your Pickup Script!
     public void AddAmmo(int amount)
     {
         currentAmmo += amount;
-        if (currentAmmo > maxAmmo) currentAmmo = maxAmmo;
-        Debug.Log("Ammo Picked Up! Total: " + currentAmmo);
+        currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
+        Debug.Log("Ammo added! Total: " + currentAmmo);
     }
 
     void AimAtMouse()
