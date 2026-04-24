@@ -11,7 +11,6 @@ public class HotbarManager : MonoBehaviour
     public float sideOffset = 0.5f;
     public float verticalOffset = -0.2f;
 
-    // Track the last horizontal side so the weapon doesn't "center" when moving purely Up/Down
     private bool lastWasLeft = false;
 
     void Start()
@@ -23,6 +22,7 @@ public class HotbarManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) SelectSlot(0);
         if (Input.GetKeyDown(KeyCode.Alpha2)) SelectSlot(1);
+        if (Input.GetKeyDown(KeyCode.Alpha3)) SelectSlot(2); // Added for potions/extras
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll > 0f) SelectSlot((currentSlot + 1) % weapons.Length);
@@ -32,6 +32,19 @@ public class HotbarManager : MonoBehaviour
     public void SelectSlot(int index)
     {
         if (index < 0 || index >= weapons.Length) return;
+
+        // --- ANIMATION GLITCH FIX ---
+        // If we are switching to a new weapon, reset its animator state
+        if (index != currentSlot && weapons[index] != null)
+        {
+            Animator anim = weapons[index].GetComponentInChildren<Animator>();
+            if (anim != null)
+            {
+                anim.Rebind();
+                anim.Update(0f);
+            }
+        }
+
         currentSlot = index;
 
         for (int i = 0; i < weapons.Length; i++)
@@ -40,6 +53,38 @@ public class HotbarManager : MonoBehaviour
         }
     }
 
+    // --- NEW PICKUP LOGIC ---
+    public bool AddItemToHotbar(GlobalPickup.ItemType type, int amount)
+    {
+        if (type == GlobalPickup.ItemType.Ammo)
+        {
+            CrossbowScript cb = GetComponentInChildren<CrossbowScript>(true);
+            if (cb != null)
+            {
+                cb.AddAmmo(amount);
+                return true;
+            }
+        }
+        else if (type == GlobalPickup.ItemType.HealthPotion)
+        {
+            // LOOK HERE: We find the PotionUse script on your "Holder" object
+            PotionUse pot = GetComponentInChildren<PotionUse>(true);
+
+            if (pot != null)
+            {
+                pot.potionCount += amount; // Add to inventory
+                Debug.Log("Potion added to slot. Total: " + pot.potionCount);
+                return true;
+            }
+            else
+            {
+                Debug.LogError("No PotionUse script found in any hotbar slot!");
+            }
+        }
+        return false;
+    }
+
+    // --- YOUR ORIGINAL VISUAL LOGIC (FIXES THE ERRORS) ---
     public void UpdateWeaponVisuals(string direction, bool isLeft)
     {
         GameObject currentWeapon = weapons[currentSlot];
@@ -47,14 +92,11 @@ public class HotbarManager : MonoBehaviour
 
         SpriteRenderer weaponSR = currentWeapon.GetComponent<SpriteRenderer>();
 
-        // 1. UPDATE THE SIDE TRACKER
-        // This ensures the weapon stays on the left/right even if we are only moving Up or Down
         if (direction == "Side")
         {
             lastWasLeft = isLeft;
         }
 
-        // 2. ALWAYS USE SIDE POSITIONING
         float xPos = lastWasLeft ? -sideOffset : sideOffset;
         currentWeapon.transform.localPosition = new Vector3(xPos, verticalOffset, 0);
 
@@ -63,10 +105,8 @@ public class HotbarManager : MonoBehaviour
         else
             currentWeapon.transform.localRotation = Quaternion.Euler(0, 180, -90f);
 
-        // 3. SORTING (The only thing that changes when moving Up)
         if (weaponSR != null)
         {
-            // Tucks behind the player when moving up, stays in front for everything else
             weaponSR.sortingOrder = (direction == "Up") ? playerBaseOrder - 1 : playerBaseOrder + 1;
         }
     }

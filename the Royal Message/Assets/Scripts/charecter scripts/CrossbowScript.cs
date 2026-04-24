@@ -4,6 +4,11 @@ using System.Collections;
 public class CrossbowScript : MonoBehaviour
 {
     public enum WeaponState { Empty, Reloading, Loaded }
+
+    [Header("Ammo Settings")]
+    public int currentAmmo = 10;
+    public int maxAmmo = 30;
+
     [Header("Debug Info")]
     public WeaponState currentState = WeaponState.Empty;
 
@@ -18,13 +23,24 @@ public class CrossbowScript : MonoBehaviour
 
     private bool isWaitingToReload = false;
 
+    void OnEnable()
+    {
+        // Fix for the glitchy animation: Force the animator to reset when equipped
+        if (crossbowAnim != null)
+        {
+            crossbowAnim.Rebind();
+            crossbowAnim.Update(0f);
+        }
+    }
+
     void Update()
     {
         if (!transform.root.CompareTag("Player")) return;
 
         AimAtMouse();
 
-        if (currentState == WeaponState.Empty && !isWaitingToReload)
+        // Only reload if we actually HAVE ammo left
+        if (currentState == WeaponState.Empty && !isWaitingToReload && currentAmmo > 0)
         {
             StartCoroutine(WaitAndReload());
         }
@@ -44,8 +60,6 @@ public class CrossbowScript : MonoBehaviour
     IEnumerator WaitAndReload()
     {
         isWaitingToReload = true;
-
-        // Ensure bool is false so we stay in Idle
         crossbowAnim.SetBool("isReloading", false);
 
         yield return new WaitForSeconds(emptyDelay);
@@ -59,7 +73,6 @@ public class CrossbowScript : MonoBehaviour
     void CheckReloadProgress()
     {
         AnimatorStateInfo stateInfo = crossbowAnim.GetCurrentAnimatorStateInfo(0);
-
         if (stateInfo.IsName("crossbowreload"))
         {
             if (stateInfo.normalizedTime >= 0.95f && !crossbowAnim.IsInTransition(0))
@@ -71,21 +84,26 @@ public class CrossbowScript : MonoBehaviour
 
     void Fire()
     {
+        // Spend one ammo
+        currentAmmo--;
+
         currentState = WeaponState.Empty;
-
-        // 1. THE FIX: Force the Animator to the "Idle" state IMMEDIATELY
-        // Replace "Idle" with the exact name of your empty/single-frame state
         crossbowAnim.Play("Idle", 0, 0f);
-
-        // 2. Clear parameters
         crossbowAnim.SetBool("isReloading", false);
         crossbowAnim.SetTrigger("isFiring");
 
-        // 3. Spawn bolt
         if (boltPrefab != null && firePoint != null)
         {
             Instantiate(boltPrefab, firePoint.position, transform.rotation * Quaternion.Euler(0, 0, 180));
         }
+    }
+
+    // Call this from your Pickup Script!
+    public void AddAmmo(int amount)
+    {
+        currentAmmo += amount;
+        if (currentAmmo > maxAmmo) currentAmmo = maxAmmo;
+        Debug.Log("Ammo Picked Up! Total: " + currentAmmo);
     }
 
     void AimAtMouse()
@@ -98,5 +116,17 @@ public class CrossbowScript : MonoBehaviour
         Vector3 s = transform.localScale;
         s.y = (angle > 90 || angle < -90) ? -1f : 1f;
         transform.localScale = s;
+    }
+
+    void OnDisable()
+    {
+        currentState = WeaponState.Empty;
+        isWaitingToReload = false;
+        StopAllCoroutines();
+
+        if (crossbowAnim != null)
+        {
+            crossbowAnim.SetBool("isReloading", false);
+        }
     }
 }

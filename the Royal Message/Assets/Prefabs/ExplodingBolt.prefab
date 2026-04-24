@@ -153,9 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 20
-  explosionDamage: 100
-  explosionRadius: 3
+  explosionDamage: 80
+  explosionRadius: 2
   targetTag: Enemy
+  explosionEffect: {fileID: 7253285722219741402, guid: 09bd09a298709cd4482a66ab7b2807f3, type: 3}
 --- !u!50 &5872105642829536711
 Rigidbody2D:
   serializedVersion: 5
