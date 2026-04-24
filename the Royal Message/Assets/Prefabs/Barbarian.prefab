@@ -187,7 +187,8 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 1192978220683885228}
   healthPotPrefab: {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
-  dropChance: 30
+  ammoPrefab: {fileID: 4289110270508570349, guid: 8a5514b04bd34ee4d9bc2109ca141733, type: 3}
+  dropChance: 100
 --- !u!114 &-1308042347399313931
 MonoBehaviour:
   m_ObjectHideFlags: 0

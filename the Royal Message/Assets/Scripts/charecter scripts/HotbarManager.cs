@@ -56,8 +56,10 @@ public class HotbarManager : MonoBehaviour
     // --- NEW PICKUP LOGIC ---
     public bool AddItemToHotbar(GlobalPickup.ItemType type, int amount)
     {
+        // AMMO: Direct to Crossbow
         if (type == GlobalPickup.ItemType.Ammo)
         {
+            // This finds the Crossbow even if you're currently holding the Sword
             CrossbowScript cb = GetComponentInChildren<CrossbowScript>(true);
             if (cb != null)
             {
@@ -65,20 +67,14 @@ public class HotbarManager : MonoBehaviour
                 return true;
             }
         }
+        // POTION: To the Potion Holder
         else if (type == GlobalPickup.ItemType.HealthPotion)
         {
-            // LOOK HERE: We find the PotionUse script on your "Holder" object
             PotionUse pot = GetComponentInChildren<PotionUse>(true);
-
             if (pot != null)
             {
-                pot.potionCount += amount; // Add to inventory
-                Debug.Log("Potion added to slot. Total: " + pot.potionCount);
+                pot.potionCount += amount;
                 return true;
-            }
-            else
-            {
-                Debug.LogError("No PotionUse script found in any hotbar slot!");
             }
         }
         return false;
