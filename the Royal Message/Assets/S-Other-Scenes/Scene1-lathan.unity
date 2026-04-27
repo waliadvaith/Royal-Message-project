@@ -367,9 +367,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: maxAmmo
+      value: 7388
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: boltPrefab
       value: 
-      objectReference: {fileID: 56273435712736134, guid: 0256f08a872e2d14da9ec2728c3a556f, type: 3}
+      objectReference: {fileID: 6927787576083194260, guid: 8571212a8e83e214288e62bd6d613923, type: 3}
+    - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: emptyDelay
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: currentAmmo
+      value: 10552
+      objectReference: {fileID: 0}
     - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: currentState
       value: 2
@@ -959,7 +971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 924908695422417738, guid: ca6a5701d01803745b3fd79f65d722b8, type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 12326
       objectReference: {fileID: 0}
     - target: {fileID: 924908695422417738, guid: ca6a5701d01803745b3fd79f65d722b8, type: 3}
       propertyPath: dropChance
