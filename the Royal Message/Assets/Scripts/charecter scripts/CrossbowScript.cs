@@ -42,6 +42,13 @@ public class CrossbowScript : MonoBehaviour
         {
             StartCoroutine(WaitAndReload());
         }
+        else if (currentState == WeaponState.Empty && currentAmmo <= 0)
+        {
+            if (crossbowAnim != null)
+            {
+                crossbowAnim.SetBool("isReloading", false);
+            }
+        }
         else if (currentState == WeaponState.Reloading)
         {
             CheckReloadProgress();
@@ -84,8 +91,12 @@ public class CrossbowScript : MonoBehaviour
         currentState = WeaponState.Empty;
 
         crossbowAnim.Play("Idle", 0, 0f);
-        crossbowAnim.SetBool("isReloading", false);
         crossbowAnim.SetTrigger("isFiring");
+
+        if (currentAmmo <= 0)
+        {
+            crossbowAnim.SetBool("isReloading", false);
+        }
 
         if (boltPrefab != null && firePoint != null)
         {
