@@ -501,6 +501,14 @@ PrefabInstance:
       value: Barbarian (10)
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
       value: 42.339996
       objectReference: {fileID: 0}
@@ -564,6 +572,14 @@ PrefabInstance:
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
       value: Barbarian (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
@@ -631,6 +647,14 @@ PrefabInstance:
       value: Barbarian (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
       value: -53
       objectReference: {fileID: 0}
@@ -694,6 +718,14 @@ PrefabInstance:
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
       value: Barbarian (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
@@ -883,6 +915,14 @@ PrefabInstance:
       value: Barbarian (9)
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.319996
       objectReference: {fileID: 0}
@@ -946,6 +986,14 @@ PrefabInstance:
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
       value: Barbarian (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1091,6 +1139,14 @@ PrefabInstance:
       value: Barbarian (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
       value: -40.99
       objectReference: {fileID: 0}
@@ -1154,6 +1210,14 @@ PrefabInstance:
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
       value: Barbarian (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1221,6 +1285,14 @@ PrefabInstance:
       value: Barbarian (14)
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
       value: 51.329994
       objectReference: {fileID: 0}
@@ -1284,6 +1356,14 @@ PrefabInstance:
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
       value: Barbarian (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1730,6 +1810,14 @@ PrefabInstance:
       value: Barbarian (12)
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.409996
       objectReference: {fileID: 0}
@@ -2135,6 +2223,14 @@ PrefabInstance:
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
       value: Barbarian
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
@@ -67099,6 +67195,14 @@ PrefabInstance:
       value: Barbarian (13)
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
       value: 48.509995
       objectReference: {fileID: 0}
@@ -67162,6 +67266,14 @@ PrefabInstance:
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
       value: Barbarian (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
@@ -67415,6 +67527,14 @@ PrefabInstance:
       value: Barbarian (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
       value: -46.91
       objectReference: {fileID: 0}
@@ -67478,6 +67598,14 @@ PrefabInstance:
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
       value: Barbarian (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
