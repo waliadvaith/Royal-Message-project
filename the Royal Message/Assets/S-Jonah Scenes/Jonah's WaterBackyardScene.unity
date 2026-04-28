@@ -1004,7 +1004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 597537337316648930, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -16.45
       objectReference: {fileID: 0}
     - target: {fileID: 597537337316648930, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1124,6 +1124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   ammoText: {fileID: 1497749861}
   potionText: {fileID: 986985347}
+  goldText: {fileID: 0}
+  goldCount: 0
   crossbow: {fileID: 1003165494}
   potion: {fileID: 1003165492}
 --- !u!114 &1096885606
