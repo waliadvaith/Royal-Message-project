@@ -69,7 +69,10 @@ public class Health : MonoBehaviour
 
             if (GetComponent<Collider2D>() != null)
                 GetComponent<Collider2D>().enabled = false;
-
+            // --- NEW CODE START ---
+            EndGameScreens screens = GetComponentInChildren<EndGameScreens>();
+            if (screens != null) screens.ActivateLose();
+            // --- NEW CODE END ---
             gameObject.tag = "Untagged";
         }
         else
