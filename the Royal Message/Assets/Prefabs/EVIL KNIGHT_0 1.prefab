@@ -186,7 +186,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1192978220683885228}
-  healthPotPrefab: {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
+  goldPrefab: {fileID: 0}
   dropChance: 30
 --- !u!114 &-1308042347399313931
 MonoBehaviour:
@@ -246,9 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eae0decb50a7244abbdb7b8a448a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  moveSpeed: 2
-  stopDistance: 1.5
-  detectionRange: 11111111
+  speed: 2.5
+  attackRange: 1.2
 --- !u!1 &3326848789257753034
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,11 +560,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8c4abdd8b43614f83af3d52333033d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwordScript
-  swordAnimator: {fileID: 5666417433173082351}
   damagePerHit: 25
   attackCooldown: 1
   targetTag: Player
-  sideOffset: 1
+  swordAnimator: {fileID: 5666417433173082351}
 --- !u!1 &7328113023096832826
 GameObject:
   m_ObjectHideFlags: 0
