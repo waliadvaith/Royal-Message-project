@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems; // ADDED: Required for UI detection
 
 public class CrossbowScript : MonoBehaviour
 {
@@ -23,6 +24,13 @@ public class CrossbowScript : MonoBehaviour
 
     private bool isWaitingToReload = false;
 
+    void Start()
+    {
+        // ADDED: Force mouse to be visible and unlocked at the start
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     void OnEnable()
     {
         if (crossbowAnim != null)
@@ -35,6 +43,19 @@ public class CrossbowScript : MonoBehaviour
     void Update()
     {
         if (!transform.root.CompareTag("Player")) return;
+
+        // ADDED: Safety check - if something hides the mouse, force it back
+        if (!Cursor.visible)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        // ADDED: Prevent aiming and firing if mouse is over UI (Shop Buttons)
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
 
         AimAtMouse();
 
@@ -65,11 +86,11 @@ public class CrossbowScript : MonoBehaviour
     IEnumerator WaitAndReload()
     {
         isWaitingToReload = true;
-        crossbowAnim.SetBool("isReloading", false);
+        if (crossbowAnim != null) crossbowAnim.SetBool("isReloading", false);
         yield return new WaitForSeconds(emptyDelay);
 
         currentState = WeaponState.Reloading;
-        crossbowAnim.SetBool("isReloading", true);
+        if (crossbowAnim != null) crossbowAnim.SetBool("isReloading", true);
         isWaitingToReload = false;
     }
 
@@ -90,12 +111,15 @@ public class CrossbowScript : MonoBehaviour
         currentAmmo--;
         currentState = WeaponState.Empty;
 
-        crossbowAnim.Play("Idle", 0, 0f);
-        crossbowAnim.SetTrigger("isFiring");
-
-        if (currentAmmo <= 0)
+        if (crossbowAnim != null)
         {
-            crossbowAnim.SetBool("isReloading", false);
+            crossbowAnim.Play("Idle", 0, 0f);
+            crossbowAnim.SetTrigger("isFiring");
+
+            if (currentAmmo <= 0)
+            {
+                crossbowAnim.SetBool("isReloading", false);
+            }
         }
 
         if (boltPrefab != null && firePoint != null)
@@ -106,9 +130,22 @@ public class CrossbowScript : MonoBehaviour
 
     public void AddAmmo(int amount)
     {
+        int previousAmmo = currentAmmo;
         currentAmmo += amount;
         currentAmmo = Mathf.Clamp(currentAmmo, 0, maxAmmo);
+
         Debug.Log("Ammo added! Total: " + currentAmmo);
+
+        // PATCH: If we were empty and stuck, kickstart the reload process immediately
+        if (previousAmmo <= 0 && currentAmmo > 0 && currentState == WeaponState.Empty)
+        {
+            if (crossbowAnim != null)
+            {
+                // Reset the bool to "flicker" it, forcing the Animator to see the change
+                crossbowAnim.SetBool("isReloading", false);
+                isWaitingToReload = false;
+            }
+        }
     }
 
     void AimAtMouse()

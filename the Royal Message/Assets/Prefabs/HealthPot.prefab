@@ -151,6 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54a07bab9cb95a498c3c4aa61307049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  type: 0
+  type: 1
   amount: 1
   destroyOnPickup: 1
