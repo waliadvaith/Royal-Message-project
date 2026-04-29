@@ -40,7 +40,7 @@ public class HotbarUI : MonoBehaviour
     public void RefreshUI()
     {
         if (goldText != null)
-            goldText.text = "Dirty Deeds Done Dirt Cheap: "+goldCount;
+            goldText.text = "Money: "+goldCount;
 
         if (crossbow != null && ammoText != null)
             ammoText.text = "Ammo: " + crossbow.currentAmmo;

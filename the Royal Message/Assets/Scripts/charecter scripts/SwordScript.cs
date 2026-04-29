@@ -13,11 +13,18 @@ public class SwordScript : MonoBehaviour
     private float nextAttackTime = 0f;
     private List<Collider2D> hitList = new List<Collider2D>();
     private bool isPlayer;
-
+    public HotbarManager hotbar;
     void Start()
     {
         if (swordAnimator == null) swordAnimator = GetComponent<Animator>();
         isPlayer = transform.root.CompareTag("Player");
+        // If the hotbar is on the main Player object, use this:
+        hotbar = GetComponentInParent<HotbarManager>();
+
+        if (hotbar == null)
+        {
+            Debug.LogError("Sword cannot find the HotbarManager! Make sure it's on the Player.");
+        }
     }
 
     void Update()
@@ -25,7 +32,7 @@ public class SwordScript : MonoBehaviour
         // Only the player uses keyboard input
         if (isPlayer)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && hotbar.canAttack)
             {
                 TryAttack();
             }

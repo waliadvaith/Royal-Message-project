@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 8678438818189228914}
   - component: {fileID: 8680636947160904006}
   - component: {fileID: 218110123851243602}
+  - component: {fileID: 1342736372028959175}
   m_Layer: 0
   m_Name: merchant
   m_TagString: Enemy
@@ -489,14 +490,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8659fb282da6e3c4f81423fefe954d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  potionPrice: 50
-  ammoPrice: 50
+  potionPrice: 25
+  ammoPrice: 25
   potionPrefab: {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
   ammoPrefab: {fileID: 4289110270508570349, guid: 8a5514b04bd34ee4d9bc2109ca141733, type: 3}
   dropPoint: {fileID: 9190622709448677919}
   floatingMenu: {fileID: 4568956409962310299}
   buyAmmoBtn: {fileID: 6401166144436836238}
   buyPotBtn: {fileID: 6193425335953561522}
+  weaponHolder: {fileID: 0}
 --- !u!61 &8680636947160904006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -560,6 +562,18 @@ MonoBehaviour:
   healthBar: {fileID: 8717754526216161717}
   goldPrefab: {fileID: 4289110270508570349, guid: 86c9f1a5e0aaba04382816861a8b41e3, type: 3}
   dropChance: 100
+--- !u!114 &1342736372028959175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085799468071700441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33035edf0a5eaf43a7dc240ebd553f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &7402058209558843792
 GameObject:
   m_ObjectHideFlags: 0

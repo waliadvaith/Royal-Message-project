@@ -186,8 +186,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1192978220683885228}
-  healthPotPrefab: {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
-  ammoPrefab: {fileID: 4289110270508570349, guid: 8a5514b04bd34ee4d9bc2109ca141733, type: 3}
+  goldPrefab: {fileID: 6586477059012332201, guid: 287a9f4eabde95244962d51d6cdf1ca9, type: 3}
   dropChance: 100
 --- !u!114 &-1308042347399313931
 MonoBehaviour:
@@ -249,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
   speed: 2.5
   attackRange: 1.2
+  detectionRange: 8
 --- !u!1 &3326848789257753034
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 8325346091621447328}
   - component: {fileID: 3393603599109606559}
   m_Layer: 9
-  m_Name: Canvas
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

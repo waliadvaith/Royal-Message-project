@@ -19,6 +19,7 @@ public class Trader : MonoBehaviour
 
     private HotbarUI ui;
 
+
     void Start()
     {
         if (floatingMenu != null) floatingMenu.SetActive(false);
@@ -74,4 +75,5 @@ public class Trader : MonoBehaviour
             Debug.Log("Ammo dropped!");
         }
     }
+
 }

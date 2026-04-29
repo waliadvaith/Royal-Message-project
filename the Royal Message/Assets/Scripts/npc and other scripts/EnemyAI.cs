@@ -4,16 +4,19 @@ public class EnemyAI : MonoBehaviour
 {
     public float speed = 2.5f;
     public float attackRange = 1.2f;
+    public float detectionRange = 7.0f; // NEW: How close the player needs to be to "wake up" the enemy
 
     private Transform playerTransform;
     private Rigidbody2D rb;
     private SwordScript mySword;
+    private bool isChasing = false; // Tracks if the enemy has seen the player
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         mySword = GetComponentInChildren<SwordScript>();
 
+        // We find the player, but we won't act until they are in range
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         if (p != null) playerTransform = p.transform;
     }
@@ -24,14 +27,28 @@ public class EnemyAI : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, playerTransform.position);
 
-        // Move toward player
+        // --- DETECTION LOGIC ---
+        if (!isChasing)
+        {
+            if (distance <= detectionRange)
+            {
+                isChasing = true;
+                Debug.Log(gameObject.name + " spotted the player!");
+            }
+            else
+            {
+                return; // Stay still if player is too far away
+            }
+        }
+
+        // --- MOVEMENT LOGIC (Only runs if isChasing is true) ---
         if (distance > attackRange * 0.9f)
         {
             Vector2 dir = ((Vector2)playerTransform.position - rb.position).normalized;
             rb.MovePosition(rb.position + dir * speed * Time.fixedDeltaTime);
         }
 
-        // Sword Logic
+        // --- SWORD LOGIC ---
         if (mySword != null)
         {
             // Face the player
@@ -46,5 +63,14 @@ public class EnemyAI : MonoBehaviour
                 mySword.TryAttack();
             }
         }
+    }
+
+    // Helper: Draws a blue circle in the editor so you can see the detection range
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

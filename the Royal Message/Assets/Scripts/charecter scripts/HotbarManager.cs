@@ -10,9 +10,11 @@ public class HotbarManager : MonoBehaviour
     public int playerBaseOrder = 10;
     public float sideOffset = 0.5f;
     public float verticalOffset = -0.2f;
+    [Header("Shop Settings")]
+    public GameObject weaponHolder;
 
     private bool lastWasLeft = false;
-
+    public bool canAttack = true;
     void Start()
     {
         SelectSlot(0);
@@ -105,5 +107,18 @@ public class HotbarManager : MonoBehaviour
         {
             weaponSR.sortingOrder = (direction == "Up") ? playerBaseOrder - 1 : playerBaseOrder + 1;
         }
+    }
+    
+     // NEW: Toggle for attacking
+
+    public void SetWeaponsActive(bool state)
+    {
+        if (weaponHolder != null)
+        {
+            weaponHolder.SetActive(state);
+        }
+
+        // Set canAttack to the same state as the visuals
+        canAttack = state;
     }
 }

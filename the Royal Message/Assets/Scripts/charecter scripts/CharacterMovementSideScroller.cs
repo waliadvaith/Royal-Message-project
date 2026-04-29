@@ -20,6 +20,10 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     public HotbarManager hotbar;
+    [Header("Camera Zoom Settings")]
+    public float normalZoom = 5f;   // Standard zoom for Level 1
+    public float castleZoom = 10f;  // Zoomed out for the Castle
+
 
     void Awake()
     {
@@ -37,17 +41,24 @@ public class CharacterMovement : MonoBehaviour
     // THIS IS THE FIX: This runs the millisecond the new scene is ready
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Loaded scene: " + scene.name);
+        // Find the camera attached to the player (or the Main Camera)
+        Camera cam = GetComponentInChildren<Camera>();
+        if (cam == null) cam = Camera.main;
 
-        // If the new scene is Jonah's Kingdom/Castle, kill the limits
-        if (scene.name.Contains("Kingdom") || scene.name.Contains("Castle"))
+        if (cam != null)
         {
-            useLimits = false;
-            Debug.Log("Limits Disabled for this scene.");
-        }
-        else
-        {
-            useLimits = true; // Keep them on for the starter area
+            // Check if the scene name is the Castle one
+            if (scene.name.Contains("Kingdom") || scene.name.Contains("Castle"))
+            {
+                cam.orthographicSize = castleZoom;
+                useLimits = false; // Also remove those world boundaries
+                Debug.Log("Camera Zoomed Out for Castle Scene");
+            }
+            else
+            {
+                cam.orthographicSize = normalZoom;
+                useLimits = true;
+            }
         }
     }
 
