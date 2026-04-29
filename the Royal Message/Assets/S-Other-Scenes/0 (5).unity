@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f67553d27843cc4dbc9c1e04e0896ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WalkableTilePaint
-  grass: {fileID: 11400000, guid: 3ffffe15ff5019442a2cac9f826d0014, type: 2}
+  grass: {fileID: 11400000, guid: 0081e724081e39b4eb254ea340902ccd, type: 2}
   topPath: {fileID: 11400000, guid: f2bd67a71a2485c4d9299a0ddec5eb0d, type: 2}
   centerPath: {fileID: 11400000, guid: eab8764c598bc754ea6bd1dd4b11085a, type: 2}
   bottomPath: {fileID: 11400000, guid: d05718539efb65d4b9bd83bcc0ae9c6d, type: 2}
