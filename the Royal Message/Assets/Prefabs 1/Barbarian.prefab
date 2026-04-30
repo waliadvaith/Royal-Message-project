@@ -246,9 +246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eae0decb50a7244abbdb7b8a448a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  speed: 2.5
+  speed: 5.5
   attackRange: 1.2
-  detectionRange: 8
+  detectionRange: 15
 --- !u!1 &3326848789257753034
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,10 +561,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8c4abdd8b43614f83af3d52333033d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwordScript
-  damagePerHit: 25
-  attackCooldown: 1
+  damagePerHit: 15
+  attackCooldown: 0.5
   targetTag: Player
   swordAnimator: {fileID: 5666417433173082351}
+  hotbar: {fileID: 0}
 --- !u!1 &7328113023096832826
 GameObject:
   m_ObjectHideFlags: 0
