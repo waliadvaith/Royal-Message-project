@@ -15,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - backround
   - 
   - 
   - 
@@ -47,6 +47,12 @@ TagManager:
     locked: 0
   - name: Main Objects
     uniqueID: 1059167005
+    locked: 0
+  - name: backrounds
+    uniqueID: 2234702627
+    locked: 0
+  - name: ui things
+    uniqueID: 500387537
     locked: 0
   m_RenderingLayers:
   - Default
