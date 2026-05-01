@@ -230,7 +230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 42.599976, y: -15.146973}
+  m_AnchoredPosition: {x: 42.599976, y: -15.146988}
   m_SizeDelta: {x: 126.02, y: 20}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &45927601
@@ -1126,11 +1126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5becccef669a6964383f097b742dfbc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  MoralityScore: 0
-  BountyLevel: 0
-  MaxMorality: 50
-  MinMorality: -50
-  BountyHunt: {fileID: 1820977613}
 --- !u!4 &1097701308
 Transform:
   m_ObjectHideFlags: 0
@@ -2145,7 +2140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BountyHunterManager
   enemyPrefab: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
   spawnInterval: 10
-  spawnDistance: 10
+  spawnDistance: 0
   currentBountyLevel: 1
 --- !u!4 &1820977614
 Transform:
@@ -2695,20 +2690,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: maxAmmo
-      value: 9999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: boltPrefab
       value: 
-      objectReference: {fileID: 6927787576083194260, guid: 8571212a8e83e214288e62bd6d613923, type: 3}
+      objectReference: {fileID: 56273435712736134, guid: 0256f08a872e2d14da9ec2728c3a556f, type: 3}
     - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: emptyDelay
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: currentAmmo
-      value: 9999999
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2425990011548505505, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: healthBar

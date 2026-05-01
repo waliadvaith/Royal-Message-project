@@ -20,18 +20,18 @@ public class MoralityBar : MonoBehaviour
 
     void Update()
     {
-        // Sync the slider with the Global Morality Score
-        float currentScore = MoralityManager.MoralityScore;
-        moralitySlider.value = currentScore;
 
-        // Update the color based on the position (Red for evil, Green for good)
+        if (MoralityManager.Instance != null)
+        {
+            float currentScore = MoralityManager.Instance.MoralityScore;
+            moralitySlider.value = currentScore;
+        }
+
         if (fill != null)
         {
-            // normalizedValue converts the score (like -50 to 50) to 0 to 1 for the gradient
             fill.color = gradient.Evaluate(moralitySlider.normalizedValue);
-
-            // Hide if it hits the absolute bottom (optional)
             fill.enabled = (moralitySlider.value > moralitySlider.minValue);
         }
     }
+
 }

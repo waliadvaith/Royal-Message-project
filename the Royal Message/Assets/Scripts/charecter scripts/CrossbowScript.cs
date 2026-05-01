@@ -76,7 +76,7 @@ public class CrossbowScript : MonoBehaviour
         }
         else if (currentState == WeaponState.Loaded)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButton(0))
             {
                 Fire();
             }
