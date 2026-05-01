@@ -106,14 +106,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3999d75a741a7994dac2d1dac2667152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrossbowScript
-  currentAmmo: 10
-  maxAmmo: 10000
+  currentAmmo: 9999999
+  maxAmmo: 9999999
   currentState: 0
   boltPrefab: {fileID: 6927787576083194260, guid: 8571212a8e83e214288e62bd6d613923, type: 3}
   firePoint: {fileID: 1747840475000988621}
   crossbowAnim: {fileID: 3997111322319627072}
   visualOffset: 180
-  emptyDelay: 0.5
+  emptyDelay: 1
 --- !u!95 &3997111322319627072
 Animator:
   serializedVersion: 7
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fbf79616daaf54aa93d396fadfb7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
-  speed: 5
+  speed: 3
   useLimits: 1
   yMin: -1.5
   yMax: 3.5
@@ -441,6 +441,8 @@ MonoBehaviour:
   backSprite: {fileID: 4769318998693152943, guid: 219eb86a0ac26a14a85d57e0a38d9f56, type: 3}
   sideSprite: {fileID: 2829232388215122354, guid: 873d635ff0993554f8b87084f57741d5, type: 3}
   hotbar: {fileID: 1172378203534832246}
+  normalZoom: 5
+  castleZoom: 10
 --- !u!61 &6369497639035727828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -597,6 +599,8 @@ MonoBehaviour:
   playerBaseOrder: 10
   sideOffset: 1
   verticalOffset: -0.2
+  weaponHolder: {fileID: 0}
+  canAttack: 1
 --- !u!1 &5312435553349240231
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +636,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.57, y: 2.89}
-  m_SizeDelta: {x: 1313.03, y: 917.1}
+  m_SizeDelta: {x: 1600, y: 917.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5115027663904648010
 CanvasRenderer:
@@ -847,6 +851,7 @@ MonoBehaviour:
   attackCooldown: 0.5
   targetTag: Enemy
   swordAnimator: {fileID: 5479079823869283557}
+  hotbar: {fileID: 0}
 --- !u!1 &6489859939439115516
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c911ab861d6fb114098e37f49c1799c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  healAmount: 50
+  healAmount: 100
   potionCount: 0
 --- !u!212 &1081075098404976176
 SpriteRenderer:
@@ -988,7 +993,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1313.03, y: 913}
+  m_SizeDelta: {x: 1600, y: 913}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4130164467341551439
 CanvasRenderer:
@@ -1086,7 +1091,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1059167005
   m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &1430230946745636778

@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eae0decb50a7244abbdb7b8a448a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  speed: 5.5
+  speed: 3.1
   attackRange: 1.2
   detectionRange: 15
 --- !u!1 &3326848789257753034
