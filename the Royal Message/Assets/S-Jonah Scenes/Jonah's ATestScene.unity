@@ -477,7 +477,7 @@ PrefabInstance:
     - target: {fileID: 3372050263004817083, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 914534316}
     - target: {fileID: 7016785085896257186, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: xMax
       value: -300
@@ -43649,7 +43649,7 @@ Transform:
   m_GameObject: {fileID: 1674542507}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.97, y: 9.6, z: 0}
+  m_LocalPosition: {x: 26, y: 10, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43689,7 +43689,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.005542636}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -43699,7 +43699,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.18, y: 4.1}
+  m_Size: {x: 3.5, y: 4.2}
   m_EdgeRadius: 0
 --- !u!1 &1901959007
 GameObject:
