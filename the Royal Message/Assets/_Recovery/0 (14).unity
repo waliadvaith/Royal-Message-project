@@ -2146,7 +2146,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
   spawnInterval: 10
   spawnDistance: 10
-  currentBountyLevel: 20
+  currentBountyLevel: 1000
 --- !u!4 &1820977614
 Transform:
   m_ObjectHideFlags: 0
@@ -2693,14 +2693,6 @@ PrefabInstance:
     - target: {fileID: 597537337316648930, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: boltPrefab
-      value: 
-      objectReference: {fileID: 56273435712736134, guid: 0256f08a872e2d14da9ec2728c3a556f, type: 3}
-    - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
-      propertyPath: emptyDelay
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2425990011548505505, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: healthBar
