@@ -1061,7 +1061,7 @@ PrefabInstance:
       addedObject: {fileID: 1587792197}
     - targetCorrespondingSourceObject: {fileID: 2960281589503791276, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1587792196}
+      addedObject: {fileID: 1587792199}
   m_SourcePrefab: {fileID: 100100000, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
 --- !u!1 &1021974968
 GameObject:
@@ -1948,23 +1948,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2960281589503791276, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
   m_PrefabInstance: {fileID: 953103356}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &1587792196
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587792189}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: 851e89ffd9759f945b6facb11cd563c9, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 851e89ffd9759f945b6facb11cd563c9, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!95 &1587792197
 Animator:
   serializedVersion: 7
@@ -2000,6 +1983,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::movethisway
   animator: {fileID: 0}
+--- !u!114 &1587792199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587792189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b4ad10155961c4ba834f92ee6c93d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::movethisway
+  animator: {fileID: 1587792197}
 --- !u!1 &1746678763
 GameObject:
   m_ObjectHideFlags: 0
