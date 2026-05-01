@@ -1,13 +1,18 @@
+using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class House : MonoBehaviour
 {
     public GameObject[] itemsToSpawn;
     private bool isNearHouse = false;
+    public SpriteRenderer rb;
+    private CharacterMovementFreeMovement freeMovement;
     
     void Start()
     {
-
+        rb.GetComponent<SpriteRenderer>();
+        freeMovement = GetComponent<CharacterMovementFreeMovement>();
     }
 
     void Update()
@@ -15,7 +20,8 @@ public class House : MonoBehaviour
         // Check if player is near a house and presses the 'E' key
         if (isNearHouse && Input.GetKeyDown(KeyCode.E))
         {
-            GenerateRandomItem();
+          CompareTag("Player");
+          GenerateRandomItem();
         }
     }
 
@@ -30,22 +36,15 @@ public class House : MonoBehaviour
         Instantiate(itemsToSpawn[randomIndex], transform.position, Quaternion.identity);
     }
 
+
     // Detect proximity using Trigger Colliders
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("house"))
         {
+            Debug.Log("the player is near the house");
             isNearHouse = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("house"))
-        {
-            isNearHouse = false;
         }
     }
    
 }
-

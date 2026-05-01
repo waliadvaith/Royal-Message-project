@@ -2,20 +2,53 @@ using UnityEngine;
 
 public class MoralityManager : MonoBehaviour
 {
+    
+    public static MoralityManager Instance;
 
-    public static int MoralityScore = 0;
-    public static int BountyLevel = 0;
+    public int MoralityScore = 0;
+    public int BountyLevel = 0;
+    public int MaxMorality = 50;
+    public int MinMorality = -50;
+    public BountyHunterManager BountyHunt;
 
-    public static void AddMorality(int amount)
+    private void Awake()
     {
+        
+        if (Instance == null) Instance = this;
+    }
+
+    // 3. Remove 'static' from the method
+    public void AddMorality(int amount)
+    {
+        
         MoralityScore += amount;
 
+        
+        MoralityScore = Mathf.Clamp(MoralityScore, MinMorality, MaxMorality);
 
-        if (MoralityScore < -10)
+
+        if (BountyHunt != null)
         {
-            BountyLevel = Mathf.Abs(MoralityScore) / 5;
+            
+            if (MoralityScore < 10)
+            {
+                float evilFactor = Mathf.Abs(MoralityScore) / (float)Mathf.Abs(MinMorality);
+                BountyHunt.currentBountyLevel = Mathf.RoundToInt(Mathf.Pow(evilFactor, 2) * 5);
+            }
+            else
+            {
+                
+                BountyHunt.currentBountyLevel = 0;
+            }
         }
 
-        Debug.Log($"Global Morality Updated! Current Score: {MoralityScore} | Bounty: {BountyLevel}");
     }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q)) AddMorality(-10);
+        if (Input.GetKeyDown(KeyCode.E)) AddMorality(10);
+    }
+
 }
