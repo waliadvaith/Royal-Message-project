@@ -1,50 +1,71 @@
-using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.XR;
+using TMPro; // Make sure you have TextMeshPro installed!
 
 public class House : MonoBehaviour
 {
-    public GameObject[] itemsToSpawn;
-    private bool isNearHouse = false;
-    public SpriteRenderer rb;
-    private CharacterMovementFreeMovement freeMovement;
-    
+    [Header("Loot Settings")]
+    public GameObject coinPrefab;    // Drag your Coin Prefab here
+    public Transform dropPoint;      // Create an empty child object where coins pop out
+    public int minCoins = 3;
+    public int maxCoins = 8;
+    public int moralityLoss = -5;
+
+    [Header("UI Reference")]
+    public GameObject lootPrompt;    // A small Canvas/Text over the house
+    public MoralityManager MoralityManager;
+    private bool canLoot = false;
+    private bool isLooted = false;
+
     void Start()
     {
-        rb.GetComponent<SpriteRenderer>();
-        freeMovement = GetComponent<CharacterMovementFreeMovement>();
+        if (lootPrompt != null) lootPrompt.SetActive(false);
     }
 
     void Update()
     {
-        // Check if player is near a house and presses the 'E' key
-        if (isNearHouse && Input.GetKeyDown(KeyCode.E))
+        if (canLoot && !isLooted && Input.GetKeyDown(KeyCode.E))
         {
-          CompareTag("Player");
-          GenerateRandomItem();
+            LootHouse();
         }
     }
 
-    void GenerateRandomItem()
+    void LootHouse()
     {
-        if (itemsToSpawn.Length == 2) return;
+        isLooted = true;
+        if (lootPrompt != null) lootPrompt.SetActive(false);
 
-        // Select a random index from the array
-        int randomIndex = Random.Range(2, itemsToSpawn.Length);
-        
-        // Spawn the random item at the current position
-        Instantiate(itemsToSpawn[randomIndex], transform.position, Quaternion.identity);
+        // 1. Reduce Morality
+        MoralityManager.AddMorality(moralityLoss);
+
+        // 2. Spawn physical coins
+        int amount = Random.Range(minCoins, maxCoins);
+        for (int i = 0; i < amount; i++)
+        {
+            GameObject coin = Instantiate(coinPrefab, dropPoint.position, Quaternion.identity);
+
+            // Add a little "pop" force so they scatter
+
+        }
+
+        // 3. Visual Feedback (Dim the house)
+        GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.3f, 0.3f);
     }
 
-
-    // Detect proximity using Trigger Colliders
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("house"))
+        if (other.CompareTag("Player") && !isLooted)
         {
-            Debug.Log("the player is near the house");
-            isNearHouse = true;
+            canLoot = true;
+            if (lootPrompt != null) lootPrompt.SetActive(true);
         }
     }
-   
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            canLoot = false;
+            if (lootPrompt != null) lootPrompt.SetActive(false);
+        }
+    }
 }
