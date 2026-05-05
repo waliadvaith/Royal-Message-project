@@ -1771,6 +1771,33 @@ MonoBehaviour:
   goldCount: 0
   crossbow: {fileID: 1895429078}
   potion: {fileID: 216480143}
+--- !u!1 &1552099131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2960281589503791276, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+  m_PrefabInstance: {fileID: 4996056421075105268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1552099132
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552099131}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7df0d97a28f4335459c64950fbb36b0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 1
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1567378514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2808,7 +2835,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2960281589503791276, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1552099132}
   m_SourcePrefab: {fileID: 100100000, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
 --- !u!1001 &7844667668252774337
 PrefabInstance:
