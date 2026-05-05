@@ -5,6 +5,7 @@ public class EndGameScreens : MonoBehaviour
 {
     public GameObject winPanel;  // Drag your "You Win" child object here
     public GameObject losePanel; // Drag your "Game Over" child object here
+    public GameObject start;
 
     void Start()
     {
