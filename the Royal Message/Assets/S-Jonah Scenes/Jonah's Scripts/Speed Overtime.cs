@@ -1,5 +1,6 @@
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class SpeedOvertime : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class SpeedOvertime : MonoBehaviour
     public SpriteRenderer characterSR;
     private SpriteRenderer rb;
     public float time = 0.00f;
-    public float additonalspeed = +2.50f;
+    public float increase;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,17 +29,23 @@ public class SpeedOvertime : MonoBehaviour
 
         
         // happens if it has reached a current amount of time
-        if(time > 30.0f)
+        if(time > 20.0f)
         {
-            CharacterMovementScript.speed = Time.deltaTime * 2 * additionalspeed;
+            increase = 3.0f * Time.deltaTime;
+            CharacterMovementScript.speed = increase * Time.deltaTime;
             Debug.Log("you been granted even more speed");
         }
-            if(time >= 18.0f)
+            if(time >= 10.0f)
             {
-                CharacterMovementScript.speed = Time.deltaTime * additionalspeed;
-                Debug.Log("you been granted more speed");
+                    if(time < 20.0f)
+                    {
+                        increase = 2.0f * Time.deltaTime;
+                        CharacterMovementScript.speed = increase * Time.deltaTime;
+                        Debug.Log("you been granted more speed");
+                    }
+                
             }
-        if (time < 9.0f)
+        if (time < 10.0f)
         {
             Debug.Log("no speed gained yet");
         }

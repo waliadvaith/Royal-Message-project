@@ -552,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.629997
+      value: -29.129997
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.y
@@ -43685,7 +43685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.2
+      value: -25.7
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.y
@@ -43766,7 +43766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.5
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.y
@@ -44307,7 +44307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.5
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.y
@@ -44402,7 +44402,7 @@ MonoBehaviour:
   minCoins: 3
   maxCoins: 8
   moralityLoss: -5
-  lootPrompt: {fileID: 0}
+  promptText: {fileID: 0}
   MoralityManager: {fileID: 0}
 --- !u!212 &1674542509
 SpriteRenderer:
@@ -44560,7 +44560,7 @@ MonoBehaviour:
   CharacterMovementScript: {fileID: 1757536074}
   characterSR: {fileID: 1757536075}
   time: 0
-  additonalspeed: 2.5
+  increase: 0
 --- !u!1 &1806956251
 GameObject:
   m_ObjectHideFlags: 0
@@ -44631,7 +44631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.5
+      value: -23
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.y
