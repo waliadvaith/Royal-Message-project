@@ -1,29 +1,52 @@
 using UnityEngine;
-using TMPro; // Make sure you have TextMeshPro installed!
+using TMPro;
 
-public class House : MonoBehaviour
+public class HouseLoot : MonoBehaviour
 {
     [Header("Loot Settings")]
-    public GameObject coinPrefab;    // Drag your Coin Prefab here
-    public Transform dropPoint;      // Create an empty child object where coins pop out
+    public GameObject coinPrefab;
+    public Transform dropPoint;
     public int minCoins = 3;
     public int maxCoins = 8;
     public int moralityLoss = -5;
 
     [Header("UI Reference")]
-    public GameObject lootPrompt;    // A small Canvas/Text over the house
+    public TextMeshProUGUI promptText;
     public MoralityManager MoralityManager;
+
     private bool canLoot = false;
     private bool isLooted = false;
+    private bool isLocked = false;
+    private bool hasGeneratedLockStatus = false;
 
     void Start()
     {
-        if (lootPrompt != null) lootPrompt.SetActive(false);
+        if (promptText != null) promptText.gameObject.SetActive(false);
+
+        // Roll for lock status ONCE when the house is created
+        DetermineLockStatus();
+    }
+
+    void DetermineLockStatus()
+    {
+        // Multiplied by 2: so -50 becomes 100%
+        float lockChance = MoralityManager.MoralityScore < 0 ? Mathf.Abs(MoralityManager.MoralityScore) * 1.5f : 0;
+
+        if (Random.Range(0, 100) < lockChance)
+        {
+            isLocked = true;
+        }
+        else
+        {
+            isLocked = false;
+        }
+
+        hasGeneratedLockStatus = true;
     }
 
     void Update()
     {
-        if (canLoot && !isLooted && Input.GetKeyDown(KeyCode.E))
+        if (canLoot && !isLooted && !isLocked && Input.GetKeyDown(KeyCode.E))
         {
             LootHouse();
         }
@@ -32,23 +55,19 @@ public class House : MonoBehaviour
     void LootHouse()
     {
         isLooted = true;
-        if (lootPrompt != null) lootPrompt.SetActive(false);
+        if (promptText != null) promptText.gameObject.SetActive(false);
 
-        // 1. Reduce Morality
+        // Reference to the updated MoralityScore
         MoralityManager.AddMorality(moralityLoss);
 
-        // 2. Spawn physical coins
         int amount = Random.Range(minCoins, maxCoins);
         for (int i = 0; i < amount; i++)
         {
-            GameObject coin = Instantiate(coinPrefab, dropPoint.position, Quaternion.identity);
-
-            // Add a little "pop" force so they scatter
-
+            // Simple spawn (No Rigidbody forces)
+            Instantiate(coinPrefab, dropPoint.position, Quaternion.identity);
         }
 
-        // 3. Visual Feedback (Dim the house)
-        GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.3f, 0.3f);
+        GetComponent<SpriteRenderer>().color = new Color(0.2f, 0.2f, 0.2f);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -56,7 +75,19 @@ public class House : MonoBehaviour
         if (other.CompareTag("Player") && !isLooted)
         {
             canLoot = true;
-            if (lootPrompt != null) lootPrompt.SetActive(true);
+
+            if (isLocked)
+            {
+                promptText.text = "LOCKED!";
+                promptText.color = Color.red;
+            }
+            else
+            {
+                promptText.text = "PRESS E TO LOOT";
+                promptText.color = Color.white;
+            }
+
+            promptText.gameObject.SetActive(true);
         }
     }
 
@@ -65,7 +96,7 @@ public class House : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canLoot = false;
-            if (lootPrompt != null) lootPrompt.SetActive(false);
+            if (promptText != null) promptText.gameObject.SetActive(false);
         }
     }
 }
