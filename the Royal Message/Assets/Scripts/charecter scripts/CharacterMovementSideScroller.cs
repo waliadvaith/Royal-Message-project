@@ -47,42 +47,50 @@ public class CharacterMovement : MonoBehaviour
 
     void UpdateCharacterSpriteAndAnimation()
     {
-        if (movement.sqrMagnitude > 0.01f) // If moving
+        if (movement.sqrMagnitude > 0.01f)
         {
-            if (movement.y > 0) // UP
+            if (Mathf.Abs(movement.y) >= Mathf.Abs(movement.x))
             {
-                characterSR.sprite = backSprite;
-                if (anim != null) anim.SetInteger("direction", 1);
-                if (hotbar != null) hotbar.UpdateWeaponVisuals("Up", false);
+                if (movement.y > 0) // UP
+                {
+                    characterSR.sprite = backSprite;
+                    if (anim != null) anim.SetInteger("direction", 1);
+                }
+                else // DOWN
+                {
+                    characterSR.sprite = frontSprite;
+                    if (anim != null) anim.SetInteger("direction", 0);
+                }
             }
-            else if (movement.y < 0) // DOWN
+            else
             {
-                characterSR.sprite = frontSprite;
-                if (anim != null) anim.SetInteger("direction", 0);
-                if (hotbar != null) hotbar.UpdateWeaponVisuals("Down", false);
+                if (movement.x > 0) // RIGHT
+                {
+                    characterSR.sprite = sideSprite;
+                    characterSR.flipX = false;
+                    if (anim != null) anim.SetInteger("direction", 2);
+                }
+                else // LEFT
+                {
+                    characterSR.sprite = sideSprite;
+                    characterSR.flipX = true;
+                    if (anim != null) anim.SetInteger("direction", 3);
+                }
             }
-            else if (movement.x > 0) // RIGHT
-            {
-                characterSR.sprite = sideSprite;
-                
-                if (anim != null) anim.SetInteger("direction", 3);
-                if (hotbar != null) hotbar.UpdateWeaponVisuals("Side", false);
-            }
-            else if (movement.x < 0) // LEFT
-            {
-                characterSR.sprite = sideSprite;
-                
-                if (anim != null) anim.SetInteger("direction", 2);
-                if (hotbar != null) hotbar.UpdateWeaponVisuals("Side", true);
-            }
+
+            // FORCE THE SNAP
+            if (anim != null) anim.Update(0);
         }
-        else // IDLE - Not moving
+        else
         {
-            // Reset to Forward (Front) sprite and animation
             characterSR.sprite = frontSprite;
-            
-            // Optional: reset flipX if you want him always facing same way when idle
             characterSR.flipX = false;
+            if (anim != null)
+            {
+                anim.SetInteger("direction", 0);
+                anim.Update(0); // Snap back to idle instantly
+            }
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
