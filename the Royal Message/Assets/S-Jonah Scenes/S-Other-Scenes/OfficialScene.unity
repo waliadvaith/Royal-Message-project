@@ -562,37 +562,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2859905722147630928, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
+      propertyPath: m_Name
+      value: StealText
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389587997197312902, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389587997197312902, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.24
+      objectReference: {fileID: 0}
     - target: {fileID: 4198497745818800057, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
       propertyPath: m_Name
       value: Lootable House
       objectReference: {fileID: 0}
-    - target: {fileID: 6834909509779783992, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
-      propertyPath: m_text
-      value: press e to rob
-      objectReference: {fileID: 0}
+    - target: {fileID: 4825135467991736498, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1355731665}
     - target: {fileID: 7135078821943827911, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
-      propertyPath: maxCoins
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7135078821943827911, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
-      propertyPath: minCoins
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: promptText
+      value: 
+      objectReference: {fileID: 873128020}
     - target: {fileID: 7135078821943827911, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
       propertyPath: MoralityManager
       value: 
       objectReference: {fileID: 1097701307}
+    - target: {fileID: 7624803205464322865, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
+      propertyPath: m_fontSize
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7624803205464322865, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8412850466354682059, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
-      propertyPath: m_SortingOrder
+      propertyPath: m_SortingLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412850466354682059, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1059167005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5998420782817171912, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
 --- !u!1 &470769046
 GameObject:
@@ -680,6 +697,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &873128020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7624803205464322865, guid: b701fa30e0b16ba4abb05d52a1ccc923, type: 3}
+  m_PrefabInstance: {fileID: 410818526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &929949979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1724,7 +1752,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 500387537
   m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1548909155
@@ -2910,6 +2938,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2096017572427562350, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: currentAmmo
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2425990011548505505, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: healthBar
       value: 
@@ -2920,7 +2952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6532255650939552898, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2935,10 +2967,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 218110123851243602, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
-      propertyPath: dropChance
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 394073437947299283, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_Camera
       value: 
