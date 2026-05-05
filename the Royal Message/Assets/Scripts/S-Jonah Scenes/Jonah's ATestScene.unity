@@ -684,6 +684,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2425990011548505505, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: goldPrefab
+      value: 
+      objectReference: {fileID: 6586477059012332201, guid: 287a9f4eabde95244962d51d6cdf1ca9, type: 3}
+    - target: {fileID: 2425990011548505505, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
       propertyPath: currentHealth
       value: 1
       objectReference: {fileID: 0}
@@ -43665,7 +43669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.1
+      value: -13.83
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.y
@@ -44287,7 +44291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.0171
+      value: 27.37
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.y
@@ -44377,18 +44381,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80454e58364354249b09eb1271b50be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::House
-  itemsToSpawn:
-  - {fileID: 4289110270508570349, guid: 86c9f1a5e0aaba04382816861a8b41e3, type: 3}
-  - {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
-  - {fileID: 6586477059012332201, guid: 287a9f4eabde95244962d51d6cdf1ca9, type: 3}
-  - {fileID: 4289110270508570349, guid: 86c9f1a5e0aaba04382816861a8b41e3, type: 3}
-  - {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
-  - {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
-  - {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
-  - {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
-  - {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
-  - {fileID: 2903521045811623909, guid: c04ac33f3559fd744839bd547a53467d, type: 3}
-  rb: {fileID: 1674542509}
+  coinPrefab: {fileID: 0}
+  dropPoint: {fileID: 0}
+  minCoins: 3
+  maxCoins: 8
+  moralityLoss: -5
+  lootPrompt: {fileID: 0}
+  MoralityManager: {fileID: 0}
 --- !u!212 &1674542509
 SpriteRenderer:
   serializedVersion: 2
@@ -44579,7 +44578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.4
+      value: 15.18
       objectReference: {fileID: 0}
     - target: {fileID: 3170559716519272986, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_LocalPosition.y
