@@ -33,14 +33,15 @@ public class EndGameScreens : MonoBehaviour
         Time.timeScale = 0f; // Freeze the world
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 1f;
+        Destroy(transform.root.gameObject);
+        SceneManager.LoadScene(0);
     }
 
     // Add this to your Restart Button's OnClick()
     public void ReloadGame()
     {   start.SetActive(true);
         Time.timeScale = 1f;
-        // Since Player is DontDestroyOnLoad, we must destroy them 
-        // to avoid having two players when the first scene loads
         Destroy(transform.root.gameObject);
         SceneManager.LoadScene(0);
     }
