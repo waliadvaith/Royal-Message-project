@@ -715,6 +715,14 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7260655632443897272, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: damagePerHit
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260655632443897272, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
+      propertyPath: attackCooldown
+      value: 0.00000001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 374717610084501874, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
