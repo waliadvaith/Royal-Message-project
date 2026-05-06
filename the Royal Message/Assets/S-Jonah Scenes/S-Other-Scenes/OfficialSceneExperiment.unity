@@ -2266,6 +2266,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: buyPotBtn
+      value: 
+      objectReference: {fileID: 510681487}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: buyAmmoBtn
+      value: 
+      objectReference: {fileID: 1778228537}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: floatingMenu
+      value: 
+      objectReference: {fileID: 1129907128}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2307,7 +2319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneToLoad: Jonah's MainKingdomScene
-  spawnPositionInNewScene: {x: -20, y: 10, z: 0}
+  spawnPositionInNewScene: {x: 0, y: 0, z: 0}
 --- !u!68 &1581196186
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2364,7 +2376,7 @@ Transform:
   m_GameObject: {fileID: 1581196184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 200, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
