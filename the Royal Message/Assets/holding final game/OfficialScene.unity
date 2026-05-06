@@ -2707,6 +2707,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1223088504531297076, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223088504531297076, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.34
+      objectReference: {fileID: 0}
     - target: {fileID: 2879228586114085019, guid: 8f71756eea147f942aa065ba2b208515, type: 3}
       propertyPath: m_Name
       value: Barbarian

@@ -120,6 +120,7 @@ public class CrossbowScript : MonoBehaviour
             {
                 crossbowAnim.SetBool("isReloading", false);
             }
+           
         }
 
         if (boltPrefab != null && firePoint != null)
