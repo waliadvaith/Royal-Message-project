@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/holding final game/credits.unity
     guid: d5f240475a0aa854bb1106ae9506feec
   - enabled: 1
-    path: Assets/holding final game/OfficialScene.unity
+    path: Assets/S-Jonah Scenes/S-Other-Scenes/OfficialScene.unity
     guid: b011219473c1ee440ba4f3735c149026
   - enabled: 1
     path: Assets/holding final game/starting scene.unity
