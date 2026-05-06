@@ -45,54 +45,65 @@ public class CharacterMovement : MonoBehaviour
         UpdateCharacterSpriteAndAnimation();
     }
 
+    // 1. Add a variable to track the current direction
+    private int lastDirection = -1;
+
+    // Add this at the top of your class with your other variables
+
+
+    
     void UpdateCharacterSpriteAndAnimation()
     {
+        int currentDirection = -1;
+
         if (movement.sqrMagnitude > 0.01f)
         {
             if (Mathf.Abs(movement.y) >= Mathf.Abs(movement.x))
             {
-                if (movement.y > 0) // UP
-                {
-                    characterSR.sprite = backSprite;
-                    if (anim != null) anim.SetInteger("direction", 1);
-                }
-                else // DOWN
-                {
-                    characterSR.sprite = frontSprite;
-                    if (anim != null) anim.SetInteger("direction", 0);
-                }
+                currentDirection = (movement.y > 0) ? 1 : 0; // 1: Backwards, 0: Forward
             }
             else
             {
-                if (movement.x > 0) // RIGHT
-                {
-                    characterSR.sprite = sideSprite;
-                    characterSR.flipX = false;
-                    if (anim != null) anim.SetInteger("direction", 2);
-                }
-                else // LEFT
-                {
-                    characterSR.sprite = sideSprite;
-                    characterSR.flipX = true;
-                    if (anim != null) anim.SetInteger("direction", 3);
-                }
+                currentDirection = (movement.x > 0) ? 3 : 2; // 2: Right, 3: Left
             }
-
-            // FORCE THE SNAP
-            if (anim != null) anim.Update(0);
         }
         else
         {
-            characterSR.sprite = frontSprite;
-            characterSR.flipX = false;
-            if (anim != null)
-            {
-                anim.SetInteger("direction", 0);
-                anim.Update(0); // Snap back to idle instantly
-            }
+            currentDirection = 0; // Default to Forward/Idle
             rb.linearVelocity = Vector2.zero;
         }
+
+        if (currentDirection != lastDirection)
+        {
+            if (anim != null)
+            {
+                anim.SetInteger("direction", currentDirection);
+                // This forces the frame to swap immediately
+                anim.Update(0);
+            }
+
+            // Set the static sprite as a fallback
+            if (currentDirection == 0) characterSR.sprite = frontSprite;
+            else if (currentDirection == 1) characterSR.sprite = backSprite;
+            else if (currentDirection == 2) characterSR.sprite = sideSprite;
+            else if (currentDirection == 3) characterSR.sprite = sideSprite;
+
+            // REMOVED: characterSR.flipX logic
+            lastDirection = currentDirection;
+        }
     }
+
+
+
+    // Helper to keep logic clean
+    void UpdateSpriteVisuals(int dir)
+    {
+        if (dir == 0) characterSR.sprite = frontSprite;
+        else if (dir == 1) characterSR.sprite = backSprite;
+        else if (dir == 2) { characterSR.sprite = sideSprite; characterSR.flipX = false; }
+        else if (dir == 3) { characterSR.sprite = sideSprite; characterSR.flipX = true; }
+    }
+
 
     void FixedUpdate()
     {
