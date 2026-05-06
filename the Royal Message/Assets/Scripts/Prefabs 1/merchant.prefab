@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 8680636947160904006}
   - component: {fileID: 218110123851243602}
   - component: {fileID: 1342736372028959175}
+  - component: {fileID: 4968204116554482289}
   m_Layer: 0
   m_Name: merchant
   m_TagString: Enemy
@@ -572,6 +573,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33035edf0a5eaf43a7dc240ebd553f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &4968204116554482289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5085799468071700441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555e7bb232ba9954193dbcd5088e7671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  killPenalty: -20
+  vanishChanceMultiplier: 1.6
+  MoralityManager: {fileID: 0}
 --- !u!1 &7402058209558843792
 GameObject:
   m_ObjectHideFlags: 0

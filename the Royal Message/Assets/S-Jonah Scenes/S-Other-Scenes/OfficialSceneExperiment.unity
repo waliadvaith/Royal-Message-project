@@ -341,6 +341,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c911ab861d6fb114098e37f49c1799c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!1001 &263807677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 394073437947299283, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1355731665}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9057248
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: MoralityManager
+      value: 
+      objectReference: {fileID: 1097701307}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: vanishChanceMultiplier
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085799468071700441, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_Name
+      value: merchant (use with shop menu) (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242302070942910438, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242302070942910438, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: buyPotBtn
+      value: 
+      objectReference: {fileID: 510681487}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: buyAmmoBtn
+      value: 
+      objectReference: {fileID: 1778228537}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: floatingMenu
+      value: 
+      objectReference: {fileID: 1129907128}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
 --- !u!1 &328825285
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +786,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1001 &616215328
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 394073437947299283, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1355731665}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9057248
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: MoralityManager
+      value: 
+      objectReference: {fileID: 1097701307}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: vanishChanceMultiplier
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085799468071700441, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_Name
+      value: merchant (use with shop menu) (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242302070942910438, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242302070942910438, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: buyPotBtn
+      value: 
+      objectReference: {fileID: 510681487}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: buyAmmoBtn
+      value: 
+      objectReference: {fileID: 1778228537}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: floatingMenu
+      value: 
+      objectReference: {fileID: 1129907128}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
 --- !u!1 &745216823 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2960281589503791276, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
@@ -727,7 +905,7 @@ PrefabInstance:
       objectReference: {fileID: 1355731665}
     - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 450
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -769,6 +947,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1355731665}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: MoralityManager
+      value: 
+      objectReference: {fileID: 1097701307}
     - target: {fileID: 5085799468071700441, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_Name
       value: merchant (use with shop menu) (3)
@@ -1366,7 +1548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   MoralityScore: 0
   BountyLevel: 0
-  MaxMorality: 50
+  MaxMorality: 0
   MinMorality: -50
   BountyHunt: {fileID: 1820977613}
 --- !u!4 &1097701308
@@ -1389,6 +1571,95 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2198389466421295827, guid: 3a8de4d36ba1ec149929e439e62af7c8, type: 3}
   m_PrefabInstance: {fileID: 2140140457381349611}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1213744807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 394073437947299283, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1355731665}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9057248
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: MoralityManager
+      value: 
+      objectReference: {fileID: 1097701307}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: vanishChanceMultiplier
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085799468071700441, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_Name
+      value: merchant (use with shop menu) (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242302070942910438, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242302070942910438, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: buyPotBtn
+      value: 
+      objectReference: {fileID: 510681487}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: buyAmmoBtn
+      value: 
+      objectReference: {fileID: 1778228537}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: floatingMenu
+      value: 
+      objectReference: {fileID: 1129907128}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
 --- !u!1 &1253338321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +2208,7 @@ PrefabInstance:
       objectReference: {fileID: 1355731665}
     - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 150
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1979,6 +2250,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1355731665}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: MoralityManager
+      value: 
+      objectReference: {fileID: 1097701307}
     - target: {fileID: 5085799468071700441, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_Name
       value: merchant (use with shop menu) (1)
@@ -2721,7 +2996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 300
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2763,6 +3038,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1355731665}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: MoralityManager
+      value: 
+      objectReference: {fileID: 1097701307}
     - target: {fileID: 5085799468071700441, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_Name
       value: merchant (use with shop menu) (2)
@@ -3207,6 +3486,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: MoralityManager
+      value: 
+      objectReference: {fileID: 1097701307}
+    - target: {fileID: 4968204116554482289, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: vanishChanceMultiplier
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5085799468071700441, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
       propertyPath: m_Name
       value: merchant (use with shop menu)
@@ -3320,6 +3607,9 @@ SceneRoots:
   - {fileID: 2077726929196606662}
   - {fileID: 9117328348508200673}
   - {fileID: 8623064957691700671}
+  - {fileID: 263807677}
+  - {fileID: 616215328}
+  - {fileID: 1213744807}
   - {fileID: 1567378514}
   - {fileID: 2043964869}
   - {fileID: 929949979}

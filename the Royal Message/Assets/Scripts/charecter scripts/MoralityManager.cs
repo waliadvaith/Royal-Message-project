@@ -10,7 +10,8 @@ public class MoralityManager : MonoBehaviour
     public int MaxMorality = 50;
     public int MinMorality = -50;
     public BountyHunterManager BountyHunt;
-
+    public delegate void MoralityChanged();
+    public static event MoralityChanged OnMoralityChanged;
     private void Awake()
     {
         
@@ -20,10 +21,11 @@ public class MoralityManager : MonoBehaviour
     // 3. Remove 'static' from the method
     public void AddMorality(int amount)
     {
-        
-        MoralityScore += amount;
 
-        
+        MoralityScore += amount;
+        // This "shouts" to all Traders that the score changed
+        OnMoralityChanged?.Invoke();
+
         MoralityScore = Mathf.Clamp(MoralityScore, MinMorality, MaxMorality);
 
 
@@ -45,10 +47,6 @@ public class MoralityManager : MonoBehaviour
     }
 
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q)) AddMorality(-10);
-        if (Input.GetKeyDown(KeyCode.E)) AddMorality(10);
-    }
+
 
 }
