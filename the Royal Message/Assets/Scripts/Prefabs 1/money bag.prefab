@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalPickup
   type: 2
-  amount: 75
+  amount: 100
   destroyOnPickup: 1
 --- !u!50 &-8245259780773174238
 Rigidbody2D:
