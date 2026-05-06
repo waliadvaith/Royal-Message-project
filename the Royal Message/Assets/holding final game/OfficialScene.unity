@@ -594,6 +594,87 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5030770418786518129, guid: 0fa060ae2ffcb6a4ca21385dc8fe641d, type: 3}
   m_PrefabInstance: {fileID: 4996056421075105268}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &800315248
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 394073437947299283, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1355731665}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.182868
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9057248
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 644332451878835343, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3262835628456726988, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596158765137365629, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1355731665}
+    - target: {fileID: 5085799468071700441, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_Name
+      value: merchant (use with shop menu) (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242302070942910438, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242302070942910438, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678438818189228914, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
+      propertyPath: weaponHolder
+      value: 
+      objectReference: {fileID: 705781882}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63dcf2b59b557fd45a72b0c8bfb93abe, type: 3}
 --- !u!1001 &929949979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3082,6 +3163,7 @@ SceneRoots:
   - {fileID: 2077726929196606662}
   - {fileID: 9117328348508200673}
   - {fileID: 8623064957691700671}
+  - {fileID: 800315248}
   - {fileID: 1567378514}
   - {fileID: 2043964869}
   - {fileID: 929949979}
