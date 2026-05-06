@@ -23,6 +23,7 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     public HotbarManager hotbar;
+    public SwordScript sword;
 
     [Header("Camera Zoom Settings")]
     public float normalZoom = 5f;
@@ -51,16 +52,17 @@ public class CharacterMovement : MonoBehaviour
     // Add this at the top of your class with your other variables
 
 
-    
+
     void UpdateCharacterSpriteAndAnimation()
     {
-        int currentDirection = -1;
+        int currentDirection = lastDirection;
 
-        if (movement.sqrMagnitude > 0.01f)
+        // 0.1f threshold to kill "ghost" inputs when letting go of keys
+        if (movement.sqrMagnitude > 0.1f)
         {
             if (Mathf.Abs(movement.y) >= Mathf.Abs(movement.x))
             {
-                currentDirection = (movement.y > 0) ? 1 : 0; // 1: Backwards, 0: Forward
+                currentDirection = (movement.y > 0) ? 1 : 0; // 1: Back, 0: Front
             }
             else
             {
@@ -69,39 +71,54 @@ public class CharacterMovement : MonoBehaviour
         }
         else
         {
-            currentDirection = 0; // Default to Forward/Idle
+            currentDirection = 5; // Idle
             rb.linearVelocity = Vector2.zero;
         }
 
+        // Only trigger if the state actually changes
         if (currentDirection != lastDirection)
         {
             if (anim != null)
             {
                 anim.SetInteger("direction", currentDirection);
-                // This forces the frame to swap immediately
+                // Force the Animator to the new state immediately
                 anim.Update(0);
             }
 
-            // Set the static sprite as a fallback
-            if (currentDirection == 0) characterSR.sprite = frontSprite;
-            else if (currentDirection == 1) characterSR.sprite = backSprite;
-            else if (currentDirection == 2) characterSR.sprite = sideSprite;
-            else if (currentDirection == 3) characterSR.sprite = sideSprite;
+            // Sync the static sprite renderer to the correct starting frame
+            UpdateSpriteVisuals(currentDirection);
 
-            // REMOVED: characterSR.flipX logic
             lastDirection = currentDirection;
+        }
+        // Inside UpdateCharacterSpriteAndAnimation() in CharacterMovement.cs
+
+        if (currentDirection == 1) // Backwards
+        {
+            if (sword != null) sword.SetDirection("Up");
+        }
+        else if (currentDirection == 0 || currentDirection == 5) // Forward/Idle
+        {
+            if (sword != null) sword.SetDirection("Down");
+        }
+        else if (currentDirection == 2) // Right
+        {
+            if (sword != null) sword.SetDirection("Right");
+        }
+        else if (currentDirection == 3) // Left
+        {
+            if (sword != null) sword.SetDirection("Left");
         }
     }
 
-
-
-    // Helper to keep logic clean
     void UpdateSpriteVisuals(int dir)
     {
-        if (dir == 0) characterSR.sprite = frontSprite;
+        // NO flipX here—let the animation handle the orientation
+        if (dir == 0 || dir == 5) characterSR.sprite = frontSprite;
         else if (dir == 1) characterSR.sprite = backSprite;
-        else if (dir == 2) { characterSR.sprite = sideSprite; characterSR.flipX = false; }
-        else if (dir == 3) { characterSR.sprite = sideSprite; characterSR.flipX = true; }
+        else if (dir == 2 || dir == 3) characterSR.sprite = sideSprite;
+
+        // Safety: Ensure flipX is ALWAYS false so it doesn't mess with the anims
+        characterSR.flipX = false;
     }
 
 
