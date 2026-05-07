@@ -1793,15 +1793,27 @@ MonoBehaviour:
     characterPortrait: {fileID: -960271038206414302, guid: 976c158b6443e5c40a6a96a909eec2f6, type: 3}
     sentence: Hello have you seen this wierd guy who murders people and steals their
       hand
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: random guy (with suspicously hand shaped throat)
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: '*muffled* idk man'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: MC
     characterPortrait: {fileID: -960271038206414302, guid: 976c158b6443e5c40a6a96a909eec2f6, type: 3}
     sentence: oh ok *walks away*
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: KILLER QUEEN
     characterPortrait: {fileID: 8567611977841083638, guid: 1b7c5c1b6619a074faf8ad72c3658e41, type: 3}
     sentence: 'killer queen: bite the dust! '
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!212 &1345897016
 SpriteRenderer:
   serializedVersion: 2
@@ -3324,78 +3336,150 @@ MonoBehaviour:
   - characterName: MC
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: WHERE AM I
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: HHA YOU ARE IN A SECRET REALM BUT I WONT LET YOU OUT UNLESS YOU PLAY
       A VIDEO GAME WITH ME
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: JUST A DUDE
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: ITS OK I WILL DO IT
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: THE ONLY WAY TO SAVE YOUR FRIEND IS IF YOU PLAY ANOTHER GAME WITH ME
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: NARRATOR
     characterPortrait: {fileID: 3089998214199147395, guid: d8c67ab61b87c9a4fa97d7b33f2fe344, type: 3}
     sentence: '*AFTER THE GAME*'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: JUST A DUDE
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: NOOO YOU MUST HAVE CHEATED HOW DID YOU GET A PARAGON SO EARLY
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: '*STEALS HIS SOUL* HAHA I STOLE YOUR SOUL BECAUSE YOU GAVE UP'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: NARRATOR
     characterPortrait: {fileID: 3089998214199147395, guid: d8c67ab61b87c9a4fa97d7b33f2fe344, type: 3}
     sentence: to be continued *roundabout plays*
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: '*STEALS HIS SOUL* HAHA I STOLE YOUR SOUL BECAUSE YOU GAVE UP'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: MC
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: ok fine i will do it this time i choose clash royale
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: 'OK BET THAT IS MY FAVORITE GAME YOU WILL DEFNIATELY LOSE '
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: I CHOOSE THE MOST SKILLED DECK HYPERBAIT
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: MC
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: GRR THEN I WILL CHOOSE GOLEM BEATDOWN
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: NARRATOR
     characterPortrait: {fileID: 3089998214199147395, guid: d8c67ab61b87c9a4fa97d7b33f2fe344, type: 3}
     sentence: '*GAME START*'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: HMM WHERE WILL YOU PLACE YOUR CANNON TO DEFEND MY WALLBREAKERS? 4-3?
       4-4? 3-4?
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: MC
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: '*STAYS SILENT AND PLACES IT AT 4-3*'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: HAHA I PREDICTED YOU AND PLAED AN EARTQUAKE RIGHT THERE HAHAHA
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: MC
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: '*OH I UNDERSTAND IT NOW HIS STAND HAS THE ABILITY TO READ MY MIND
       EVERY TIME HE ASKS A YES OR NO QUESTION*'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: MC
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: '*USES THIS INFO TO BEAT HIM*'
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: NOOO HOW DID YOU OUTSMART ME AND MY STAND
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: MC
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: doesn matter now ask your stand atum this am i going to beat you up
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: D'ARBY YOUNGER
     characterPortrait: {fileID: 4899459736066164292, guid: 19ebb2b573652df41b36471d12960e1c, type: 3}
     sentence: ARE YOU GONNA DO THE ORA ORA THING
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: ATUM
     characterPortrait: {fileID: 4348147635906250702, guid: 6432650cd74ffb948bbe713f58499f3c, type: 3}
     sentence: YES! YES! YES! YES! YES!
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
   - characterName: STAR PLATINUM
     characterPortrait: {fileID: -6595774128135874082, guid: 145440f84627e4140a87230c344a1c2c, type: 3}
     sentence: ORA ORA ORA ORA ORA ORA ORA *BEATS HIM UP*
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!212 &2106245125
 SpriteRenderer:
   serializedVersion: 2

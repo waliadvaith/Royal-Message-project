@@ -1,16 +1,21 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI; // Needed for the Portrait Image
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI; // Needed for the Portrait Image
+
 
 [System.Serializable]
 public class DialogueLine
 {
     public string characterName;
-    public Sprite characterPortrait; // New: Assign a sprite here
+    public Sprite characterPortrait;
     [TextArea(3, 10)]
     public string sentence;
+
+    // This creates the "On Line Start" box in the Inspector
+    public UnityEvent onLineStart;
 }
 
 public class DialogueManager : MonoBehaviour
@@ -52,10 +57,15 @@ public class DialogueManager : MonoBehaviour
 
         DialogueLine currentLine = lines.Dequeue();
 
-        // Update UI elements
+        // --- NEW: Trigger the specific command for this line ---
+        if (currentLine.onLineStart != null)
+        {
+            currentLine.onLineStart.Invoke();
+        }
+        // -------------------------------------------------------
+
         nameText.text = currentLine.characterName;
 
-        // Update Portrait
         if (currentLine.characterPortrait != null)
         {
             portraitImage.sprite = currentLine.characterPortrait;
@@ -63,7 +73,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            portraitImage.gameObject.SetActive(false); // Hide if no portrait assigned
+            portraitImage.gameObject.SetActive(false);
         }
 
         StopAllCoroutines();
