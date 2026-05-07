@@ -29,9 +29,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/S-Jonah Scenes/S-Other-Scenes/OfficialSceneExperiment.unity
     guid: 7c5305b3bf883924cbdc01e2f20aeebc
-  - enabled: 1
+  - enabled: 0
     path: Assets/holding final game/HOW ARE YOU HERE.unity
     guid: 32f4c680a6dcd1e4c9b3be69dc346273
+  - enabled: 1
+    path: Assets/S-Jonah Scenes/Jonah's BattleScene.unity
+    guid: 2c6fe9d881b87234e973ccf9c593577c
+  - enabled: 1
+    path: Assets/S-Jonah Scenes/Jonah's BaseScene.unity
+    guid: 1f1a7874ae76ffa4b871f669fd033294
+  - enabled: 1
+    path: Assets/S-Jonah Scenes/Jonah's NPCVillage.unity
+    guid: 7721b4e7d6265d54a93237b0218650e8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
