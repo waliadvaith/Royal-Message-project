@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fbf79616daaf54aa93d396fadfb7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
-  speed: 3
+  speed: 4
   anim: {fileID: 1410047979588568982}
   useLimits: 1
   yMin: -1.5
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf195d67e3237c440bcbd2b354433ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 300
+  maxHealth: 1e+13
   currentHealth: 0
   healthBar: {fileID: 0}
   goldPrefab: {fileID: 0}

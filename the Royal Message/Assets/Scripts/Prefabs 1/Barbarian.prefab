@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22eae0decb50a7244abbdb7b8a448a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  speed: 3.1
+  speed: 4.3
   attackRange: 1.2
   detectionRange: 15
 --- !u!1 &3326848789257753034
@@ -564,6 +564,7 @@ MonoBehaviour:
   damagePerHit: 15
   attackCooldown: 0.5
   targetTag: Player
+  sideOffset: 0.5
   swordAnimator: {fileID: 5666417433173082351}
   hotbar: {fileID: 0}
 --- !u!1 &7328113023096832826
