@@ -938,18 +938,21 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: .....what? .....
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Cool Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Oh... Sorry, did I kill the vibe by accident
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: No... it' not.. that.. it just... feels a bit akward... you're not...
@@ -957,12 +960,14 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Cool Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Ok, have a nice day my Messanger
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
 --- !u!61 &299562046
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -203846,6 +203851,7 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Birds Carrier Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Well theres a way to think about differently then you normally would
@@ -203853,12 +203859,14 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: Wait.... really?
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Birds Carrier Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Yeah! You just got to think like your in a battle as it can help you
@@ -203866,12 +203874,14 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: Oh... ok... I keep that in mind..
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
 --- !u!61 &1084741313
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204121,18 +204131,21 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: Fine... I.... guess...
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Oh not a confident guy. Ok I see
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
 --- !u!61 &1095577864
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204473,24 +204486,28 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: Uh...
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Practice Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Oh did I accidentally provoked fear on you
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: Yeah... you did...
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Practice Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Sorry about that, I was just trying to practice my skills of dramatic
@@ -204498,6 +204515,7 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
 --- !u!61 &1185022357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -205553,36 +205571,42 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: ...........
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Just a Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: So not much of a talker are you
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: ...no...not...really..
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Just a Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Ok, understandable have a nice day
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Just a Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: and defeat those evil knights!
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
 --- !u!61 &1334922994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -206002,18 +206026,21 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Friendly Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Yeah sometimes I feel that way too when I'm around people I don't know
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: Wait.... Really?
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Friendly Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Yeah but sometimes I wonder why your so nervous when it comes to converstations
@@ -206021,6 +206048,7 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: Well... sometimes it's... just comes... very natural... to me... like
@@ -206028,18 +206056,21 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Friendly Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Oh ok. I see but you go ahead and defeat those Knights! You Got This
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: Thanks.....
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
 --- !u!61 &1608399128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207032,23 +207063,43 @@ MonoBehaviour:
   conversation:
   - characterName: Professional
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
-    sentence: Hmm.. did you try to kill any innoncet people
+    sentence: Did You Kill Anyone?
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
-  - characterName: Messager
-    characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
-    sentence: Uhhh............ No......
-    onLineStart:
-      m_PersistentCalls:
-        m_Calls: []
-  - characterName: Professional
-    characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
-    sentence: Hmm.. maybe I just overthinking about the possibles because I'm am
-      a professional thinker after all.
-    onLineStart:
-      m_PersistentCalls:
-        m_Calls: []
+    choices:
+    - choiceText: Uh... No...
+      onChoiceSelected:
+        m_PersistentCalls:
+          m_Calls: []
+      followUpDialogue:
+      - characterName: Professional
+        characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
+        sentence: Hmm. Maybe I'm just over-thinking things I am a professional speaker
+          after all.
+        onLineStart:
+          m_PersistentCalls:
+            m_Calls: []
+        choices: []
+    - choiceText: Maybe... I did....
+      onChoiceSelected:
+        m_PersistentCalls:
+          m_Calls: []
+      followUpDialogue:
+      - characterName: Professional
+        characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
+        sentence: ..........
+        onLineStart:
+          m_PersistentCalls:
+            m_Calls: []
+        choices: []
+      - characterName: Professional
+        characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
+        sentence: Hmmm. I don't know maybe you could be joking
+        onLineStart:
+          m_PersistentCalls:
+            m_Calls: []
+        choices: []
 --- !u!61 &1835315440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207649,18 +207700,21 @@ MonoBehaviour:
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Mute Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: ............
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
   - characterName: Messager
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: I'll just... leave you... alone... I might... be making... akward
     onLineStart:
       m_PersistentCalls:
         m_Calls: []
+    choices: []
 --- !u!61 &1956143976
 BoxCollider2D:
   m_ObjectHideFlags: 0
