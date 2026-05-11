@@ -41,6 +41,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/S-Jonah Scenes/Jonah's NPCVillage.unity
     guid: 7721b4e7d6265d54a93237b0218650e8
+  - enabled: 1
+    path: Assets/holding final game/scene i can edit.unity
+    guid: 0689b9f2cdb43e9468ddc80bbbe1b510
+  - enabled: 1
+    path: Assets/holding final game/end.unity
+    guid: d3174e6284715fc4890a6327fc3c18ea
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
