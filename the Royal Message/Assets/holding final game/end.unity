@@ -1354,7 +1354,7 @@ GameObject:
   - component: {fileID: 641260454}
   - component: {fileID: 641260456}
   - component: {fileID: 641260455}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1424,7 @@ TilemapRenderer:
   m_SortingLayerID: -1648929337
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.5, y: 0.5, z: 0}
   m_MaxChunkCount: 16
