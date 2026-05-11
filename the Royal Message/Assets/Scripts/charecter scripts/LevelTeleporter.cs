@@ -13,6 +13,7 @@ public class LevelTeleporter : MonoBehaviour
         {
             // Start the sequence and don't let the player die
             DontDestroyOnLoad(other.transform.root.gameObject);
+            DontDestroyOnLoad(transform.root.gameObject);
             StartCoroutine(TeleportSequence(other.transform.root.gameObject));
         }
     }

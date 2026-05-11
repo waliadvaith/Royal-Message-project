@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
-
+using TMPro;
 public class DialogueTrigger : MonoBehaviour
 {
     // This creates the list in your Inspector!
     public List<DialogueLine> conversation;
 
     private bool playerInRange = false;
+    public TMP_Text promptText;
 
     void Update()
     {
@@ -40,11 +41,14 @@ public class DialogueTrigger : MonoBehaviour
         {
             Debug.Log("Player entered range");
             playerInRange = true;
+            promptText.text = "press e to talk";
+
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player")) playerInRange = false;
+        promptText.text = "";
     }
 }
