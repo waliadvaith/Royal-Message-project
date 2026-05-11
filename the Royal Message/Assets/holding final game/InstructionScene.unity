@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -332, y: 349}
+  m_AnchoredPosition: {x: -352, y: 320}
   m_SizeDelta: {x: 460.6, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &41894938
@@ -209,8 +209,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -485,7 +485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 156.57367, y: 98.086426}
+  m_AnchoredPosition: {x: 55, y: 68}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458060317
@@ -508,9 +508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'the red liquid is a health potion and it heals some hp and the bundle
-    of arrows hold multiple arrows in a quiver that you can buy from the shop for
-    a fair price '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed8f8d6664d4eb34b9550c31027dba08, type: 2}
   m_sharedMaterial: {fileID: -6631170411529271791, guid: ed8f8d6664d4eb34b9550c31027dba08, type: 2}
@@ -840,7 +838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -333, y: 2}
+  m_AnchoredPosition: {x: 283, y: 415}
   m_SizeDelta: {x: 460.6, y: 0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1030634627
@@ -863,8 +861,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " Mechanics:\nmovement w,a,s,d\n\nattack lc/space\nhot bar 1,2,3 + scroll
-    wheel \n\nbegin your journey messenger."
+  m_text: " Mechanics:\nmovement w,a,s,d\n\ninteract E\n\nattack lc/space\n\nhot
+    bar 1,2,3 + scroll wheel \nbegin your journey messenger."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed8f8d6664d4eb34b9550c31027dba08, type: 2}
   m_sharedMaterial: {fileID: -6631170411529271791, guid: ed8f8d6664d4eb34b9550c31027dba08, type: 2}
@@ -891,8 +889,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -930,7 +928,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 42.387054, z: 8.490173, w: -469.07138}
+  m_margin: {x: 0, y: 85.746, z: 8.490173, w: -469.07138}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
