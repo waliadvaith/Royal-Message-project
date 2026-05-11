@@ -638,7 +638,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -717,7 +717,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: -0.060386658, y: 0.090580344}
@@ -795,7 +795,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3390328498087256492, guid: edf6855a43dd47a40b605ab6122dd57d, type: 3}
@@ -1330,7 +1330,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -1409,7 +1409,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: -0.05093956, y: 0}
@@ -1489,7 +1489,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -1568,7 +1568,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
@@ -245896,7 +245896,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3390328498087256492, guid: edf6855a43dd47a40b605ab6122dd57d, type: 3}
@@ -246653,7 +246653,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -246742,7 +246742,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.16556168, y: 0.05094099}
@@ -246822,7 +246822,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -246901,7 +246901,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.025466919, y: -0.08914757}
@@ -246994,7 +246994,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3390328498087256492, guid: edf6855a43dd47a40b605ab6122dd57d, type: 3}
@@ -247072,7 +247072,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -247151,7 +247151,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: -0.026994705, y: 0.09447765}
