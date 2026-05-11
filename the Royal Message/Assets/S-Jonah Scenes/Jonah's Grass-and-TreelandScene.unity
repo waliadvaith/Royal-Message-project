@@ -968,6 +968,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     choices: []
+  promptText: {fileID: 0}
 --- !u!61 &299562046
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -203882,6 +203883,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     choices: []
+  promptText: {fileID: 0}
 --- !u!61 &1084741313
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204144,8 +204146,21 @@ MonoBehaviour:
     sentence: Oh not a confident guy. Ok I see
     onLineStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 4126524051334895449, guid: 7590bcb3e3049fb4baaaf5399c087f85, type: 3}
+          m_TargetAssemblyTypeName: MoralityManager, Assembly-CSharp
+          m_MethodName: AddMorality
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     choices: []
+  promptText: {fileID: 0}
 --- !u!61 &1095577864
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204516,6 +204531,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     choices: []
+  promptText: {fileID: 0}
 --- !u!61 &1185022357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -205607,6 +205623,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     choices: []
+  promptText: {fileID: 0}
 --- !u!61 &1334922994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -206062,15 +206079,40 @@ MonoBehaviour:
     sentence: Oh ok. I see but you go ahead and defeat those Knights! You Got This
     onLineStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 4126524051334895449, guid: 7590bcb3e3049fb4baaaf5399c087f85, type: 3}
+          m_TargetAssemblyTypeName: MoralityManager, Assembly-CSharp
+          m_MethodName: AddMorality
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     choices: []
   - characterName: Messanger
     characterPortrait: {fileID: 6863246505373101655, guid: ea8b8e0fd76013344a5160746e085530, type: 3}
     sentence: Thanks.....
     onLineStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 4126524051334895449, guid: 7590bcb3e3049fb4baaaf5399c087f85, type: 3}
+          m_TargetAssemblyTypeName: MoralityManager, Assembly-CSharp
+          m_MethodName: AddMorality
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     choices: []
+  promptText: {fileID: 0}
 --- !u!61 &1608399128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207079,7 +207121,19 @@ MonoBehaviour:
           after all.
         onLineStart:
           m_PersistentCalls:
-            m_Calls: []
+            m_Calls:
+            - m_Target: {fileID: 4126524051334895449, guid: 7590bcb3e3049fb4baaaf5399c087f85, type: 3}
+              m_TargetAssemblyTypeName: MoralityManager, Assembly-CSharp
+              m_MethodName: AddMorality
+              m_Mode: 3
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 5
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
         choices: []
     - choiceText: Maybe... I did....
       onChoiceSelected:
@@ -207098,8 +207152,21 @@ MonoBehaviour:
         sentence: Hmmm. I don't know maybe you could be joking
         onLineStart:
           m_PersistentCalls:
-            m_Calls: []
+            m_Calls:
+            - m_Target: {fileID: 4126524051334895449, guid: 7590bcb3e3049fb4baaaf5399c087f85, type: 3}
+              m_TargetAssemblyTypeName: MoralityManager, Assembly-CSharp
+              m_MethodName: AddMorality
+              m_Mode: 3
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: -5
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
         choices: []
+  promptText: {fileID: 0}
 --- !u!61 &1835315440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207715,6 +207782,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     choices: []
+  promptText: {fileID: 0}
 --- !u!61 &1956143976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207945,6 +208013,10 @@ SceneRoots:
   - {fileID: 299562048}
   - {fileID: 1608399130}
   - {fileID: 1084741315}
+  - {fileID: 1835315442}
+  - {fileID: 1185022359}
+  - {fileID: 1095577866}
+  - {fileID: 1956143978}
   - {fileID: 1729800810}
   - {fileID: 1091432813}
   - {fileID: 1188159224}
@@ -207953,7 +208025,3 @@ SceneRoots:
   - {fileID: 1920906413}
   - {fileID: 1279598656}
   - {fileID: 1239048802}
-  - {fileID: 1835315442}
-  - {fileID: 1185022359}
-  - {fileID: 1095577866}
-  - {fileID: 1956143978}
