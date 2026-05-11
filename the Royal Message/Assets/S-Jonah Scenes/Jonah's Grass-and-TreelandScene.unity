@@ -321,7 +321,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -412,7 +412,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -614,7 +614,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -705,7 +705,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -796,7 +796,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -887,7 +887,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 299562046}
   - component: {fileID: 299562045}
   m_Layer: 0
-  m_Name: just a dude_0 (1)
+  m_Name: Cool Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1060,7 +1060,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -1166,7 +1166,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -1257,7 +1257,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -1348,7 +1348,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -1439,7 +1439,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -1744,7 +1744,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -1820,7 +1820,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4040304741453717471, guid: d370873e6700264469d55269a82a8e48, type: 3}
@@ -2005,7 +2005,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -2096,7 +2096,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -2187,7 +2187,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -2379,7 +2379,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -2470,7 +2470,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -2896,7 +2896,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4040304741453717471, guid: d370873e6700264469d55269a82a8e48, type: 3}
@@ -3002,7 +3002,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -203825,7 +203825,7 @@ GameObject:
   - component: {fileID: 1084741313}
   - component: {fileID: 1084741312}
   m_Layer: 0
-  m_Name: just a dude_0 (3)
+  m_Name: Birds Carrier Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203974,7 +203974,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -204065,7 +204065,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6447008027194679244, guid: 77eae9d5388e6df4295d0bff61e8bd30, type: 3}
@@ -204106,7 +204106,7 @@ GameObject:
   - component: {fileID: 1095577864}
   - component: {fileID: 1095577863}
   m_Layer: 0
-  m_Name: just a dude_0 (7)
+  m_Name: Random Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204125,7 +204125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   conversation:
-  - characterName: Dude
+  - characterName: Random Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: So how have you been?
     onLineStart:
@@ -204139,7 +204139,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     choices: []
-  - characterName: Dude
+  - characterName: Random Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Oh not a confident guy. Ok I see
     onLineStart:
@@ -204238,7 +204238,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -204344,7 +204344,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -204435,7 +204435,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -204461,7 +204461,7 @@ GameObject:
   - component: {fileID: 1185022357}
   - component: {fileID: 1185022356}
   m_Layer: 0
-  m_Name: just a dude_0 (5)
+  m_Name: Practice Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204608,7 +204608,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -204699,7 +204699,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6447008027194679244, guid: 77eae9d5388e6df4295d0bff61e8bd30, type: 3}
@@ -204805,7 +204805,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -204896,7 +204896,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -204972,7 +204972,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1945986382225850775, guid: 468de74c427a0a84ab1475256888c9a7, type: 3}
@@ -205156,7 +205156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -205232,7 +205232,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1945986382225850775, guid: 468de74c427a0a84ab1475256888c9a7, type: 3}
@@ -205338,7 +205338,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -205429,7 +205429,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -205520,7 +205520,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -205546,7 +205546,7 @@ GameObject:
   - component: {fileID: 1334922994}
   - component: {fileID: 1334922993}
   m_Layer: 0
-  m_Name: just a dude_0
+  m_Name: Just a Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205699,7 +205699,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -206001,7 +206001,7 @@ GameObject:
   - component: {fileID: 1608399128}
   - component: {fileID: 1608399127}
   m_Layer: 0
-  m_Name: just a dude_0 (2)
+  m_Name: Friendly Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206163,7 +206163,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -206470,7 +206470,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -206561,7 +206561,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -206652,7 +206652,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -206728,7 +206728,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6447008027194679244, guid: 77eae9d5388e6df4295d0bff61e8bd30, type: 3}
@@ -206834,7 +206834,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -206925,7 +206925,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -207016,7 +207016,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -207042,7 +207042,7 @@ GameObject:
   - component: {fileID: 1835315440}
   - component: {fileID: 1835315439}
   m_Layer: 0
-  m_Name: just a dude_0 (4)
+  m_Name: Professional Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207061,7 +207061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   conversation:
-  - characterName: Professional
+  - characterName: Professional Dude
     characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
     sentence: Did You Kill Anyone?
     onLineStart:
@@ -207073,7 +207073,7 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
       followUpDialogue:
-      - characterName: Professional
+      - characterName: Professional Dude
         characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
         sentence: Hmm. Maybe I'm just over-thinking things I am a professional speaker
           after all.
@@ -207086,14 +207086,14 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
       followUpDialogue:
-      - characterName: Professional
+      - characterName: Professional Dude
         characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
         sentence: ..........
         onLineStart:
           m_PersistentCalls:
             m_Calls: []
         choices: []
-      - characterName: Professional
+      - characterName: Professional Dude
         characterPortrait: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
         sentence: Hmmm. I don't know maybe you could be joking
         onLineStart:
@@ -207192,7 +207192,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -207543,7 +207543,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4040304741453717471, guid: d370873e6700264469d55269a82a8e48, type: 3}
@@ -207649,7 +207649,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
@@ -207675,7 +207675,7 @@ GameObject:
   - component: {fileID: 1956143976}
   - component: {fileID: 1956143975}
   m_Layer: 0
-  m_Name: just a dude_0 (6)
+  m_Name: Mute Dude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207807,7 +207807,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 398647834585502450, guid: ba8786717bb7ba54faf91dda11ae39e7, type: 3}
@@ -207913,7 +207913,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1059167005
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8667466294985060184, guid: 5a11e20181272634c8a57a9985733593, type: 3}
