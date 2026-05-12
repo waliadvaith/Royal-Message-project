@@ -5,13 +5,16 @@ public class EndGameScreens : MonoBehaviour
 {
     public GameObject winPanel;  // Drag your "You Win" child object here
     public GameObject losePanel; // Drag your "Game Over" child object here
-    public GameObject start;
+    public GameObject blackPanel;
+    public GameObject HUD;
+
 
     void Start()
     {
         // Hide both at the start
         winPanel.SetActive(false);
         losePanel.SetActive(false);
+        DontDestroyOnLoad(HUD);
     }
 
     public void ActivateWin()
@@ -23,6 +26,7 @@ public class EndGameScreens : MonoBehaviour
     public void ActivateLose()
     {
         losePanel.SetActive(true);
+        blackPanel.SetActive(true);
         FinishGame();
     }
 

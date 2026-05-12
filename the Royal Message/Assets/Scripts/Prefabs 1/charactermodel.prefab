@@ -1273,7 +1273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   winPanel: {fileID: 5312435553349240231}
   losePanel: {fileID: 6532255650939552898}
-  start: {fileID: 0}
 --- !u!1001 &2704228199937765838
 PrefabInstance:
   m_ObjectHideFlags: 0
