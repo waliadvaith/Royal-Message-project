@@ -45,7 +45,21 @@ public class WalkableTilePaint : MonoBehaviour
 
     void Start()
     {
+        // FIX 1: Automatically find the player so the reference isn't lost on restart
+        if (player == null)
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) player = p.transform;
+        }
+
+        // FIX 2: Explicitly reset variables (in case of static issues or persistence)
         currentColumnIndex = -5;
+        lastHouseX = -100f;
+
+        // Clear existing tiles just in case the tilemap survived the load
+        groundPath.ClearAllTiles();
+        decorationMap.ClearAllTiles();
+
         for (int i = 0; i < preBuildAmount; i++)
         {
             GenerateColumn();
@@ -54,6 +68,14 @@ public class WalkableTilePaint : MonoBehaviour
 
     void Update()
     {
+        // FIX 3: Null check to prevent the script from crashing if player isn't found
+        if (player == null)
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) player = p.transform;
+        }
+
+        // Only generate if the player has moved far enough
         if (player.position.x > currentColumnIndex - renderDistance)
         {
             GenerateColumn();

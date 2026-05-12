@@ -1,9 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
     public float speed = 5.0f;
+    
 
     [Header("Animations")]
     public Animator anim;

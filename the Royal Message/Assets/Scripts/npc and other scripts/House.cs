@@ -50,6 +50,7 @@ public class HouseLoot : MonoBehaviour
         {
             LootHouse();
         }
+
     }
 
     void LootHouse()

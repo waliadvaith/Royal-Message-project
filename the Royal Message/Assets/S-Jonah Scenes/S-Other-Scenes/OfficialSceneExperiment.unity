@@ -1024,7 +1024,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sceneToLoad: Jonah's MainKingdomScene
   spawnPositionInNewScene: {x: 0.5, y: 0.6, z: 0}
-  HUD: {fileID: 0}
 --- !u!68 &1581196186
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1646,7 +1645,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sceneToLoad: Jonah's BattleScene
   spawnPositionInNewScene: {x: 0.5, y: 0.6, z: 0}
-  HUD: {fileID: 461120256}
 --- !u!68 &2043951747
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2000,6 +1998,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 862292410261443528, guid: e10f77b4933d8f54ba461d4aaffbe078, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -154.16992
+      objectReference: {fileID: 0}
     - target: {fileID: 1958661278155865183, guid: e10f77b4933d8f54ba461d4aaffbe078, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas

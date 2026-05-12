@@ -6,7 +6,7 @@ public class LevelTeleporter : MonoBehaviour
 {
     public string sceneToLoad;
     public Vector3 spawnPositionInNewScene;
-    public GameObject HUD;
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,7 +15,7 @@ public class LevelTeleporter : MonoBehaviour
             // Start the sequence and don't let the player die
             DontDestroyOnLoad(other.transform.root.gameObject);
             DontDestroyOnLoad(transform.root.gameObject);
-            DontDestroyOnLoad(HUD);
+            
             StartCoroutine(TeleportSequence(other.transform.root.gameObject));
         }
     }
