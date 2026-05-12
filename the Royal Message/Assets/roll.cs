@@ -43,7 +43,6 @@ public class Roll : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
     }
 
-    // 3. Added missing Roll function
     void PerformRoll()
     {
         Debug.Log("Rolling!");
