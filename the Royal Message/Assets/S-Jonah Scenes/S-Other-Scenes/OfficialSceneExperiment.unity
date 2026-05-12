@@ -1024,6 +1024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sceneToLoad: Jonah's MainKingdomScene
   spawnPositionInNewScene: {x: 0.5, y: 0.6, z: 0}
+  HUD: {fileID: 0}
 --- !u!68 &1581196186
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1643,8 +1644,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5e78e811532ca4ebd993133ca8d3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sceneToLoad: Jonah's MainKingdomScene
+  sceneToLoad: Jonah's BattleScene
   spawnPositionInNewScene: {x: 0.5, y: 0.6, z: 0}
+  HUD: {fileID: 461120256}
 --- !u!68 &2043951747
 EdgeCollider2D:
   m_ObjectHideFlags: 0

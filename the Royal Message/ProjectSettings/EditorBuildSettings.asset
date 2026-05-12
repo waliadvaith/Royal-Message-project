@@ -47,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/holding final game/end.unity
     guid: d3174e6284715fc4890a6327fc3c18ea
+  - enabled: 1
+    path: Assets/S-Jonah Scenes/Jonah's Grass-and-TreelandScene.unity
+    guid: b02b559b248bb234abb9438bc4343dae
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
