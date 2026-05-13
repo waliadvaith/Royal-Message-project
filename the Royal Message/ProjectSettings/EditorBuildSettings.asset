@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/S-Jonah Scenes/Jonah's NPCVillage.unity
     guid: 7721b4e7d6265d54a93237b0218650e8
-  - enabled: 1
+  - enabled: 0
     path: Assets/holding final game/scene i can edit.unity
     guid: 0689b9f2cdb43e9468ddc80bbbe1b510
   - enabled: 1
@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/S-Jonah Scenes/Jonah's Grass-and-TreelandScene.unity
     guid: b02b559b248bb234abb9438bc4343dae
+  - enabled: 1
+    path: Assets/S-Jonah Scenes/Jonah's Final Fight.unity
+    guid: 468c2581d80117040add049de350082f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

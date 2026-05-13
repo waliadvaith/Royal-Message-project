@@ -186,7 +186,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   fleeThresholdPercent: 50
-  fleeChance: 30
+  fleeChance: 10
   healthBar: {fileID: 1192978220683885228}
   goldPrefab: {fileID: 6586477059012332201, guid: 25d31390b0012c445a6d5bc0e5136eec, type: 3}
   dropChance: 100

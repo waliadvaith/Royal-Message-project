@@ -7,7 +7,7 @@ public class DialogueTrigger : MonoBehaviour
     public List<DialogueLine> conversation;
 
     private bool playerInRange = false;
-    public TMP_Text promptText;
+    
 
     void Update()
     {
@@ -41,7 +41,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             Debug.Log("Player entered range");
             playerInRange = true;
-            promptText.text = "press e to talk";
+            
 
         }
     }
@@ -49,6 +49,6 @@ public class DialogueTrigger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player")) playerInRange = false;
-        promptText.text = "";
+        
     }
 }
