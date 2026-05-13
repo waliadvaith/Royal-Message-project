@@ -61,6 +61,10 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(true);
         ClearChoices();
 
+        // --- NEW: Freeze Time ---
+        Time.timeScale = 0f;
+        // ------------------------
+
         lines.Clear();
         foreach (DialogueLine line in dialogueList)
         {
@@ -113,7 +117,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSecondsRealtime(0.02f);
         }
         isTyping = false;
 
@@ -170,6 +174,10 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         nameText.text = "";
         dialoguePanel.SetActive(false);
+
+        // --- NEW: Unfreeze Time ---
+        Time.timeScale = 1f;
+        // --------------------------
     }
 
     void Update()
@@ -177,7 +185,7 @@ public class DialogueManager : MonoBehaviour
         // Advance dialogue on Click/Space only if NOT typing and NOT showing choices
         if (isOpen && !isTyping && (currentChoices == null || currentChoices.Count == 0))
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.X))
             {
                 DisplayNextSentence();
             }

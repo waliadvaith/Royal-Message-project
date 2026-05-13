@@ -185,6 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
   currentHealth: 0
+  fleeThresholdPercent: 50
+  fleeChance: 30
   healthBar: {fileID: 1192978220683885228}
   goldPrefab: {fileID: 6586477059012332201, guid: 25d31390b0012c445a6d5bc0e5136eec, type: 3}
   dropChance: 100
@@ -249,6 +251,15 @@ MonoBehaviour:
   speed: 4.3
   attackRange: 1.2
   detectionRange: 15
+  fleeSpeedMultiplier: 1
+  FleeingDialogue:
+  - characterName: Enemy
+    characterPortrait: {fileID: 8452206207373491569, guid: 499bb5d520c9f4247a155cffb5b6522c, type: 3}
+    sentence: Please... Spare me! I have a family!
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
+    choices: []
 --- !u!1 &3326848789257753034
 GameObject:
   m_ObjectHideFlags: 0

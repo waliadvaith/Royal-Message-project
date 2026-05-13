@@ -498,6 +498,7 @@ MonoBehaviour:
   floatingMenu: {fileID: 0}
   buyAmmoBtn: {fileID: 0}
   buyPotBtn: {fileID: 0}
+  closeMenuBtn: {fileID: 0}
 --- !u!61 &8680636947160904006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -558,9 +559,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 30
   currentHealth: 0
+  fleeThresholdPercent: 20
+  fleeChance: 50
   healthBar: {fileID: 8717754526216161717}
   goldPrefab: {fileID: 4289110270508570349, guid: 86c9f1a5e0aaba04382816861a8b41e3, type: 3}
-  dropChance: 100
+  dropChance: 50.5
 --- !u!114 &1342736372028959175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,8 +589,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   killPenalty: -20
-  vanishChanceMultiplier: 1.6
+  vanishChanceMultiplier: 100
   MoralityManager: {fileID: 0}
+  leavingDialogue:
+  - characterName: Trader
+    characterPortrait: {fileID: 9009724932033879321, guid: d24660c7c768da748ac640e1a9288648, type: 3}
+    sentence: I know what kind of person you are... I am leaving!
+    onLineStart:
+      m_PersistentCalls:
+        m_Calls: []
+    choices: []
 --- !u!1 &7402058209558843792
 GameObject:
   m_ObjectHideFlags: 0

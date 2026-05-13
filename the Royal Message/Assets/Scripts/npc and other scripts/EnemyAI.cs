@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -10,7 +11,9 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D rb;
     private SwordScript mySword;
     private bool isChasing = false; // Tracks if the enemy has seen the player
-
+    private bool isFleeing = false;
+    public float fleeSpeedMultiplier = 1.5f;
+    public List<DialogueLine> FleeingDialogue;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,8 +27,22 @@ public class EnemyAI : MonoBehaviour
     void FixedUpdate()
     {
         if (playerTransform == null) return;
-
         float distance = Vector2.Distance(transform.position, playerTransform.position);
+
+        if (isFleeing)
+        {
+            // Run AWAY from player
+            Vector2 dirAway = ((Vector2)rb.position - (Vector2)playerTransform.position).normalized;
+            rb.MovePosition(rb.position + dirAway * (speed * fleeSpeedMultiplier) * Time.fixedDeltaTime);
+
+            // MERCY CHECK: If they get away, give morality
+            if (distance > 15f)
+            {
+                Object.FindFirstObjectByType<MoralityManager>()?.AddMorality(2);
+                Destroy(gameObject);
+            }
+            return;
+        }
 
         // --- DETECTION LOGIC ---
         if (!isChasing)
@@ -72,5 +89,17 @@ public class EnemyAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+    public void StartFleeing()
+    {
+        isFleeing = true;
+        isChasing = false;
+        if (mySword != null) mySword.gameObject.SetActive(false); // Drop weapon
+
+        // TRIGGER DIALOGUE HERE
+        if (DialogueManager.instance != null && FleeingDialogue.Count > 0)
+        {
+            DialogueManager.instance.StartDialogue(FleeingDialogue);
+        }
     }
 }

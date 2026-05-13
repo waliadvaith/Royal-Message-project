@@ -6,6 +6,11 @@ public class Health : MonoBehaviour
     public float maxHealth = 100f;
     public float currentHealth;
 
+    [Header("Flee Settings")]
+    [Range(0, 100)] public float fleeThresholdPercent = 20f;
+    [Range(0, 100)] public float fleeChance = 50f;
+    private bool hasFled = false;
+
     [Header("UI Connection")]
     public HealthBar healthBar;
 
@@ -13,43 +18,49 @@ public class Health : MonoBehaviour
     public GameObject goldPrefab;
     [Range(0, 100)] public float dropChance = 50f;
 
-    void Awake()
-    {
-        currentHealth = maxHealth;
-    }
+    void Awake() => currentHealth = maxHealth;
 
     void Start()
     {
-        if (healthBar != null)
-        {
-            healthBar.SetMaxHealth(maxHealth);
-        }
+        if (healthBar != null) healthBar.SetMaxHealth(maxHealth);
     }
 
     public void Heal(float amount)
     {
-        currentHealth += amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        if (healthBar != null)
-        {
-            healthBar.UpdateHealthBar(currentHealth);
-        }
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        if (healthBar != null) healthBar.UpdateHealthBar(currentHealth);
     }
 
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        if (healthBar != null)
-        {
-            healthBar.UpdateHealthBar(currentHealth);
-        }
+        if (healthBar != null) healthBar.UpdateHealthBar(currentHealth);
 
         if (currentHealth <= 0)
         {
             Die();
+        }
+        else
+        {
+            CheckForFlee();
+        }
+    }
+
+    void CheckForFlee()
+    {
+        // Only run flee logic if it's an enemy with EnemyAI and hasn't fled yet
+        if (hasFled) return;
+
+        EnemyAI ai = GetComponent<EnemyAI>();
+        if (ai == null) return; // This ignores Traders and Players
+
+        if ((currentHealth / maxHealth) * 100 <= fleeThresholdPercent)
+        {
+            if (Random.Range(0f, 100f) <= fleeChance)
+            {
+                hasFled = true;
+                ai.StartFleeing();
+            }
         }
     }
 
@@ -57,36 +68,29 @@ public class Health : MonoBehaviour
     {
         if (gameObject.CompareTag("Player"))
         {
-            // Player death logic
-            if (GetComponent<Rigidbody2D>() != null)
-                GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+            if (GetComponent<Rigidbody2D>() != null) GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+            if (GetComponent<CharacterMovement>() != null) GetComponent<CharacterMovement>().enabled = false;
+            if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().enabled = false;
+            if (GetComponent<Collider2D>() != null) GetComponent<Collider2D>().enabled = false;
 
-            if (GetComponent<CharacterMovement>() != null)
-                GetComponent<CharacterMovement>().enabled = false;
-
-            if (GetComponent<SpriteRenderer>() != null)
-                GetComponent<SpriteRenderer>().enabled = false;
-
-            if (GetComponent<Collider2D>() != null)
-                GetComponent<Collider2D>().enabled = false;
-            // --- NEW CODE START ---
             EndGameScreens screens = GetComponentInChildren<EndGameScreens>();
             if (screens != null) screens.ActivateLose();
-            // --- NEW CODE END ---
             gameObject.tag = "Untagged";
         }
         else
         {
-            // Enemy death logic
-            if (gameObject.CompareTag("Enemy"))
+            // CRUELTY CHECK: If player kills a fleeing enemy
+            if (hasFled)
             {
-                // Roll for gold drop
-                if (Random.Range(0f, 100f) <= dropChance)
+                Object.FindFirstObjectByType<MoralityManager>()?.AddMorality(-5);
+                Debug.Log("Cruel kill! Morality decreased.");
+            }
+
+            if (gameObject.CompareTag("Enemy") && !hasFled)
+            {
+                if (Random.Range(0f, 100f) <= dropChance && goldPrefab != null)
                 {
-                    if (goldPrefab != null)
-                    {
-                        Instantiate(goldPrefab, transform.position, Quaternion.identity);
-                    }
+                    Instantiate(goldPrefab, transform.position, Quaternion.identity);
                 }
             }
 

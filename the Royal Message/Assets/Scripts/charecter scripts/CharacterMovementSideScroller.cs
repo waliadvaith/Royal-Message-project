@@ -143,20 +143,31 @@ public class CharacterMovement : MonoBehaviour
     // Camera logic remains the same...
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
+        // 1. Find the Camera
         Camera cam = GetComponentInChildren<Camera>();
         if (cam == null) cam = Camera.main;
-        if (cam != null)
+
+        // 2. CHECK SCENE NAME
+        // We check for "jonah" (case-insensitive check is safer)
+        if (scene.name.ToLower().Contains("jonah"))
         {
-            if (scene.name.Contains("Kingdom") || scene.name.Contains("Castle"))
-            {
-                cam.orthographicSize = castleZoom;
-                useLimits = false;
-            }
-            else
-            {
-                cam.orthographicSize = normalZoom;
-                useLimits = true;
-            }
+            // REMOVE CLAMPS for the designer's levels
+            useLimits = false;
+
+            // Set the wide-view zoom
+            if (cam != null) cam.orthographicSize = castleZoom;
+
+            Debug.Log("Entered Designer Scene (" + scene.name + "): Limits Removed.");
+        }
+        else
+        {
+            // ADD CLAMPS BACK for your generated road/standard levels
+            useLimits = true;
+
+            // Return to normal zoom
+            if (cam != null) cam.orthographicSize = normalZoom;
+
+            Debug.Log("Entered Standard Path: Limits Applied.");
         }
     }
 }
