@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/S-Jonah Scenes/S-Other-Scenes/Main Scene.unity
     guid: 93ec648924456d04f9569f532bcbda53
   - enabled: 1
+    path: Assets/S-Jonah Scenes/S-Other-Scenes/OfficialSceneExperiment.unity
+    guid: 7c5305b3bf883924cbdc01e2f20aeebc
+  - enabled: 1
     path: Assets/holding final game/credits.unity
     guid: d5f240475a0aa854bb1106ae9506feec
   - enabled: 1
@@ -27,7 +30,7 @@ EditorBuildSettings:
     path: Assets/holding final game/InstructionScene.unity
     guid: 803192c4e86a2914587a29e43b7379ab
   - enabled: 1
-    path: Assets/holding final game/OfficialSceneExperiment.unity
+    path: Assets/S-Jonah Scenes/S-Other-Scenes/OfficialSceneExperiment.unity
     guid: 7c5305b3bf883924cbdc01e2f20aeebc
   - enabled: 0
     path: Assets/holding final game/HOW ARE YOU HERE.unity
