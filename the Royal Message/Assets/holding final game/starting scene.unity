@@ -287,7 +287,6 @@ GameObject:
   - component: {fileID: 180117465}
   - component: {fileID: 180117467}
   - component: {fileID: 180117469}
-  - component: {fileID: 180117468}
   m_Layer: 6
   m_Name: Start_Screen_0
   m_TagString: Untagged
@@ -382,14 +381,6 @@ SortingGroup:
   m_SortingOrder: 0
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
---- !u!81 &180117468
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180117464}
-  m_Enabled: 1
 --- !u!82 &180117469
 AudioSource:
   m_ObjectHideFlags: 0
