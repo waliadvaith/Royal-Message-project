@@ -23,6 +23,20 @@ public class Health : MonoBehaviour
     void Start()
     {
         if (healthBar != null) healthBar.SetMaxHealth(maxHealth);
+        currentHealth = maxHealth;
+        if (gameObject.CompareTag("Player") || gameObject.name.Contains("Player")) // Name check as a backup
+        {
+            // 1. Reset Health
+            currentHealth = maxHealth;
+
+            // 2. Ensure everything is turned ON
+            if (GetComponent<CharacterMovement>() != null) GetComponent<CharacterMovement>().enabled = true;
+            if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().enabled = true;
+            if (GetComponent<Collider2D>() != null) GetComponent<Collider2D>().enabled = true;
+
+            // 3. FIX THE TAG: If it was changed to Untagged, change it back
+            gameObject.tag = "Player";
+        }
     }
 
     public void Heal(float amount)
@@ -68,14 +82,11 @@ public class Health : MonoBehaviour
     {
         if (gameObject.CompareTag("Player"))
         {
-            if (GetComponent<Rigidbody2D>() != null) GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-            if (GetComponent<CharacterMovement>() != null) GetComponent<CharacterMovement>().enabled = false;
-            if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().enabled = false;
-            if (GetComponent<Collider2D>() != null) GetComponent<Collider2D>().enabled = false;
+
 
             EndGameScreens screens = GetComponentInChildren<EndGameScreens>();
             if (screens != null) screens.ActivateLose();
-            gameObject.tag = "Untagged";
+
         }
         else
         {

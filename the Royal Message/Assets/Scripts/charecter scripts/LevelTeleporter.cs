@@ -1,12 +1,13 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class LevelTeleporter : MonoBehaviour
 {
     public string sceneToLoad;
     public Vector3 spawnPositionInNewScene;
-
+    public GameObject Player;
     private bool isTeleporting = false;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -43,6 +44,21 @@ public class LevelTeleporter : MonoBehaviour
         // 4. Set position in new scene
         player.transform.position = spawnPositionInNewScene;
 
+
+        // --- THE DYNAMIC CLAMP FIX ---
+        // Check if the NEW scene name contains "Jonah"
+        bool isJonahScene = sceneToLoad.ToLower().Contains("Jonah");
+
+        // Tell the player script to enable or disable clamps
+        CharacterMovement movement = player.GetComponentInChildren<CharacterMovement>();
+        if (movement != null)
+        {
+            movement.useLimits = isJonahScene;
+        }
+        // ----------------------------
+
+        yield return new WaitForFixedUpdate();
+
         // 5. Re-enable physics
         if (rb != null)
         {
@@ -56,4 +72,20 @@ public class LevelTeleporter : MonoBehaviour
         // Now that the player is safely moved, the portal can finally delete itself
         Destroy(transform.root.gameObject);
     }
+    public void Teleport()
+    {
+        if (isTeleporting) return;
+
+        if (Player.CompareTag("Player"))
+        {
+            isTeleporting = true;
+
+            // Ensure player and portal survive the transition
+            DontDestroyOnLoad(Player.transform.root.gameObject);
+            DontDestroyOnLoad(transform.root.gameObject);
+
+            StartCoroutine(TeleportSequence(Player.transform.root.gameObject));
+        }
+    }
 }
+

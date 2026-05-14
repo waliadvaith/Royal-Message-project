@@ -127,16 +127,20 @@ public class CharacterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Normalize movement so diagonal walking isn't faster
+        // 1. Calculate the movement normally
         Vector2 targetPosition = rb.position + movement.normalized * speed * Time.fixedDeltaTime;
 
+        // 2. ONLY apply the limits if we are NOT in a "Jonah" scene
         if (useLimits)
         {
+            // Y-Axis Clamp (Vertical Road)
             targetPosition.y = Mathf.Clamp(targetPosition.y, yMin, yMax);
+
+            // X-Axis Limit (Stop them from going too far left)
             targetPosition.x = Mathf.Max(targetPosition.x, xMax);
         }
 
-        // Use MovePosition for Rigidbody-based snappiness
+        // 3. Move the player
         rb.MovePosition(targetPosition);
     }
 

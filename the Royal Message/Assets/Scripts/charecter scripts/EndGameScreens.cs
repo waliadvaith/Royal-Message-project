@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndGameScreens : MonoBehaviour
 {
     public GameObject winPanel;  // Drag your "You Win" child object here
     public GameObject losePanel; // Drag your "Game Over" child object here
-    public GameObject blackPanel;
-    public GameObject HUD;
+
+    public GameObject restartButton;
 
 
     void Start()
@@ -14,19 +15,23 @@ public class EndGameScreens : MonoBehaviour
         // Hide both at the start
         winPanel.SetActive(false);
         losePanel.SetActive(false);
-        DontDestroyOnLoad(HUD);
+
+        restartButton.SetActive(false);
+
     }
 
     public void ActivateWin()
     {
         winPanel.SetActive(true);
+        restartButton.SetActive(true);
         FinishGame();
     }
 
     public void ActivateLose()
     {
         losePanel.SetActive(true);
-        blackPanel.SetActive(true);
+
+        restartButton.SetActive(true);
         FinishGame();
     }
 

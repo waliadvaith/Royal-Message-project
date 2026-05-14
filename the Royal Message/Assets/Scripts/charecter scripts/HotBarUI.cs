@@ -48,4 +48,21 @@ public class HotbarUI : MonoBehaviour
         if (potion != null && potionText != null)
             potionText.text = "Pots: " + potion.potionCount;
     }
+    void Awake()
+    {
+        // Using the modern Unity 2023+ method to avoid warnings
+        GameObject[] allObjects = GameObject.FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+
+        foreach (GameObject go in allObjects)
+        {
+            // Check if it has the same name but isn't THIS specific instance
+            if (go.name == gameObject.name && go != gameObject)
+            {
+                // If the other object is already 'Global' (DontDestroyOnLoad), it's the old one.
+                // We want to keep the old one and destroy this new duplicate.
+                Destroy(gameObject);
+                return;
+            }
+        }
+    }
 }
